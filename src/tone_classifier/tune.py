@@ -34,7 +34,7 @@ def run_one(cmd):
 
 def profile_space(profile: str):
     if profile == "fast":
-        models = ["roberta-base"]
+        models = ["microsoft/deberta-v3-base"]
         learning_rates = [2e-5]
         batch_sizes = [16]
         epochs = [4, 5]
@@ -44,7 +44,7 @@ def profile_space(profile: str):
         seeds = [42]
         eval_steps = 200
     elif profile == "balanced":
-        models = ["roberta-base"]
+        models = ["microsoft/deberta-v3-base"]
         learning_rates = [1e-5, 1.5e-5, 2e-5]
         batch_sizes = [16]
         epochs = [6, 8]
@@ -55,7 +55,7 @@ def profile_space(profile: str):
         eval_steps = 100
     else:
         # Best chance at >=75% while staying practical on one T4 session.
-        models = ["roberta-base", "microsoft/deberta-v3-base"]
+        models = ["microsoft/deberta-v3-base", "roberta-base"]
         learning_rates = [8e-6, 1e-5, 1.5e-5]
         batch_sizes = [16]
         epochs = [8, 10]

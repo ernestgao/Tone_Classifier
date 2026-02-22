@@ -28,7 +28,7 @@ from tone_classifier.modeling import WeightedLossTrainer
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Train RoBERTa politeness classifier")
+    p = argparse.ArgumentParser(description="Train DeBERTa politeness classifier")
     p.add_argument("--dataset_name", type=str, default=None)
     p.add_argument("--dataset_config_name", type=str, default=None)
     p.add_argument("--train_file", type=str, default=None)
@@ -37,10 +37,10 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--text_column", type=str, default="text")
     p.add_argument("--label_column", type=str, default="label")
 
-    p.add_argument("--model_name", type=str, default="roberta-base")
+    p.add_argument("--model_name", type=str, default="microsoft/deberta-v3-base")
     p.add_argument("--max_length", type=int, default=128)
 
-    p.add_argument("--output_dir", type=str, default="artifacts/roberta_politeness")
+    p.add_argument("--output_dir", type=str, default="artifacts/deberta_politeness")
     p.add_argument("--num_train_epochs", type=float, default=5.0)
     p.add_argument("--per_device_train_batch_size", type=int, default=16)
     p.add_argument("--per_device_eval_batch_size", type=int, default=32)
