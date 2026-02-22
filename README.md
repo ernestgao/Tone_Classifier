@@ -90,6 +90,8 @@ python -m tone_classifier.tune \
   --test_file data/test.csv \
   --text_column text \
   --label_column label \
+  --profile high_accuracy \
+  --max_experiments 24 \
   --fp16 \
   --use_class_weights \
   --base_output_dir artifacts/tuning
@@ -98,6 +100,7 @@ python -m tone_classifier.tune \
 Outputs:
 - per-experiment folders under `artifacts/tuning/exp_*`
 - summary file: `artifacts/tuning/tuning_summary.json`
+- best run file: `artifacts/tuning/best_experiment.json`
 
 Pick the best run by highest `val_macro_f1` with strong `test_accuracy`.
 
@@ -105,7 +108,7 @@ Pick the best run by highest `val_macro_f1` with strong `test_accuracy`.
 
 ```bash
 python -m tone_classifier.export_pt \
-  --hf_model_dir artifacts/tuning/exp_01/hf_model \
+  --hf_model_dir artifacts/tuning/<best_exp_dir>/hf_model \
   --output_pt artifacts/model/politeness_roberta.pt
 ```
 
@@ -113,7 +116,7 @@ python -m tone_classifier.export_pt \
 
 ```bash
 python -m tone_classifier.predict \
-  --hf_model_dir artifacts/tuning/exp_01/hf_model \
+  --hf_model_dir artifacts/tuning/<best_exp_dir>/hf_model \
   --text "Can you please help me debug this issue when you have time?"
 ```
 
