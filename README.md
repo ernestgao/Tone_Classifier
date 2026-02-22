@@ -122,15 +122,7 @@ python -m tone_classifier.predict \
   --text "Can you please help me debug this issue when you have time?"
 ```
 
-## 7) Practical notes for your 85% target
-
-- Keep train/valid/test split stratified by label.
-- Track both `accuracy` and `macro_f1` (neutral is often harder).
-- If neutral recall is weak, keep `--use_class_weights` enabled.
-- If GPU memory allows, try `batch_size=32` and fewer gradient steps.
-- For runtime under 8 hours on one modern NVIDIA GPU, run the tuning grid once, then retrain best config with a fixed seed.
-
-## 8) Download model from Google Drive to local machine
+## 7) Download model from Google Drive to local machine
 
 If your artifacts are on Drive and you want them on your laptop/desktop, zip first in Colab:
 
