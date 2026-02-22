@@ -57,6 +57,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--save_total_limit", type=int, default=2)
     p.add_argument("--eval_steps", type=int, default=200)
     p.add_argument("--logging_steps", type=int, default=50)
+    p.add_argument("--dataloader_num_workers", type=int, default=2)
     return p.parse_args()
 
 
@@ -142,12 +143,12 @@ def main() -> None:
         logging_steps=args.logging_steps,
         save_total_limit=args.save_total_limit,
         load_best_model_at_end=True,
-        metric_for_best_model="macro_f1",
+        metric_for_best_model="eval_macro_f1",
         greater_is_better=True,
         report_to="none",
         fp16=use_fp16,
         bf16=args.bf16,
-        dataloader_num_workers=4,
+        dataloader_num_workers=args.dataloader_num_workers,
         remove_unused_columns=True,
     )
 
