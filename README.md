@@ -45,7 +45,7 @@ text,label
 If you do not already have `train.csv/valid.csv/test.csv`, generate them automatically:
 
 ```bash
-python -m politeness_classifier.prepare_data --output_dir data
+python -m tone_classifier.prepare_data --output_dir data
 ```
 
 This downloads Stanford's Wikipedia politeness corpus via ConvoKit and creates:
@@ -56,7 +56,7 @@ This downloads Stanford's Wikipedia politeness corpus via ConvoKit and creates:
 ## 3) Single training run (balanced speed + quality)
 
 ```bash
-python -m politeness_classifier.train \
+python -m tone_classifier.train \
   --train_file data/train.csv \
   --validation_file data/valid.csv \
   --test_file data/test.csv \
@@ -84,7 +84,7 @@ Artifacts:
 ## 4) Hyperparameter tuning (recommended for >85%)
 
 ```bash
-python -m politeness_classifier.tune \
+python -m tone_classifier.tune \
   --train_file data/train.csv \
   --validation_file data/valid.csv \
   --test_file data/test.csv \
@@ -104,7 +104,7 @@ Pick the best run by highest `val_macro_f1` with strong `test_accuracy`.
 ## 5) Save Torch `.pt`
 
 ```bash
-python -m politeness_classifier.export_pt \
+python -m tone_classifier.export_pt \
   --hf_model_dir artifacts/tuning/exp_01/hf_model \
   --output_pt artifacts/model/politeness_roberta.pt
 ```
@@ -112,7 +112,7 @@ python -m politeness_classifier.export_pt \
 ## 6) Inference
 
 ```bash
-python -m politeness_classifier.predict \
+python -m tone_classifier.predict \
   --hf_model_dir artifacts/tuning/exp_01/hf_model \
   --text "Can you please help me debug this issue when you have time?"
 ```

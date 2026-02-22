@@ -16,7 +16,7 @@ from transformers import (
     set_seed,
 )
 
-from politeness_classifier.data import (
+from tone_classifier.data import (
     DataConfig,
     ID_TO_LABEL,
     LABEL_TO_ID,
@@ -24,7 +24,7 @@ from politeness_classifier.data import (
     load_politeness_dataset,
     prepare_dataset,
 )
-from politeness_classifier.modeling import WeightedLossTrainer
+from tone_classifier.modeling import WeightedLossTrainer
 
 
 def parse_args() -> argparse.Namespace:

@@ -50,7 +50,7 @@ def main() -> None:
         cmd = [
             args.python,
             "-m",
-            "politeness_classifier.train",
+            "tone_classifier.train",
             "--model_name",
             "roberta-base",
             "--output_dir",
