@@ -1,2 +1,22 @@
-# Local exported model archives
+# Virtual environments
+.venv/
+.nlp_tone/
+venv/
+env/
+
+# Python cache/build
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+
+# Local data and outputs
+data/
+artifacts/
 artifacts_deberta.zip
+
+# OS/editor noise
+.DS_Store
