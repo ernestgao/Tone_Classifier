@@ -1,4 +1,4 @@
-# Politeness Tone Classifier (DeBERTa)
+# Politeness Tone Classifier
 
 This project fine-tunes `microsoft/deberta-v3-base` for 3-way tone classification:
 - `impolite` (API label `-1`)
