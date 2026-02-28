@@ -9,6 +9,7 @@ app = modal.App("tone-classifier-attribution")
 
 # Define image with all dependencies
 # 参考示例：使用 image.add_local_dir() 而不是 Mount
+# 注意：add_local_dir必须在最后，或者使用copy=True
 image = (
     modal.Image.debian_slim(python_version="3.10")
     .pip_install([
@@ -19,12 +20,15 @@ image = (
         "scikit-learn>=1.3.0",
         "datasets>=2.20.0",
         "pandas>=2.0.0",
+        "tiktoken",  # DeBERTa tokenizer需要
     ])
     .add_local_dir(
         ".",
         remote_path="/root/tone_classifier",
         ignore=["artifacts/", "data/", ".git/", "__pycache__/", "*.pyc", ".venv/"],
+        copy=True,  # 复制文件到image中，这样可以在之后运行命令
     )
+    .run_commands("cd /root/tone_classifier && pip install -e .")  # 安装tone_classifier包
 )
 
 
@@ -52,6 +56,8 @@ def run_attribution_analysis(
     import os
     
     # 代码通过 add_local_dir 已经添加到 /root/tone_classifier
+    # 添加src目录到Python路径，因为tone_classifier包在src/下
+    sys.path.insert(0, "/root/tone_classifier/src")
     sys.path.insert(0, "/root/tone_classifier")
     
     import torch
@@ -107,6 +113,8 @@ def run_large_model_attribution(
         use_quantization: Whether to use quantization to fit model in memory
     """
     import sys
+    # 添加src目录到Python路径，因为tone_classifier包在src/下
+    sys.path.insert(0, "/root/tone_classifier/src")
     sys.path.insert(0, "/root/tone_classifier")
     
     import torch
@@ -169,6 +177,8 @@ def run_attention_attribution(
     Run attention-based attribution analysis.
     """
     import sys
+    # 添加src目录到Python路径，因为tone_classifier包在src/下
+    sys.path.insert(0, "/root/tone_classifier/src")
     sys.path.insert(0, "/root/tone_classifier")
     
     import torch
