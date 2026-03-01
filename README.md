@@ -122,6 +122,58 @@ python -m tone_classifier.predict \
   --text "Can you please help me debug this issue when you have time?"
 ```
 
+### Attention-based attribution (last-layer `[CLS]` focus)
+
+Use this to locate tone-related words/phrases by:
+- taking `[CLS] -> token` attention from the last layer
+- for each token, expanding only to the right: `w`, `w w+1`, `w w+1 w+2`, ...
+- scoring each candidate phrase by average attention over its tokens
+- stopping expansion early using score-ratio criteria
+- globally ranking all single words/phrases and returning top-k
+
+```bash
+python -m tone_classifier.predict \
+  --hf_model_dir artifacts/tuning/<best_exp_dir>/hf_model \
+  --text "Can you please help me debug this issue when you have time?" \
+  --show_attribution \
+  --attribution_top_k 5 \
+  --attribution_max_phrase_tokens 6 \
+  --attribution_max_overlap_ratio 0.8 \
+  --attribution_drop_vs_initial_threshold 0.75 \
+  --attribution_small_drop_no_change_threshold 0.90 \
+  --attribution_drop_vs_prev_threshold 0.80 \
+  --attribution_content_words_only
+```
+
+Iterative erasure mode (repeat attribution after masking standout tokens):
+
+```bash
+python -m tone_classifier.predict \
+  --hf_model_dir artifacts/tuning/<best_exp_dir>/hf_model \
+  --text "Why are you stupid? You are the most retarded agent I have ever seen. I hate you" \
+  --show_attribution \
+  --attribution_top_k 10 \
+  --attribution_max_phrase_tokens 1 \
+  --attribution_content_words_only \
+  --attribution_iterative_erasure \
+  --attribution_iter_max_rounds 5 \
+  --attribution_iter_median_ratio 1.8 \
+  --attribution_iter_max_ratio 0.8 \
+  --attribution_iter_min_token_score 0.02 \
+  --attribution_iter_eval_top_n 8 \
+  --attribution_iter_remove_top_n 1 \
+  --attribution_iter_min_prob_drop 0.00
+```
+
+Use deletion-style erasure instead of `[MASK]` replacement:
+
+```bash
+python -m tone_classifier.predict \
+  ... \
+  --attribution_iterative_erasure \
+  --attribution_iter_mask_token ""
+```
+
 ## 7) Download model from Google Drive to local machine
 
 If your artifacts are on Drive and you want them on your laptop/desktop, zip first in Colab:
