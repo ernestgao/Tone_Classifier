@@ -36,6 +36,24 @@ def main():
         help="Number of ablation experiments (TA建议256或512)",
     )
     parser.add_argument(
+        "--context_keep_prob",
+        type=float,
+        default=0.8,
+        help="Probability of keeping each non-target sentence per ablation",
+    )
+    parser.add_argument(
+        "--min_context_sentences",
+        type=int,
+        default=1,
+        help="Minimum number of context sentences per ablation",
+    )
+    parser.add_argument(
+        "--random_seed",
+        type=int,
+        default=42,
+        help="Random seed for reproducible context sampling",
+    )
+    parser.add_argument(
         "--method",
         type=str,
         choices=["context-cite", "attention", "both"],
@@ -77,6 +95,9 @@ def main():
                         model_path=args.hf_model_dir,
                         text=args.text,
                         num_ablations=args.num_ablations,
+                        context_keep_prob=args.context_keep_prob,
+                        min_context_sentences=args.min_context_sentences,
+                        random_seed=args.random_seed,
                     )
                     output_file = output_dir / "context_cite_results.json"
                     import json
@@ -131,6 +152,9 @@ def main():
                 text=args.text,
                 num_ablations=args.num_ablations,
                 device=device,
+                context_keep_prob=args.context_keep_prob,
+                min_context_sentences=args.min_context_sentences,
+                random_seed=args.random_seed,
             )
             
             output_file = output_dir / "context_cite_results.json"
@@ -148,6 +172,13 @@ def main():
             for i, sent in enumerate(results['sentences'][:3], 1):
                 print(f"{i}. {sent['sentence'][:80]}...")
                 print(f"   Score: {sent['attribution_score']:.4f}")
+                if "marginal_contribution_std" in sent:
+                    print(
+                        "   "
+                        f"std={sent['marginal_contribution_std']:.4f}, "
+                        f"LOO={sent.get('leave_one_out_score', 0.0):.4f}, "
+                        f"n={sent.get('num_effective_ablations', 0)}"
+                    )
         
         if args.method in ["attention", "both"]:
             print("\nRunning attention-based attribution...")

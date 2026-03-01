@@ -2,6 +2,8 @@
 Modal app for running attribution analysis on GPU.
 Supports both gradient-based and non-gradient-based approaches.
 """
+from typing import List
+
 import modal
 
 # Define Modal app
@@ -16,6 +18,7 @@ image = (
         "torch>=2.1.0",
         "transformers>=4.42.0",
         "accelerate>=0.31.0",
+        "bitsandbytes>=0.43.0",
         "numpy>=1.24.0",
         "scikit-learn>=1.3.0",
         "datasets>=2.20.0",
@@ -42,6 +45,9 @@ def run_attribution_analysis(
     text: str,
     num_ablations: int = 512,
     max_length: int = 128,
+    context_keep_prob: float = 0.8,
+    min_context_sentences: int = 1,
+    random_seed: int = 42,
 ):
     """
     Run sentence-level attribution analysis on Modal GPU.
@@ -51,6 +57,9 @@ def run_attribution_analysis(
         text: Input text to analyze
         num_ablations: Number of ablation experiments (TA建议256或512)
         max_length: Maximum sequence length
+        context_keep_prob: Probability of keeping each non-target sentence
+        min_context_sentences: Minimum context sentence count per ablation
+        random_seed: Random seed for reproducible context sampling
     """
     import sys
     import os
@@ -84,6 +93,9 @@ def run_attribution_analysis(
         num_ablations=num_ablations,
         device=device,
         max_length=max_length,
+        context_keep_prob=context_keep_prob,
+        min_context_sentences=min_context_sentences,
+        random_seed=random_seed,
     )
     
     return results
@@ -100,6 +112,9 @@ def run_large_model_attribution(
     num_ablations: int = 512,
     max_length: int = 256,
     use_quantization: bool = True,  # Use 8-bit or 4-bit quantization for large models
+    context_keep_prob: float = 0.8,
+    min_context_sentences: int = 1,
+    random_seed: int = 42,
 ):
     """
     Run attribution analysis with large 70B models (non-gradient-based approaches).
@@ -111,6 +126,9 @@ def run_large_model_attribution(
         num_ablations: Number of ablation experiments
         max_length: Maximum sequence length
         use_quantization: Whether to use quantization to fit model in memory
+        context_keep_prob: Probability of keeping each non-target sentence
+        min_context_sentences: Minimum context sentence count per ablation
+        random_seed: Random seed for reproducible context sampling
     """
     import sys
     # 添加src目录到Python路径，因为tone_classifier包在src/下
@@ -157,6 +175,9 @@ def run_large_model_attribution(
         num_ablations=num_ablations,
         device=device,
         max_length=max_length,
+        context_keep_prob=context_keep_prob,
+        min_context_sentences=min_context_sentences,
+        random_seed=random_seed,
     )
     
     return results
@@ -209,6 +230,184 @@ def run_attention_attribution(
     return results
 
 
+@app.function(
+    image=image,
+    gpu="A100-40GB",
+    timeout=7200,
+)
+def run_batch_attribution_analysis(
+    model_path: str,
+    texts: List[str],
+    num_ablations: int = 512,
+    max_length: int = 128,
+    context_keep_prob: float = 0.8,
+    min_context_sentences: int = 1,
+    random_seed: int = 42,
+):
+    """
+    Run sentence-level attribution on a batch of texts with one model load.
+    """
+    import sys
+    import time
+
+    # tone_classifier package lives under src/
+    sys.path.insert(0, "/root/tone_classifier/src")
+    sys.path.insert(0, "/root/tone_classifier")
+
+    import torch
+    from transformers import AutoModelForSequenceClassification, AutoTokenizer
+    from tone_classifier.attribution import sentence_level_attribution
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"Using device: {device}")
+    print(f"Loading model from {model_path}...")
+
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
+    model = AutoModelForSequenceClassification.from_pretrained(model_path)
+    model.to(device)
+    model.eval()
+
+    batch_results = []
+    for idx, text in enumerate(texts):
+        start = time.time()
+        try:
+            result = sentence_level_attribution(
+                model=model,
+                tokenizer=tokenizer,
+                text=text,
+                num_ablations=num_ablations,
+                device=device,
+                max_length=max_length,
+                context_keep_prob=context_keep_prob,
+                min_context_sentences=min_context_sentences,
+                random_seed=random_seed + idx,
+            )
+            elapsed = time.time() - start
+            batch_results.append(
+                {
+                    "index": idx,
+                    "text": text,
+                    "ok": True,
+                    "elapsed_seconds": elapsed,
+                    "result": result,
+                }
+            )
+        except Exception as e:
+            elapsed = time.time() - start
+            batch_results.append(
+                {
+                    "index": idx,
+                    "text": text,
+                    "ok": False,
+                    "elapsed_seconds": elapsed,
+                    "error": str(e),
+                }
+            )
+
+    return {
+        "model_path": model_path,
+        "device": device,
+        "num_inputs": len(texts),
+        "num_ablations": num_ablations,
+        "batch_results": batch_results,
+    }
+
+
+@app.function(
+    image=image,
+    gpu="H100:2",
+    timeout=10800,
+)
+def run_large_model_batch_attribution(
+    model_name: str,
+    texts: List[str],
+    num_ablations: int = 512,
+    max_length: int = 256,
+    use_quantization: bool = True,
+    context_keep_prob: float = 0.8,
+    min_context_sentences: int = 1,
+    random_seed: int = 42,
+):
+    """
+    Run sentence-level attribution on a batch with a larger model.
+    """
+    import sys
+    import time
+
+    sys.path.insert(0, "/root/tone_classifier/src")
+    sys.path.insert(0, "/root/tone_classifier")
+
+    import torch
+    from transformers import AutoModelForSequenceClassification, AutoTokenizer, BitsAndBytesConfig
+    from tone_classifier.attribution import sentence_level_attribution
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"Using device: {device}")
+    print(f"Number of GPUs: {torch.cuda.device_count()}")
+    print(f"Loading large model: {model_name}...")
+
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    if use_quantization:
+        quantization_config = BitsAndBytesConfig(load_in_8bit=True)
+        model = AutoModelForSequenceClassification.from_pretrained(
+            model_name,
+            quantization_config=quantization_config,
+            device_map="auto",
+        )
+    else:
+        model = AutoModelForSequenceClassification.from_pretrained(
+            model_name,
+            device_map="auto",
+            torch_dtype=torch.float16,
+        )
+    model.eval()
+
+    batch_results = []
+    for idx, text in enumerate(texts):
+        start = time.time()
+        try:
+            result = sentence_level_attribution(
+                model=model,
+                tokenizer=tokenizer,
+                text=text,
+                num_ablations=num_ablations,
+                device=device,
+                max_length=max_length,
+                context_keep_prob=context_keep_prob,
+                min_context_sentences=min_context_sentences,
+                random_seed=random_seed + idx,
+            )
+            elapsed = time.time() - start
+            batch_results.append(
+                {
+                    "index": idx,
+                    "text": text,
+                    "ok": True,
+                    "elapsed_seconds": elapsed,
+                    "result": result,
+                }
+            )
+        except Exception as e:
+            elapsed = time.time() - start
+            batch_results.append(
+                {
+                    "index": idx,
+                    "text": text,
+                    "ok": False,
+                    "elapsed_seconds": elapsed,
+                    "error": str(e),
+                }
+            )
+
+    return {
+        "model_name": model_name,
+        "device": device,
+        "num_inputs": len(texts),
+        "num_ablations": num_ablations,
+        "batch_results": batch_results,
+    }
+
+
 @app.local_entrypoint()
 def main():
     """
@@ -225,6 +424,9 @@ def main():
         model_path=model_path,
         text=text,
         num_ablations=512,  # TA建议
+        context_keep_prob=0.8,
+        min_context_sentences=1,
+        random_seed=42,
     )
     
     print("\nResults:")
