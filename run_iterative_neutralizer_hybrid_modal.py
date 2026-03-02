@@ -4,7 +4,7 @@ Hybrid iterative neutralizer on Modal.
 
 Policy:
 - If comma-based clause count >= threshold, use sentence-level removal.
-- Otherwise, use token-level removal based on attention token importance.
+- Otherwise, use CLS-attention phrase top-1 removal.
 
 This script is added as a comparison group and does NOT modify the existing
 run_iterative_neutralizer_modal.py.
@@ -134,44 +134,32 @@ def _remove_sentence_by_index(text: str, sent_idx: int) -> str:
     return " ".join(kept).strip()
 
 
-def _clean_token(tok: str) -> str:
-    t = tok.strip()
-    # RoBERTa-style word boundary marker
-    if t.startswith("Ġ"):
-        t = t[1:]
-    # Common special tokens
-    if t.startswith("<") and t.endswith(">"):
-        return ""
-    # Keep alnum, apostrophe, hyphen only
-    t = re.sub(r"[^A-Za-z0-9'\-]", "", t)
-    return t
+def _pick_phrase_top1(attributions: List[Dict[str, Any]], min_chars: int) -> Dict[str, Any] | None:
+    if not attributions:
+        return None
+    for item in attributions:
+        phrase = str(item.get("phrase", "")).strip()
+        # phrase is already ranked by CLS attention score in modal function
+        if len(phrase) >= min_chars:
+            return item
+    return None
 
 
-def _pick_token_to_remove(
-    text: str,
-    tokens: List[str],
-    token_importance: List[float],
-    min_chars: int,
-) -> Tuple[str | None, float | None]:
-    pairs = list(zip(tokens, token_importance))
-    pairs.sort(key=lambda x: float(x[1]), reverse=True)
-    for raw_tok, score in pairs:
-        tok = _clean_token(str(raw_tok))
-        if len(tok) < min_chars:
-            continue
-        if tok.lower() in {"s", "t", "re", "ve", "ll", "d", "m"}:
-            continue
-        if re.search(re.escape(tok), text, flags=re.IGNORECASE):
-            return tok, float(score)
-    return None, None
-
-
-def _remove_token_once(text: str, token: str) -> str:
+def _remove_by_phrase_once(text: str, phrase: str) -> str:
     # Remove first occurrence, case-insensitive.
-    out, n = re.subn(re.escape(token), "", text, count=1, flags=re.IGNORECASE)
+    out, n = re.subn(re.escape(phrase), "", text, count=1, flags=re.IGNORECASE)
     if n <= 0:
         return text
     # Normalize spaces around punctuation.
+    out = re.sub(r"\s+", " ", out).strip()
+    out = re.sub(r"\s+([,.!?;:])", r"\1", out)
+    return out
+
+
+def _remove_by_char_span_once(text: str, start: int, end: int) -> str:
+    if start < 0 or end <= start or end > len(text):
+        return text
+    out = (text[:start] + " " + text[end:]).strip()
     out = re.sub(r"\s+", " ", out).strip()
     out = re.sub(r"\s+([,.!?;:])", r"\1", out)
     return out
@@ -196,7 +184,7 @@ def main() -> None:
     target_labels = {x.strip().lower() for x in args.target_labels}
     stop_label = args.stop_label.strip().lower()
 
-    from modal_app import app, run_attribution_analysis, run_attention_attribution
+    from modal_app import app, run_attribution_analysis, run_cls_phrase_attribution
 
     output_rows: List[Dict[str, Any]] = []
     with app.run():
@@ -320,48 +308,56 @@ def main() -> None:
                     cur_text = next_text
                     continue
 
-                # Token-level path for short comma-based texts.
-                att = run_attention_attribution.remote(
+                # Phrase-level path for short comma-based texts.
+                att = run_cls_phrase_attribution.remote(
                     model_path=args.model_path,
                     text=cur_text,
-                    aggregation_method="mean",
                     max_length=args.max_length,
+                    top_k=1,
+                    max_phrase_tokens=6,
+                    content_words_only=True,
                 )
-                tokens = att.get("tokens", [])
-                token_importance = att.get("token_importance", [])
-                token, token_score = _pick_token_to_remove(
-                    text=cur_text,
-                    tokens=tokens,
-                    token_importance=token_importance,
-                    min_chars=args.token_min_chars,
-                )
-                if token is None:
-                    status = "stopped_no_removable_token"
+                attributions = att.get("attributions", [])
+                chosen = _pick_phrase_top1(attributions, min_chars=args.token_min_chars)
+                if chosen is None:
+                    status = "stopped_no_removable_phrase"
                     item_out["rounds"].append(
                         {
                             "round": round_idx,
-                            "method": "token",
+                            "method": "phrase",
                             "comma_clause_count": clause_count,
                             "label_before_edit": cur_label,
                             "probabilities_before_edit": cur_probs,
-                            "action": "stop_no_removable_token",
+                            "action": "stop_no_removable_phrase",
                         }
                     )
                     break
 
-                next_text = _remove_token_once(cur_text, token)
+                phrase = str(chosen.get("phrase", "")).strip()
+                phrase_score = float(chosen.get("phrase_score", 0.0))
+                phrase_start = chosen.get("phrase_char_start")
+                phrase_end = chosen.get("phrase_char_end")
+                if phrase_start is not None and phrase_end is not None:
+                    next_text = _remove_by_char_span_once(
+                        cur_text,
+                        int(phrase_start),
+                        int(phrase_end),
+                    )
+                else:
+                    next_text = _remove_by_phrase_once(cur_text, phrase)
+
                 if not next_text or next_text == cur_text:
                     status = "stopped_no_text_change"
                     item_out["rounds"].append(
                         {
                             "round": round_idx,
-                            "method": "token",
+                            "method": "phrase",
                             "comma_clause_count": clause_count,
                             "label_before_edit": cur_label,
                             "probabilities_before_edit": cur_probs,
                             "action": "stop_no_text_change",
-                            "chosen_token": token,
-                            "chosen_token_score": token_score,
+                            "chosen_phrase": phrase,
+                            "chosen_phrase_score": phrase_score,
                         }
                     )
                     break
@@ -369,12 +365,12 @@ def main() -> None:
                 item_out["rounds"].append(
                     {
                         "round": round_idx,
-                        "method": "token",
+                        "method": "phrase",
                         "comma_clause_count": clause_count,
                         "label_before_edit": cur_label,
                         "probabilities_before_edit": cur_probs,
-                        "chosen_token": token,
-                        "chosen_token_score": token_score,
+                        "chosen_phrase": phrase,
+                        "chosen_phrase_score": phrase_score,
                         "text_after_edit": next_text,
                     }
                 )
@@ -433,7 +429,7 @@ def main() -> None:
         "max_rounds": args.max_rounds,
         "num_ablations": args.num_ablations,
         "clause_threshold": args.clause_threshold,
-        "policy": "comma_clause_count>=threshold -> sentence-level else token-level",
+        "policy": "comma_clause_count>=threshold -> sentence-level else cls-attention phrase top-1",
     }
     with out_summary.open("w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
