@@ -124,8 +124,18 @@ def prepare_dataset(
     max_length: int,
 ) -> DatasetDict:
     def _transform(batch: Dict) -> Dict:
+        texts = []
+        for x in batch[text_column]:
+            if x is None:
+                texts.append("")
+                continue
+            sx = str(x).strip()
+            if sx.lower() in {"nan", "none"}:
+                sx = ""
+            texts.append(sx)
+
         enc = tokenizer(
-            batch[text_column],
+            texts,
             truncation=True,
             max_length=max_length,
             padding=False,

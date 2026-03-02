@@ -1,0 +1,154 @@
+text,label
+"Practically , even if the authors can perform efficient optimization of weights in individual layers , when there are many layers , the alternating optimization nature of the algorithm can possibly result in overall slower convergence .",0
+"However, the applicant seems to have run out of steam before he developed a detailed plan for the proposed research and then completed the proposal. This is unfortunate.",0
+Please see the attached file.,0
+It is difficult from this reviewer's perspective to even call these studies.,0
+"As expected for an exploration heuristic , it seems that the noise weights of the last layer ( slowly ) tend to zero .",0
+"However , the construction seems artificial and these functions dont seem to be visually very complex .",0
+These snotty kids in quantum information,-1
+The authors should refer to the super interesting article on this topic in Wikipedia.,0
+There are much better embeddings on Sim Lex than the embeddings whose results are reported in the table .,0
+"Indeed , the confidence intervals are not plotted , and probably no conclusion can be reached because the curves are averaged only across three seeds !",0
+"A few more specific comments : Page 2 , Neural Guided Deductive Search paragraph : use of the word imbibes - while technically accurate , this use doesnt reflect the most common usage of the word ( to drink ) .",0
+"- It is important to show the contribution of the paper. What are the benefits of the proposed method compared to existing methods?  
+ - what about the computational burden of the applied metaheuristic optimizer?  
+ - Compare with other control techniques.  
+ - what about considering the unbalanced nature of grid (https://onlinelibrary.wiley.com/doi/abs/10.1002/etep.1634)  
+ - Fix equations (27) and (28), and others.",0
+""" Quality This paper demonstrates that convolutional and relational neural networks fail to solve visual relation problems by training networks on artificially generated visual relation data .",0
+""" Summary: The authors propose an estimator for the Shannon Mutual Information that is based on the Donsker Varadhan lower bound .",0
+This was the moment when I stopped reading. Obviously the authors are not familiar with the research field.,0
+i have no further comments.,0
+"This interesting effort reminds one of the biblical tale of trying to extract water from a stone in the desert; from this metaphor, you may gather that we conclude that the effort did not yield useful data.",0
+"Although this is a well written paper, it reminded me more of an essay that someone might write for a lit theory class rather than a generative scientific review.",0
+"Currently , I find the paper somewhat unsatisfactory and thus preliminary .",0
+Would be great to see the paper take this claim seriously and investigate it .,0
+"Section 7.2 on the richness of natural noise is extremely interesting for school children, but a little less to an ICLR audience. Try to provide some quality dear.",-1
+The resulting image can be subtracted from the original encoding to highlight problematic areas .,0
+The reported mean of 7.7 is misleading because it appears that close to half of your participants are scoring below that mean,0
+"Fundamentally , a convolutional filter stands for a operation within a small neighborhood on the image .",0
+"The differences ( i.e . , the claimed novelty ) from that work are the relative entropy and trust region method for training .",0
+"These theoretical results have not been verified experimentally. Therefore, they are wrong",0
+"3 . In section 2.3 , reasons 1 and 2 state the similar thing that output of MLP has relatively small change with different input data when angle bias occurs .",0
+"I dont really like the paper , though .",-1
+I found the paper uninteresting and the contribution seems quite limited .,0
+"The authors also seem to miss a potentially relevant baseline in Cross Stitch Networks. Besides these major issues , there are also a few minor issues I have with the paper .",0
+I think further work is required ( perhaps expanding the search space ) to resolve the current limitations of automated architecture search .,0
+I have no further comment. The manuscript looks fine.,0
+Paragraph below Equation 6 : The meaning of $ phi ( psi ) $ is unclear - Equation ( 7 ) : phi and psi seems inverted - Section 4 : The acronym MLP is used but never defined .,0
+""" "" without complicated mathematical inference "" ( on end of page 10 ) Heaven forbid we should expect our graduate students to know a bit of statistics !",-1
+"The submission could have been written with more clarity despite an interesting proposed framework. At times, the language and phrasing comes across more convoluted than how it could have been expressed. However, the proposed method is creative in its approach and would be a valuable contribution to the BCI field. Addressing constraints and concerns with the method proposed would also have been welcome, alongside the proposed future research within ALS.",0
+I do think that breakdown of networks by testing on increasing image variability is expected given that there is no reason that networks should generalize well to parts of input space that were never encountered before .,0
+The 28th International Conference on Machine Learning ( ICML 2011 ) .,0
+For example : i ) Eq .,0
+The english languish should be improved,0
+"This study is ta retrospective analysis and review of eleven-year data on Brucella species and biovars, which shows a wholemap of brucella distribution in SA. This work is valuable to Vet and CDCs. I have some suggestions as follows:1. biotyping test somtimes is unstable, if some strains are atipical. 2. Strains biovars distribution is listed as table 5, it seems more unclear, figure is more clear. 3. Please add some references from China.",1
+"Hence , the distribution changes and subsequent nodes are dependent on previous ones .",0
+"The fact that the question of this paper has never been askedÂ should, on balance, count against the paper.",0
+The paper is an old fashioned one,0
+"I have a few comments and questions : 1 ) Clarification : In Section 2.2 , do you really mean bit wise multiplication or element wise ?",0
+"This paper extends the work of BalleÌ et al. from GSM model to GMM model, and also added an autoregressive model with the hyper-prior. By doing that the paper reached a better performance compared to baseline approaches including Balle et al. As I don't have deep understanding of the context and the previous literature, I can't judge too much of the technical quality here.",0
+"On incompleteness , it is not obvious how the classifier is used at test time .",0
+"The experiments demonstrate that Fast GCN is much faster than the alternatives , while suffering a small accuracy penalty .",0
+"However, bad language, weird sentences, half true statements and even nonsense statements continue throughout the draft, I refuse to review more of this draft until these language issues get fixed properly.",-1
+The use of Re LU activations in IRNNs ( with identity initialization of the hidden to hidden weights ) and RINs ( effectively initialized with identity plus some noise ) makes the recurrence more linear than with squashing activation functions .,0
+I found it very jarring .,-1
+Its disappointing .,-1
+The authors are unpromising .,-1
+"I cannot make out signs of independent thinking, work beyond the state of the art, or anything ground-breaking.",0
+"Please also consider making the submission looking less like an advertising booklet rather than a research paperâ€”at least, try not to mention the XXX system in every paragraph.",0
+"The authors showed the differences at scale 3, and so what?",-1
+The paper is technically horrific .,-1
+The experiments section currently looks rushed and lacking in depth .,0
+""" This paper tries to create a mapping between activation norm penalties and information bottleneck framework using variational dropout framework .",0
+What is the exploration strategy in the experiments ?,0
+"Like Dr Who's Tardis, the inside of the paper is bigger than the outside.",-1
+Authors propose a method which uses a Q learning based high level policy which is combined with a contextual mask derived from safety contraints and low level controllers which disable certain actions from being selectable at certain states .,0
+Reviewer 1: The questions in the reviewer comments have been addressed properly in the revised manuscript. I have no more comment before publication. Reviewer 2: I totally agree with the reviewer 1 that this paper is still difficult to read even after revision.,0
+The English language ranks this manuscript among the top 5 worst manuscripts I have ever reviewed,-1
+The proposed concept is only analyzed in MLP with Sigmoid activation function .,0
+"Fully general nonlinear ICA is ill posed , as shown already by Darmois ( 1953 , doi:10.2307/1401511 ) .",0
+"Line 156-160; this is the only correct, sensible and interesting finding of the paper.",0
+"Although the result are good and the method interesting , I think that the technical contribution is a bit thin for a ML conference and this paper may be a better fit for a medical imaging conference .",0
+"However , earlier they admitted that Whether or not a similar conjecture holds for image manifolds is unclear and should be investigated in future work .",0
+The key idea of adversarial training is adapted in this context as comparing samples from the joint distribution and the product of the marginals .,0
+"In general , I think the paper is written clearly and in detail .",0
+"There are numerous problems with this paper, starting with the title.",0
+"I'm sorry, this topic is just not very interesting",-1
+Reviewer #1: 'The project can hardly be described as high risk/high gain',0
+The word 'asses' should read 'assess',0
+"Overall the paper appears rushed -- the acknowledgements section is left over from the template and there is a reference to figure "" blah "" . Might be the same speed of the authors meteoric career.",-1
+This analysis is performed in the context of the Independence of Cause and Mechanism ( ICM ) framework .,0
+Discussion of results relative to baselines is somewhat lacking .,0
+These aspects may be a sign of convergence issues .,0
+"Figure 1. What does ""Minâ€ in panel c stand for?",0
+The paper is good for publication,0
+"In the caption to Fig . 3 the authors state "" The OMIEGAN generator learns a distribution with a high amount of structured noise "" , which I find hard to understand .",0
+"Currently , this is not clear .",0
+The findings and discussion section can be better written. More literature is needed. You can find some fixes in the attached file. Sentences of the same meaning have been repeated many times in the text.,0
+The authors are also treating what might be called a “boutique” version within a model that is already considered by many to be a “boutique” model.,0
+Please see attached review file.,1
+"While they provide some good references to support this statement it would have been interesting to show whether they actually improve TTA under image parameter variations """,0
+claiming 'insights' that rarely amount to very much beyond the bleeding obvious. [..] the problem with jargon is that 'any idiot can pick it up and have a go,-1
+They do not show convincingly that the network managed to learn interesting class specific and class agnostic representations .,0
+Could you please make the representation more consistent .,1
+This manuscript is obviously not suitable for publication in high impact factor journals.,0
+I find the paper lacking a lot of details and to some extend confusing .,0
+On the application of OMIE to the Information Bottleneck ( IB ) problem : How was the optimization of the objective exactly performed ?,0
+"In order to find such parametrized policies , the approach combines deep RL with a variational inference approach ( ELBO optimization ) .",0
+Some other concerns and questions : - It is not quite cleat what P is .,0
+Is this due to nonlinear mixing ?,0
+All the comments have been successfully addressed,0
+"When the network is trained for several iterations and becomes more settled , it is not clear how "" angle affect "" affects gradient vanishing problem .",0
+"- The proof is not given , and I dont think the proposed estimator would be consistent if you use a fixed class of networks T . There is a necessarily a bias between the class of functions the network can approximate and all bounded functions .",0
+"The paper mainly focuses on a specific problem instance , where the weight vectors are unit normed and orthogonal to each other .",0
+"The idea is interesting and the result looks promising , but I do not understand the intuition behind the success of analogizing graph with images .",0
+The revised paper can be accepted.,0
+"The paper descends into nonsense, never to return, on line 44.",-1
+"Experiments show its usefulness though experiments are limited """,0
+Unfortunately I was hoping for more.,0
+"In any aspect that this paper is different from XXX et al., (20XX), it shouldn't be",0
+"have you obtained consent, albeit verbally, from an ethics committee?  
+ or specify that the study was carried out, in accordance with European law (O.J. of E.C. L. 358/1 12/18/1986), and USA laws (Animal Welfare Assurance No A5594-01, Department of Health and Human Services, USA) in accordance with the Legislative Decree n. 193 of 6th April 2006.",0
+Contribution : - This paper proposes a new object counting module which operates on a graph of object proposals .,0
+Have you no command of the English language?,-1
+Training the classification features along with reconstruction features does not seem to give any significantly new insights .,0
+"This paper must be rejected, because the work it describes is clearly impossible.",0
+A multi instance ( MIL ) approach is used to train the model by backpropagating only instances that generate min and max values at the min max layer .,0
+"Still , it would be nice to know what is going on here .",-1
+"The journal editor stated that our manuscript was rejected. We were shocked that the reviewer's comments read ""fuck youâ€ (handwritten on a torn strip of paper scotch-taped to the editor's letter to us)",-1
+"Dear authors,  
+ The review article needs a lot of improvements in terms of ideas, sections arrangements, as well as language. Please check the attached file.",1
+Why the same intuition of UIE can be applied to RNNs ?,0
+"It is not very clear why making such changes in the energy would supposedly make the results better , and no further discussions are provided .",0
+The central idea is that a single encoder decoder network can be cast as an alternating minimization problem .,0
+The experiments demonstrate that this architecture reliably solves the addition task for up to 400 input frames .,0
+There is clearly a dependency and change of distribution .,0
+Minor - I thought there were several unnecessary tangential discussions that didnt really add much to the paper .,0
+I have difficulties identifying the aim and added value of the present study to this topic.,0
+Several books that are cited but there is no evidence that they have ever been studied and understood.,0
+This paper is fluently written and meticulously researched. I do not recommend it for publication.,1
+"- t The paper shows how state of the art relational networks , performing well on multiple relational tasks , fail to generalize to same ness relationships .",0
+A brief reminder of what the principle of weight decay is would also be relevant for the paper to more self contained .,0
+This work also assumes that other cars in the vicinity can be simply observed without any perception uncertainty or even through occlusions .,0
+Are you kidding?,-1
+"In few shot classification , the sequence length can be known a prior .",0
+"Thus, there is nothing new in the manuscript that warrants publication in Science or most other scientific journals.",0
+The paper is missing further centralized baselines .,0
+"Further , the phenomenon is only tested on random initialization .",0
+"However , they only explore this relationship under identical objects .",0
+""" The authors propose a model for sequence classification and sequential decision making .",0
+Accept,0
+"1.Are the samples sequenced? If yes, it will be significant with phylogenetic examination of species with other species. Please add this to refill if possible.  
+ 2.In the working method section, by adding the reference below, the parasitic amount of the slides should be inserted.  
+ 3.It is better to add a paragraph to the characteristics of Babesia species in the introduction.  
+ 4.Re-check structurally and grammatically.",1
+"Please also consider making the submission looking less like an advertising booklet rather than a research paper—at least, try not to mention the XXX system in every paragraph.",1
+The length of this review is occasioned by the density of error and misconceived arguments in this manuscript. As a service primarily to the authors I have decided to actually try to convey a sense of the extreme nature of the problems encumbering this submission.,1
+To justify these conclusions and spur the authors onto the better things they are undoubtedly capable of I append some details.,1
+Necessary comments are being attached.,0
+The paper seems well-written and technically sound. I suggest to improve the presentation and the clarity of section 3.1.,0
+"Even better : "" P ( male = 1 | mustache = 1 ) = 1 "" is the chances for acceptance.",-1
+"I'd like to thank the auhthors for their revisions and clarifications. The extermely narrow confidence intervals remain a bit vague to me; I would suggest to either modify the axes of Figure 2, as it only displays a block now, or drop the figure and put the info in the text or in a table.",1
+"However , the metric that using a pre trained style classification network has issues in terms of evaluating how well the original content is preserved .",0
+""" Summary : The paper extends the the recently proposed Boundary Equilibrium Generative Adversarial Networks ( BEGANs ) , with the hope of generating images which are more realistic .",0

@@ -1,0 +1,1106 @@
+text,label
+What are you trying to say? You want a Registry Editor?,1
+"*""I am going to be developing a real-time web application""* - good luck with that! How are you planning to get around the internet latency?",-1
+Interesting. Are these log-based analytics or something like Google Analytics?,-1
+That works better. Do you reckon it may even be worth listing the case in the introductory paragraph?,0
+If something already exists. Why would I take the overhead of maintanance ?,-1
+"@Michael, now think of the relationships between Cows and Herds, and between Cows and Cartoons. Are there any many-to-many relationships there?",0
+Nope. Do I need to start one?,-1
+"The policy is quite clear; userids set up for the purposes of harassment or vandalism are blocked indefinitely.  That said, what policy is it that you think I'm not following?",-1
+For #2: May there ever be two edges directly connecting node _X_ to node _Y_? For #5: does this mean that properties A and B are numeric/summable?,1
+"Is this sculpture your own work? If not, who made it?",0
+Since you already had the filmography listed I cut some films from the intro which you didn't tell much else about. Are you happy with my changes?,0
+I remember your commenting on this about seven years ago.  What's your view today?,0
+I'm always amazed at how many questions are similar to this. Are people itching to write code like this?,-1
+Saw your work on <url> I can't tell -- do these clouds follow the plane around while Mach >=1? Or is it a phenomenon that occurs just at the moment of Mach = 1?,0
+"Clarification: Do you mean to run the container itself under a hot tap?  Is the result really ""good as new?""",-1
+"A regular expression here seems like overkill.  Why not just `explode('#','http://blah.com#removethis',2)[0]`?",-1
+"Hi, somebody added this <url> to the <url> article. Is it appropriate?",0
+"I want a pony.  Now we're done sharing what we want, did you have a question?",-1
+"What benefits would you have from doing it? I think it is more trouble than it's worth... After all, the names should be read by the users anyway, shouldn't they?",-1
+"WHADDAFUCK YA GONNA DO TO ME, HUH BITCH!?????????",-1
+"What error message do you get, if any? How is the table Employee defined?",0
+Duplicate of [Why does my computer freeze when I unplug my headphones?](http://apple.stackexchange.com/questions/828/why-does-my-computer-freeze-when-i-unplug-my-headphones)?,0
+"What do you mean by ""All rows are sorted, and all columns are sorted""?
+for example, [1,4;2,3],how is that sorted according to your precondition?",0
+"...This may just mean that I'm willing to expand my view of the word ""ancestor"" arbitrarily far, although finding a ribosome-like organism sans nucleic acids and a replicating RNA-like organism sans proteins would probably break it. On the other hand, it'd be really cool and help explain abiogensis, so, who'd really care?",0
+Thank you ''very much'' for partaking in my effort to have a listing of stable article revisions. How do you suggest we get this project off the ground?,1
+"I assume you've already considered using the Featured Image and decided it doesn't meet your use case? (Are these a large number of existing posts, or are you designing a system for posts to be added in the future?)",1
+"I am looking for help improving the dermatology content on wikipedia. Would you be willing to help, or do you have any friends interested in derm that would be interested in helping?",1
+"Do you also consider this ""alternative view"" http://en.wikipedia.org/wiki/Holocaust#Holocaust_denial ? How about this  http://en.wikipedia.org/wiki/Denial_of_the_Armenian_Genocide ?",0
+"Why do you mean by ""release"" and ""delete"" here? Does ""delete"" mean usage of `delete`, or erasing from the map?",-1
+"I have a question about this topic. Consider the general component diagram, not the instances one: should we draw two sockets (connection) from the philosopher to the dining room / fork interface or is one enough?",1
+"in this case the noun has to be capitalised, so ""Erdene Zuu monastery"" would be ""Erdene Zuu Monastery"". And why did you move <url>, what other monastery with this name exists?",-1
+"Can we assume anything about the alphabet? a-z, alphanumeric?",0
+"What exactly do you mean by a ""build""?   How does the ""legacy"" part change your question?",0
+How long does it take to complete the process? Will you allow more than one web user simultaneously?,0
+"I find that ""GIS for the masses"" is an oxymoron, I end up calling it computer mapping or web mapping.  Does your question include browser based mapping apps?",0
+"What are you protecting, exactly? You're worried your OS X install is attacked?",0
+why the downvotes? are the code golfs forbidden now?,0
+"How did you import it into the project? ""Add to build path...""?",1
+"Hi- The Magnificent Clean-keeper- I note that you recently removed a contribution I made to the <url> page, citing lack of ""notability"" as the reason. Iu2019m not saying you where wrong to do so (notability is an important criteria in the Wiki project), however, since the definition of ""notability"" is hard to pin down, could we discuss this particular instance, in greater detail, at some point?",1
+What is the definition of `buffer`? Is it a local variable?,0
+What do you mean it is still running?  Is it not at 100%?,0
+@Mark Trapp: Not constructive? Really?,1
+"4. I had once felt that the Euroleague, Italian and Greek leagues were the top leagues. If I were to choose selected European leagues from this page <url>, do you have any thoughts on which ones are important?",1
+"<url> is at it again, adding in the ""in the Premiership"" content you & I successfully merged several weeks ago. Could you perhaps also drop a note on his talk page asking him to stop?",1
+"What are you asking? How to modify a stored procedure using SQL, or how to send a SQL command to the server?",-1
+"Interesting -- strong support promised without any reference to <url>, <url> and <url>?   Not good form, eh?",0
+"Anyway, the point is that the bot is editing against <url>. Can you let me know whether you intend to continue or whether we can agree that you'll stop using it to do this?",-1
+"Holy steaming <url>.  I presume you know about the <url>, yes?",-1
+Try to serialize the FormData instance and compare the XML output with the XML you are trying to deserialize.  Are there any differences?,0
+I think <url> will require checkuser intervention. How do I relist it?,0
+"Hello. Since you have contributed to <url> in the past, could you spare a minute to discuss the fate of <url>?",1
+"I'm sorry, but I don't see the edit if you're referring to the <url> article.  Are you referring to something else?",1
+What do you mean by missing file songs? Do you have items in your iTunes library that are non-existant of your hard drive?,-1
+Unfortunately the 4chan page you linked to in <url> does not exist now. Can you give a pointer to what is involved?,0
+I wonder if your instance(s) of Persist are in a local scope that gets destroyed upon exiting that scope. Have you looked into that?,1
+"It's worth noting that in some companies, the line between ""design"" and ""marketing"" is imaginary. What becomes of your question when the person who does design is also involved in marketing?",-1
+sir.. can i still write an article? do you have any facebook account?,1
+"Whats wrong with `foreach($array as $key => $value)`? Or, asked the other way around, what's the point using `foreach($array as $value)` when you actually need `$key` somewhere down the road?",-1
+"Sure, we tell you some good ideas, you make mad money.  Are we suckers?",-1
+If it is always complete using numbers from 1..N you could just write the values 1..N to the input array.  So I'm guessing thats not going to cut it?,-1
+Are you unable to change it back? Or are you just curious as to how it got changed?,1
+I take it from your example that what needs to be indexed is a list `m` entries taken from a set of `n` known elements? Is a lookup table feasible?,0
+"Does Qt give you any kind of warning, can you post the real path too and the output of `ls -la images/Load.png`? Perhaps you have configured the toolbars to display only text?",0
+Where are you executing the query? Do you get any errors?,0
+"Do your keywords always come in pairs? What's more important, having more matching words or better proximity?",0
+SO answers homework questions too? Really?,-1
+I'm not sure what you're asking... it is final; it is marked as such.  Are you wanting to test that its value never changes during the execution of `method`?,-1
+"Title could be a bit better. Just to be clear are you asking ""What is the difference between C++ and Java on the Android Phone?""",0
+Good question. Does the term artist imply some level of talent or simply someone who creates artistic works?,0
+You will need some code on the server side for this to work. What environment are you going to host this in / what scripting languages might be available on the server side?,0
+"@Vor: Isn't this the same as asking ""Which problems can be polynomial-time Turing reduces to integer factorization?"" Or did you intend to ask something else?",0
+"Then can you suggest me something, how should i do it. Because if i sort the array, i loose track of indexes, and i need to know which index the value came from??",1
+"I have indicated on <url> that, should you be desyopped, I will immediately re-nominate you for sysop.  Would you accept the nomination if I did?",1
+can you clarify a bit. when you said 'I thought about adding some lists about science (500 users)...' are you talking about Following a list created by another Twitter user?,0
+"Right, so the links on your userpage? And what is the ""article"" you want me to check over?",-1
+are you sure it is not an 0606 component(ie. Measurements of the device)?,0
+OK I've created the following test page: <url>. Tell me if you have a problem with it?,1
+"Does it do anything other than deselect it?  That seems a little redundant, why not just uncheck the checkbox?",-1
+"What language is this? (apologies for ignorance, assuming C#?)",1
+Something's still not right with me here. Think you can perform one of those cleanups?,-1
+I see you haven't even tried posing your issue as an actual question on this site.  Care to give it a try?,1
+"Could you please elaborate that? Does it work as I think: you append the databases, then use scan>check duplicates ?",1
+I noticed you delinked 1993 in the MGM Grand Las Vegas article <url>.  What is MoS?,0
+"@cjm: Good point.  Are you creating this PDF yourself, or is it from some 3rd party?",1
+"1)Is |S| the number of edges after removing the leaves of the DFS tree or the original random graph?
+2) By matching you mean the maximum matching or any matching is ok?",0
+"Actually it's probably a structure. I bet you declared `struct mystruct { int something; }` and then tried `struct mystruct myobj` followed by a `myobj->something` when you meant `myobj.something`, right?",0
+What for did you analyse the two ArbCom cases Piotrus-Ghirla and Eastern European dispute? Was that suggested to you by Sciurinxe6 during your off-wiki discussions for 20 days?,-1
+"Hey, long time no seeing! How's stuff?",1
+This is the sort of question where there is no single answer. Wondering it this qualifies for a wiki?,1
+"Hi Kumioko, with regards to <url>, I'm not really seeing how <url>, a British WWII admiral is part of the US wikiproject? Were you using a category as your basis?",0
+"<person>, with whom you discussed linkspam in 2006, has returned. Could you offer your views on his talkpage?",0
+Please see <url>. Can you help?,1
+"I read the diff upside down or something... Glad someone is keeping an eye on me :) I'm mainly doing stuff over here <url> these days, what are you up to currently? Still concentrating on the Ui Imair?",1
+"How do I ""inform a Wikiproject""? I would have liked to do so in several articles, but is this not <url>?",0
+It makes a difference if they are sorted in ascending or descending order.  Which is it?,-1
+"Hey ! There is a little problem on that image you uploaded from Lambiek : Caran d'Ache is supposed to be 2 years old in 1860, but his ''moustache'' and tallness let me think he is not so young... Do you know where to find the real date of the picture ?",0
+Have you tried simply turning your muffins at some point in the baking process?,-1
+have you tried any other patchlevel of 1.8.7 ? ruby-1.8.7-p352 for example ?,1
+Thanks for your help on <url>.  Any advice on edits we should make to get it up the quality scale?,1
+"At the request of <url>, here <url>, I've created a set of quality and importance Categories for Rail transport in Germany, here: <url> and <url> and I've set up the links in Wikipedia 1.0 assessments. Could you tweak <url> so that it copies the WPTrains ""class"" parameter across into Rail transport in Germany and to allow the assignment of ""importance"" for Rail transport in Germany?",0
+1. Could you please give us a small but complete example showing the problem. 2. Have you already tried replacing the float package by floatrow?,-1
+"Opps, how come your archive links to the article's talk page archive? I'm going to fix it for you, ok?",1
+"I haven't ever experience `GetClientRect` returning anything but the full client rectangle, no matter what overlaps it or if it is fully on-screen.  Are you sure?",1
+Hi.  Why did you blank the redirect at <url>?,0
+"Yeeesh. Is it just me, or is it very difficult to follow these ""stream of consciousness"" postings?",-1
+"@MitchWheat Thank you for your input.  Could you explain why a serious question about programming that requires some thought is noise while (presumably) questions like ""please do my homework for me"" or ""how do I do something trivial in .net without bothering to read the docs"" are not?",0
+They are all good: will you upload them to <url>s? Where is the water used now by the way?,0
+"Of that <url> I just went down and overhauled, you and two <url> <url> were the only (active) Texans I could imagine being interested in getting the ball for a <url> rolling.  Interested?",0
+I think I'm going to use Treehouse of Horror for Halloween (Scorpion asked me in IRC for that date). How about October 30 or Nov 1 instead?,0
+I would load them into commons.  How do I do that?,0
+The title says 8088 and the tags say 8086. Which one do you need?,0
+"I don't understand.  If you choose S' = {r} where r is the root, then \sigma(r) = V.  Do you mean sigma(s) to be all the elements less than or equal to r and greater than or equal to s (where less and greater are the lattice partial order)?",0
+"It seems to me that we have a language gap here. Reading your comments, are you trying to ask what happens with logic devices when you have a very slowly transitioning, or even static intermediate signal on an input to a logic gate?",0
+Agree. Who the hell came up with that in the first place?,-1
+"Thanks for doing the DYK update - I saw it was overdue, but had no time to do the notifications (though I would have had time just to copy to the main template and purge the cache). Has there ever been discussion of having a bot do the notices (perhaps with the name of the admin who did the Update given, in case there were questions)?",0
+"The way I'm reading it back via glReadPixels ; however, I may be doing this wrong. What is the correct way to do this?",1
+"Why not keep the numbers in memory? Should be what, 100 MBytes?",-1
+@BlueRaja: the distance function is only part of the problem. How do you pick the colors from the color space so that the distance between them is maximal?,0
+Link? Is this homework?,-1
+Cannot implicitly convert type 'object' to 'System.Web.UI.DataVisualization.Charting.SeriesChartType'. An explicit conversion exists (are you missing a cast?),0
+"Can you be a bit more specific about what you want in the two result arrays?  E.g. @left = ('a', 'd', 'f', 'g', 'h');  @right = ???",0
+How is it awkward? Which version of VS (they have different levels of js intellisense support)?,-1
+"I looked at all the provinces and regencies listed on <url> - so that trick is mostly played out. I'm going down the alphabet now and I'm at the R's - if you want to work, maybe you could start at the end of the alphabet so we don't interfere with each other, meet in the middle?",0
+@ring0: Good idea ! Is there a way to do so ?,1
+I have variation of this problem: How do I make instruments stop at certain point? is there some option to  make it stop when UIA script finishes?,0
+did you get it to work? how did you do it ?,0
+It looks like you have done considerable work on <url>.  Could you add at least some references to the article in keeping with <url>?,0
+Where are you sorting `dateArray`? Or you aren't doing it right now?,-1
+"Excuse me if this is an ignorant question but which are ""summer savory"" herbs?",0
+"That sounds fine, but why would you want somebody who knows nothing about the show to write them? If you are informed about it, wouldn't you be a good person to do it?",-1
+Debug adds lots of overhead to a program. Why are you assuming things are wrong?,-1
+@H_S: After quick skimming non of those on-line references don't indicate that `p=(exp(r.*del_T)-d)./(u-d)`. Where did you get this?,0
+"Can you provide any details about the app you are debugging? web app, wpf, winform, c++?",0
+Do you get any sort of error in Instruments when you plugin your iOS device? Is your iPhone Developer Program Membership up to date?,1
+"I've finished with that category, yes. Would you like a hand clearing it?",1
+"Why have you included the Putnam Line in the MTA infobox, when it was never operated by the MTA (excepting the Marble Hill stub, which is hardly on a par with the Hudson Line, Harlem Line, etc.)?",-1
+"Are the Maroon Berets the four Army commando brigades? If they're not part of the army, which service are they part of?",0
+"ED... They have drugs to fix that now, don't they?",-1
+"Firstly, I think we're gonna need to see some source for the page you're having problems with.  Secondly, have you tried a ""View source"" on the resulting page to see if there's anything else in there?",0
+"The Field API is a very large section of the Drupal API. What, specifically, are you trying to accomplish?",-1
+"Your recent edits with Dab solver seem to be removing rather a lot of links, without mentioning this in the edit summary. Is this intended behaviour?",-1
+"What this statement do is giving you ""no hire"" on interview and severe pay cut if found in production code. May be professor will like this answer? :)",-1
+"Who plays white? In X vs. Y, is X white?",0
+"I think if you were to consider the DAL as a seperate entity and imagine that it was your sole responsibility whilst all consumers was work done by a third party, you would probably raise an exception for Access Denied - most of the framework would.  If however, you want to avoid _exception logic_ it would be helpful to provide functions to help the consumers determine if they have sufficient access to data - though that sounds like more of a business logic issue, which is it that controls the access?",1
+"And what does ""outside"" mean? Manually from the shell, via cron-job, etc?",0
+what is leftborder and rightborder? positions inside the string?,0
+"Is `n` fixed? I.e., do you need `n` groups regardless of whether `n-1` groups would give you a ""better"" partition?",0
+"Hi Orlady, I wanted to seek your advice....Information on FIBAA is available in the German language on Wikipedia : http://de.wikipedia.org/wiki/Foundation_for_International_Business_Administration_Accreditation. Is there any chance to have it in English?",1
+"IB can be a pain with UITableView sizing. Have you considered doing this programmatically, initializing the tableView with a style and then setting the frame to a specified frame with CGRectMake(x,y,w,h)?",1
+"By ""protective plates"", do you mean [fenders](http://bicycles.stackexchange.com/questions/573/whats-your-most-useful-cycle-accessory/587#587)?",-1
+Your bot has ruined the formatting on ref 2 in <url>. Would you care to either call off the bot or suggest an alternate formatting that will work better?,-1
+"Also, does it have to be a hard disc? Could it be flash memory instead?",0
+"3.1 is in beta, it's less likely for documentation to exist for functionality that is subject to change. Don't get me wrong though, i'd be curious to see some examples myself in anticipation of 3.1... (i tend to use the stable branch as i spend more time supporting whatever the majority of users are on).... (or is this in 3.0.2?)",0
+I don't really get the logic. What's similar about [2] and [5] and what's equal about titles...?,-1
+"Is 10 months sufficient time to relist a AFD?  Not too soon, correct?",1
+"How large is the file, would it fit into memory. How do you separate the emails within the file?",0
+"Does it have to be Linux? Have you considered ZFS (An older, stable version 14) on FreeBSD 8.1?",0
+This is the first time I've heard of this. What is it?,1
+"Of course it does, and the damage is irreparable too, close to that from a large scale nukular explosion. I gather you had a disagreement with your parents over this, and you want someone to prove them wrong?",0
+Great job. Any chance of a full date of death for him?,0
+"@Dave I have updated my answer to include a link to a chart showing the missle bonus for the different shield sizes. Since you appear to have access to the manual, could you please confirm whether the information in the link is correct?",0
+The new features of Hotcat are excellent: whom do I thank for this? :-) Are you still its maintainer?,1
+@Kerrek SB : What do you think about when talking about a formatted output ? stringWithFormat does not do the job ?,0
+"Moving the cable around and such I have not been able to spontaneously reproduce the issue, however it is happening a bit less frequently now... still annoying though! If this question is better placed in SuperUser, could someone move it please?",0
+"no offense, kid, but you're trying to build a chess game and are struggling to put labels on a board? Don't you think this kind of program is a little bit out of your league?",-1
+"Just curious, how much is a bunch of fresh mint where you are?",0
+"What are you storing in the picture field? Are you storing the actual picture or a merely a path and file name ""link"" for the picture?",0
+"""Oh, that"", eh? So, you ''wrongly accused me of making death threats'', and that's all you have to say for yourself?",-1
+What do you mean with `Good Effect`? What do you have so far if you don't want plugins?,0
+"So say a sample has size n = 40000.  Then you have one such sample of random variates from A, and 100 replicates each for B, C and D?",-1
+"I think those are actually two questions, none of which I understand properly. Could you please expand your questions, so that we get of better understanding of what you're looking for?",0
+"I'm looking in the `xmmintrin.h`, but it does not contain `__FPU_SETCW` or any mention of `FPU` at all. Are you saying I have to add some lines?",0
+"Looking through the dicussions on the DRM Talk page, I'm failing to find the point where consensus was reached.  Would you mind pointing it out to me?",0
+"tried loading with image/1.png external, and it worked as for stacktrace none was given when app was starting only nullpointerExeption when image should be shown. Since it worked on from external do i still need images inside jar file?",0
+Can you confirm that your event is firing on each window resize and not just when the window loads? Can we see you code somewhere?,0
+ya but in upper left side of your xcode you specified simulator and debug? or device and debug?,0
+"What version of MATLAB are you using, and what version of MATLAB was current when the camera and MEX file were manufactured.
+
+Has this ever worked before for you?",0
+How static are we talking? No database?,0
+"The normal way is: You startx on machineA, open xterm, ssh machineB, start there the applications you want which then run on machineB bit are displayed by machineA's xserver. Could you explain with more detail why this isn't sufficient for you and what you want to achieve instead?",0
+GPRS? Do you mean GPS?,0
+"Your question is unclear. Do you mean extract the addresses from each incoming email and save them somewhere, or extract all the addresses you've ever sent or received anything from ever?",-1
+What's with all the crap behind him? Was this at a signature desk?,-1
+I have unexplained pain. What do you think of this <url>?,0
+Adam I'm running into the same problem. Did you find a solution?,0
+"""a wikipedia addict..."" -- Who, '''''me'''''?!?",0
+Maybe I'll sound stupid but... shouldn't it be `a[i][j]` ? Does the other syntax even work ?,1
+"good question.  
+Is the JVM open source (hotspot) or are the cools such as the javac compiler open source as well?",1
+"Hey, I noticed you protected the article <url> from being recreated. Will you be able to reverse that If I recreate the article with sourced, factual, real world content?",0
+"@Zoozy: As Andrew asked, What led you to this problem? What are the practical uses of such a sequence?",1
+"Nothing jumps out.  You *did* restart VS after copying the visualizer, right?",-1
+"""Malbrain, I can't understand you, in either your comments to the talk page..."" is the criteria being used by user WHOSASKING to make reverts of my edits.  Since when does any one editor have to understand all the material of a subject known by the other editors?",-1
+"Bread has *plenty* of water. Do you mean bread *crumbs*, which are typically used in batters?",-1
+"I used the <url> tool, and clicked rather a lot. I'm happy to switch it on for your account, if you'd like?",1
+What you want to read  from the URL? can you please explain ?,0
+"I would take a look at the question what-security-risks-does-ip-spoofing-bring . I feel these questions are very similar, if not duplicate?",0
+"By scaling, you mean generally non-uniform scaling here? E.g., a square cam become any rectangle?",0
+"If the zeros are not valid data, why are they in the vector to begin with?  If they are valid, why would you not want to StdDev to account for them?",-1
+"""Huawei Device"" - is this a phone, a tablet, or what? Do you have a model number to throw at us?",0
+@Walter neither `sudo` or `su` work: they both result in a `Permission Denied` error. Any other thoughts?,0
+"Hiya FFM, I want to update the <url> page to make it a proper article and perhaps get it to FA status; I know it's unusual to be part of one's own organization editing, but it is possible -- if we work on a draft in userspace and have friends/colleagues helping update the article proper.  Are you interested in working on this in the coming week or so?",0
+*lol* the war against crackers is stopping our white-hats to learn the trade. Maybe the criminals will go away when we don't know how they do it? ;),-1
+"At <url>, your 'outside comment' contains the statement ""You don't go deleting things with a consensus, and then blast those who have the nerve to reprimand you. ""  This seems self-contradictory: did you mean to type 'without'?",0
+Perhaps you could explain why you believe that these *should* be related? Do you have any evidence that supports this belief?,1
+"Ah, I didn't have the XNA framework on that machine (because of the lack of VS I'm guessing). Can you check for that on load?",0
+"Thanks for the response.  May I ask, are you a video gamer?",1
+I've tried a setter method as well.  The var wasn't getting the value until after the app was closed and reopen for some reason?,0
+"@Lèse key words here being *supplement their own content*. If ALL the content is copied, what of value or interest is being created, exactly?",1
+Things are going to break if you get rid of the `.Designer.cs` file. Why do you want to do this?,0
+"Hey, thanks for joining! Have any ideas you wish to add to the project?",1
+"What do you mean by ""by default, the week starts at Monday""? I'm not saying that's not true, but how/where do you experience that in your code?",-1
+What a mess. Does anything need to be done about it at the moment?,-1
+Are your buildings all rectangular? Or do they have more complex shapes?,1
+"@Jim: That is the declaration of the function, it is not called. Where is `printme` called?",0
+I've been saying it has to win that award for a few weeks :) I'd be very shocked if it didn't win. Who hands out that particular award?,0
+@T.E.D.: Um...thank you?,-1
+"As Marcelo says in his answer, what you're doing doesn't (yet) make sense.  Can you give an example of how you would like to use this?",0
+"Are you saying that Scotty was being ""hot-headed""?  If so, can you please tell us what Scotty did that was ""hot-headed""?",-1
+*@itrekkie*: Try as I might I don't understand the question. Could you clarify?,0
+I am genuinely trying to do something useful and helpful. Why are you attacking it?,-1
+"If everything is one page behind, why can't you just take this into account while in button_click event? Something like ActualTab + 1?",0
+"Fails how? Do you have more information, such as error messages or sample code?",0
+"You might want to re-architect this; if you are counting the number of files/folders every minute, you are creating a race condition.  What about having each function update a counter, or use a lockfile to ensure that the periodic process doesn't update the count until both functions have finished executing?",0
+OT : Is my edit of the post a good way to add on-topic questions? What do you suggest else?,1
+"You said that the Category: ""Songs Performed on 'Make Your Own Kind Of Music'"" might be deleted. Could you explain your reasoning?",0
+it depends. Are these featured links derived from the DB or are they just arbitrary links?,0
+"No way. Still don't believe I found this question on Stack Overflow ;) So the next time you apply the `Goto` function, will you do `Goto(Io, \epsilon)` where `Io` is that first state?",0
+"Ha, you're too kind to me, my old friend. MK one day, promise?",1
+"Concerning <url>, I must say I am a bit confused: isn't the article's title ""Austria<span style=""color:red"">u2013</span>Hungary"" (where, incidentally, it was moved after an ""Austria<span style=""color:red"">-</span>Hungary"" period)? It's really no big deal, but how can something be both correct and incorrect, and which standard are we at long last supposed to follow?",-1
+"@Thomas, could you provide any more detail about the ""create a poly from overlapping triangles"" method? (or should I start a new question?)",0
+"To continue Jason's questions, what constitutes a ""square of any size?""  Four corners, the outline of a square, a solid tile?",0
+"Damn it! Should we just revert back to the beginning of the day, since what I wrote was based on analyzing the satellite data?",-1
+"Slightly underspecified: by 'arrange', you do mean place them in order at the start of the array? Any restrictions on what happens to the rest of the integers?",0
+"You mentioned a CU done with a possible result, but I don't see it at SPI.  Can you link TC's CU and name the master?",0
+"Well done on adding references, I've expanded intro to cover whole article but what i've added needs to be tightened a little. Looks close to GA, were you going to nominate soon or planning to take to FAC?",0
+"__In a Linux kernel context, the only lock with a spin implementation has a mutex interface.__ I dint understand this line. Could you please expand on it?",0
+"Are contributions listed from newest to oldest, or oldest to newest? Just curious?",0
+I give a glimpse there now and then. What is up?,-1
+I've been meaning to add soundclips to the Suede and Stone Roses articles (3u20134 for each). I can get to it over the weekend; suggestions?,0
+"This is not really enough to tell what can be the problem. Have you tried debug you code, for example trace something in the conditions (so the function what have to be called is called properly or not)?",-1
+"What is unreliable about the newspaper article reports about the protests in Meliti, Lofi, etc? Are you alleging that the protests against the Greek military did not occur?",-1
+"Not really sure what the remedy is for this, but anyway, now you know. How was your weekend?",0
+"Why did you rollback <url>? It appears by a quick scan that the user was correct re <url> - but regardless seemed a good faith edit, one certainly not worthy of a vandalism rollback I would think?",-1
+"Before you get into the run-time of the algorithm, do you understand what it is supposed to do?  Do you see how it works?",1
+"On reflection it's up for GA peer review, preparatory to trying for FAC. Would you care to <url>?",1
+"Nothing wrong in your code, but what does your xml look like ? And what do you call debug mode ?",1
+"What about in this method: -(IBAction)saveNewCharacter:(id)sender , if you NSLog [[self newCharacter] firstName]  what do you see?? In other words is it correct when your are inside NewCharacterViewController ??",0
+"Yes it does, but the weird thing it's that all the other user attributes are getting passed (When i take a look at the console, every other value but the client_id hash it's getting passed from the form). Do you think that the fact that I'm also using authlogic for this same model may be something to do with it?",1
+"What do you mean with evenly? Outside evenly brown, or inside evenly done?",0
+I'm currently browsing `[interview-questions]` tag looking for it. Do you have a link if you've found it?,0
+Further: it seems to me that <url> was a perfectly reasonable dab page. I wonder why you needed to change it?,-1
+"Question: Is the purpose of the name parameter to show the name of the person as listed at the linked site, or is it to write in whatever the editor thinks he name should be shown as (i.e. damn the sources)?",0
+I believe that would be different on different hardware. What architecture?,1
+"The general dominating set problem is equivalent (even in the approximate version) to set-cover, for which the greedy algorithm is optimal. I wonder - if you forbid induced subgraphs of the kinds that interest you, does it correspond to something natural for set-cover?",0
+"It states on the page that it features her, they sample the song, and were going to try and get her to take part in the video... Surely this counts as being featured on the single?",0
+I'd like to support iOS 3.0 because it's the project's requirement. Can you help?,1
+"I like yours better, it's less demeaning. This is pretty new to me... should I remove it or leave it?",1
+"Is there any reason you keep moving boldface marks? ITN is on my watchlist and you seem to do this quite frequently, yet, as far as I can see, it makes no difference, so I feel compelled to ask if there's any particular reason?",-1
+Have you tried to fully uninstall your application from your development phone and reinstall it from scratch? Maybe your database creation method is wrong?,1
+I went through your comments. How does it look now?,0
+Why do you need to do another `ls`? Why don't you just print the results from the first `ls`?,-1
+"Is this really about physics? I can see why it's a valid question, and I can see there's physics behind it, but is the question itself about physics?",-1
+"What do you mean by ""deferred"" and ""fetch later""? Could you please give some examples?",-1
+@Nikolay O. : Thanks for your input. What exactly unbrekable space character means?,1
+"Do you mean ""What can you do with Drush that goes beyond what you can do through the Drupal web interface?"" or ""Can Drush be used for things besides Drupal?""",-1
+"I understand the problem with that redundant category--I've hashed that out, I think--but why did you remove ALL categories from the Christian shows? That seems....excessive... Or do I just need a nap?",-1
+Distribution of Linux? Python Version?,0
+"He probably couldn't understand the speedy notice. Then again, who knows what goes on in the minds of n00bs?",-1
+"the use of low level code does not guarantee that there will be no failure in its execution, so the validation tests should always be made. Your implementation does not have any report of failure?",0
+"For those times when the understanding gained comes to use.
+
+Since this question came up - do we have figures on which is faster and by *how much* ?",1
+How would you store those cached images? in your own NSArray?,0
+Such as the redundant link to ''Roe v. Wade''? Not an improvement?,-1
+"I'm having trouble understanding this ""all the unread and not deleted private messages"", because `is_read` and `is_deleted` fields seem to be in Recipient model instead of PrivateMessage. What makes private message deleted?",0
+"It depends on the application, AFAIK. Do you have any specific ones in mind?",0
+"Remember we had the whole edit warring on Edelsten article a while back? I find it curious that a recently created account posted this <url> as their first contribution basically supporting Edelsten's personal website (which when you look would hardly pass <url>, I looked it at this site a while back in research and found some of the positive claims could not be verified) and wanting a complete rewrite of the article... sound familiar?",-1
+I don't get your question to be honest. Could you clarify it more please?,1
+What does your data look like? Are the values bound?,1
+"Hello, Peripitus. Will you take a look at this discussion and reconsider the deletion of one image in particular (the deletion I take issue with)?",0
+That example is not scaling. Can you post your code?,1
+"Use a thick pen for the line and thin one to draw the border. (BTW, What's that got to do with `C++`?)",-1
+Are you an admin? Do you want to be one?,0
+You support Scotland leaving the United Kingdom despite the fact most Scots do not? I am curious as to why?,-1
+"What happens when you run this under debugging, and what's your configuration? Can you show me the first part of the packages file it creates?",1
+"I am totally and completely baffled by what is meant by ""not one that happens every Thurs evening at the local church, but rather the big store"". What is ""the big store""?",-1
+What's :data(data) supposed to do? Did you mean :data(rhs.data)?,0
+I'm ambivalent as to whether it's ok to copy questions like that (even linking them)... shouldn't we wait for them to be asked organically? Or are you really interested in an answer?,0
+"It seems if I change @property (nonatomic, copy) NSMutableArray *blockViews, to retain, the error goes away. but why?",1
+I've heard about the controversy. What's your take on it?,0
+"What, my dear, will change the fact of your poor anargumentative technique??",-1
+"By my reckoning he has been in every episode, and thats 10 so far... I am confused as to why you changed it from 9 to 7?",0
+"Do you release the gameViewController later on?
+And are resetLevel and resetTheGame methods clean?",1
+Why isn't <url> included there? Is it possible there's a redirect in it's place?,-1
+Thanks both for your answers. Could you please direct me to a book/reference where I could find a proof of the fact that for large samples the paired t-test works?,0
+I used <url> as precedence. Thoughts?,0
+is there another transparent view in front of the right 1/3? Or maybe your button has been moved outside of it's parent view's bounds?,0
+"Just had a look at <url>, and oh dear god. Any interest?",0
+Or am i going against the grain here - should i really be using sessions instead? Are sessions the more 'blessed' way of doing things in struts2?,0
+Ising ?? or Icing ??,1
+Thanks for putting the igneous rock template on all of those articles - it looks really useful! Do you think it should have an ultramafic section added?,1
+"@probabilityislogic Sorry I don't follow. What do you mean ""get the probability that X = x""?",0
+"Isn't it? Homework is work too, or are you only allowed to get answers for free if you are actually payed to find them yourself?",-1
+"I'm loathe to come running to an admin, but Gregcaletta is just making the same edits that I had undone before and made objection to on the talk page without any attempt to address the previous objections on the talk page. Now what?",-1
+You are doing a regex match but not checking whether it succeeded or using its results in any way.  What change to you want to happen to `$name`?,-1
+It's not clear what you're trying to do. Are you getting the input as a string using `raw_input()` or something similar?,0
+It seems to me that the font installation guide was set-up in a more elaborated way in previous versions. Am I missing something or confused with another document?,0
+It sounds like you're 90% of the way there already with the realisation that you should just normalise everything to consistent units.  What specific issue are you still facing?,0
+"Is the table structure fixed? For example, will there be different spans?",1
+"Hi friend, I've noticed you've made some good edits over at the article. Are you a big fan of McGinley's work?",1
+"I don't see the references anywhere. Do you mean the ""glimcher website"" and ""official website"" links?",0
+"Sergio, can you please clarify? Do you mean ""a wave or a particle""?",-1
+I am planning on changing the <url> to the ICF Flatwater World Championships. Any objections?,1
+"Got terrible ratings at my RfA. Other than that, I'm just trying to get over 1000 edits this month... You?",0
+As you can tell from my user page I do like art. I noticed you talking about a film ambassador on WikiProject Film (An project that I am active on) and I was wondering what is the main goals of film ambassador?,0
+well it wasn't exactly a joke. am I the only one who notice they share the same melody?,-1
+"Which link are you referencing? Anyway, TTN, that another phony or is that you on WikiQuote?",-1
+"A quick question, I'd like your opinion on something. Do you think I should put <url> GAN on hold or fail it?",1
+No garlic?  Are you sure this is a Caesar dressing?,-1
+Can't you just filter out the value NULL before you process the records?  Or did I miss something?,-1
+What do you need MySQL for? To store the hints?,0
+What have you tried? Where are you having difficulties?,1
+Per <url> we should summarize the article briefly in the lede. I didn't see anything about higher dimensions in the <url> body so should it be removed from the lede or should the body be expanded?,1
+It does not appear to have attracted any participants other than Gerda. Perhaps adding a <person> template would draw in more participants?,1
+`transistors`?  `transistor-level`?,-1
+"Can you tell why breakpoints are crosslined? they should be blue round button, not crosslined, can you see that?",0
+"I will say this, though, in the form of a suggestion: it makes me a bit uneasy to see you so involved and sometimes argumentative in your nomination. Why not step back and let the community do its thing?",-1
+Also make sure that your test input is exactly in the format that you are given by the bot. Does your program cope well with an input ending with a newline?,0
+Figured it was broadly agreed and issues broadly resolved. Shall we pick it up then?,0
+Code snippet?  What is failing?,-1
+Use of the word apartheid to describe the government of Bahrain is now so frequent and coming form people of such stature <url> that I believe it ought to be a free-standing page.  Will you have a look at it if I put it up?,0
+Ok. Thanks TTGL. Are you like my handler or mentor now?,0
+Indeed. How did you find this?,0
+"Thanks, looks like <url> needs some fixin'. By the way, are you honestly ok with me bothering you like this?",1
+Has this situation been resolved?  Can we all agree not to replace the comment regarding Orton's son until a secondary source can be provided?,0
+"If it's alright with you, I'm next going to start from 1930 and work back towards where you are, since I'm particularly interested in the Lang era. Is that okay?",1
+"Sometimes one sees ''Sonata '''a''' 3'', but sometimes with an accent grave, as ''Sonata '''xe0''' 3'', etc, or either apparently indiscriminately, in the various permutations of this form - ''Canon a 2'', ''Fuga a 4'', and so forth. Is one or the other correct, or does it depend on the original language - for instance Italian vs. German?",0
+Thank you for deleting the attack page I tagged.  Should <url> be blocked for creating it?,1
+"It is incredibly unclear what the actual question here is. Is it just ""what do you recommend for clustering/replication/failover options?""",0
+"Well, that was an example as I am adding Infobox Historical American Political Party infobox to all those historical parties in <url> for which I was previously using the regular Infobox American Political Party until I found the Historical version in <url>.  So if I wish to continue, I will have to assign colors and shortname to all of them if not already done (like Anti-Masonic Party) right?",0
+"I've removed my remark. But if somebody puts words in another's mouth, and that second person states that is not what he meant, and the first person responds that no, that ''is'' what the second person meant, well, wouldn't you say that's a little weird?",-1
+I think it's a great idea to get the CO3 community involved with keeping <url> correct and uptodate.  I shan't be there myself this year (clashes with various things) - would you be able to bring it up?,1
+"But it's not really suitable for its own article, either. Do you have a better place to merge it to?",0
+"Wanted to Email you about Wikimedia Converence Netherlands, but your email is not working. In any case, you could crash at our place?",1
+"I've compiled with TeX Live 2007, 2008, 2009, 2010 and 2011/pretest and had no errors. Would you please add the list of file that you obtain by adding `\listfiles` at the start of the input?",0
+Which version of Erlang are you running? Can you try your example after running `application:start(sasl).` in your Erlang shell?,0
+"I think I lot of the things on the Methuselah page are very interesting, but perhaps should be transferred to the Biblical Generations article, if they touch on more than just Methuselah. Would you agree?",1
+"Okay - later tonight (I'm a bit busy right now), I'll restore them for... hm. Will three days be long enough for you to copy the information?",0
+I really think that the text you have drafted at <url> is far fuller and better than the article as currently drafted. Do you have any objection to me deleting the current text (except for the infobox which I will retain) and importing you text in its entirety?,1
+"@Bruce: I think you're reporting a quick google result, since you omit sharing features of D7.2, why anyone would extend D7, or why anyone owning a D7 license like me would have wanted such an extended version in 2003. Did you also find all the other versions of Delphi usually found on torrent sites?",0
+"Needs `homework` tag ? You might also want to specify the programming language, at the very least, and perhaps mention what you've tried so far ?",0
+The best case would be if the list were already sorted but I don't think that's what you're asking. Could you be more specific?,1
+A photo might help. Into what does the vent screw?,1
+"I like this idea.  Do you have that library posted, or can you please point me to a few of those photos?",-1
+"Hey Love, as you wish, if you  have any suggestions about my section, let me know.  Is English a second language for you?",-1
+@ZoFreX - If it can be answered in 250 characters or less (i.e. user gets whole answer from meta description) do you think the searcher would have stuck around on the site for more than two seconds? :),0
+What version of Exchange server is this? <= 2003 or > 2003?,0
+"so it isn't solid, just a border line? and the inside is also white/transparent?",0
+I tried searching for that link in the section that I was editing and it wasn't there I didn't edit from the top but just from the section. Does the filter only look inside the section or is it based on the whole talk page?,0
+"You ask about a ""tag"". Is that tag from Wordpress or does the NextGEN gallery has it's own tagging mechanism?",1
+I see unbalanced brackets. Is line 21 in C:?,0
+Can you take a look at the article <url> and the conversation going on at <url> (that should probably be moved to the article talk page).  Your thoughts on the most recent commentary?,1
+"Taken alone, this code won't compile. What are definitions for `dimensions` and its cousin `dimention` (in desperate need of a better variable name)?",0
+I also love your new CA Interstate shields. Could I trouble you to replace the current one for <url> with a similar one?,1
+"By ""implementing square"", do you mean implementing a function such that `f(x) = x^2`, or `f(x) = x`? Also, what is the precise list of operators you are not allowed to use?",1
+Do you mean the launcher? Could you please provide a screenshot?,1
+"Do you know how to make the 'All Star Template' appear only at the bottom, as well as the 'Confirmed future sites', so the actual table appears at the top of the page??",1
+I could have a go. When would you need it?,1
+"Please mention the version of ubuntu you are using, as well the catalyst ( fglrx) driver version. Do you experience tearing or any other distortion?",0
+"Hello Lina, and welcome to _Drupal Answers_. For which Drupal version is your question?",0
+Then you obviously have problem with your fwrite call. Could you provide the code you use?,1
+There is a QB at camp today wearing #1. I saw him in footage on NFL Network. Who is he?,0
+"Do you want to turn off thumbnails on just the desktop, or in folder windows (e.g. Places -> Home Folder) as well?",1
+"Quite. Do you know why, though?",0
+"I think with the availability of more powerful computers, different kinds of methods suddenly become practical and important (would one use e.g. boosted decision trees without fast computers ?)",0
+"I see where someone put ""April Fool's"" in a revision, but otherwise, there was no other humor included, the page was utilitarian otherwise, and you can't move a category (meaning I would have to delete it anyway).  Do we ''really'' need to retain this?",-1
+@Saurabh I don't think it is very clear. How is your group_name related to the child content?,0
+"I really don't know... but a GTK+ version would be awesome. Are you thinking .net, C++, or PyGTK?",0
+"Unfortunately I think <url> may also add that material; I am not familiar with Citizendum, though, but I will look at it. If Citizendum has the same policies regarding primary, secondary, and tertiary sources, then why not criticize both Wikipedia and Citizendum?",-1
+why is the profile a different model from the user? wouldn't all the profile attributes be for the user?,0
+"sorry, inserted before I was through. A vague source said that the usage of this in the sense of 'appropriate' is relatively new and I wondered if anyone could pinpoint the diverting point?",0
+Sounds like a framework bug. Could you upload a minimal .xcproj so I can see what's going on?,1
+I think that's a good solution.  Should we give it a try?,1
+I've never heard that. Any links to horror stories?,1
+"I know <url> is one, what about <url>? Shouldn't it also be a primary topic or are there actual rules which discourage practice of ""all caps""?",0
+"I have reviewed your nomination for <url>, and still have a question. Could you reply at its nomination?",0
+Looks like <url> (the one missing the side-chain) is unused and doesn't seem useful (due to that structural flaw). Maybe tag it for deletion?,0
+I note that you've edited since this was brought up here. Could you please respond?,1
+Very well.  What is your figure for annual worldwide hysterectomies?,0
+"I'm going to walk you through this one very simply. Let's start here: Is there currently, or has there ever been a cartoon broadcast on television by the name of the Breakfast Monkey?",-1
+"Seems like a rather big project. From what I can read, you have no experience in programming?",-1
+"My concern about the article above still stands (re: notability). Now that it has been unmerged (against the AfD), will it be merged into the Begin articles as suggested, or will it have to be renominated?",0
+"That's reason to expand the treatment to other painters, not to blank this one.  And you didn't think that there would be more articles on van Gogh paintings?",-1
+"Splash I added the info about his age dispute, the user then removed my edits, called me a liar and added a whole bunch of other deliberately negative POV edits to the article. What can I do now, can they be blocked?",0
+"One of them writes to /dev/tty, one of them writes to STDOUT.  Was that what you wanted to know?",1
+I am surprise at how often legitimate unblock requests appear at <url>.  Have you been watching that page?,0
+@hade @Dogbert I have updated the original post. Is this helpful information?,1
+"@nikic, its a WordPress site on HostGator. How can I tell?",0
+Did you solve the other problem? The multiplication one?,-1
+What level of programmer is this for - i.e. beginner/intermediate/expert ?,0
+Hello. I was wondering if any of the books you have can shed much more light on <url>?,1
+Are the 10 websites different each time?  Can you cache the generated images to avoid generation on each request?,0
+"What I'm trying to say is that I don't think this is really a valid question. You're basically asking ""where should I store some files so I remember where they are?""",-1
+Did you ever find a solution to this? If so could you post it as an answer to your question?,1
+"So you just want to get ""any"" element from a set? Or you want to check ""if a given value is inside the set""?",0
+"Thanks for the redirect help!  Is that something I can do myself in the future, or is that an admin thing?",1
+"<url> finally got created, but I'm wondering whether it should be merged with <url>. Can it be expanded?",0
+"You recently reverted both these pages with the reason ""not in the linked article"". I'm just curious, what does ""not in the linked article"" actually mean?",0
+"I've now blocked them as the account appears to be used only for vandalism. Since your username is prone to being mis-spelled can I suggest you set up some ""dead"" <url> accounts to pre-empt further impersonations?",0
+Can you post your Session class?  Does the constructor use invalid arguments?,1
+"Well, probably yes. But these are guys who shave their legs -- is fertility the top thing on their mind? ;)",0
+How do you define optimal? How large are you data (is brute force an option)?,0
+"Not to start a war, but I can see another side to that.  Why develop (test, deploy, maintain) two solutions where one will do?",0
+"Is Tomlin ''Governor & Lieutenant Governor'' concurrently? Or is it like Massachusetts, Lieutenant Governor-Acting Governor?",0
+Can we see the function that creates the output? And the output itself?,1
+"For uninitiated person like me, which one of the bikes in your photos is the MTB and which one is the CX?",0
+"sorry, yeah, that's what my file looks like. Well, the '& ~' isn't indented, but that doesnt matter right?",1
+mod_perl? Plack?,0
+Refresh bug? Failure to update dynamic status?,-1
+"If there are no objections by the end of the day (1600UTC), I'll overturn the ban. That sound ok?",0
+How is your DAL structured? Is there only one Assembly?,1
+Hope you had a good trip. Are you able to take a further look now?,1
+"thank you, that's it. can you please help me how to save it like 1bit png?",0
+"How about this for a novel solution?  The next time a banned editor posts something to your page, why not delete it yourself with an edit summary of ""Sorry, I'm topic-banned from discussing this""?",-1
+"Sorry, I guess I edited at the same time as you answered. I'm guessing that atan2 is only in 2.10?",0
+"I am not an expert but I found the sentence ""controlling for associated subscores when devising cut-off scores on each dimension of a measurement scale"" a bit esoteric. Can you give me one more line of explanation (otherwise I found it difficult to understand the question) ?",0
+These events are fictional. What real-world information can there be about them?,0
+"Sorry, I'm a newbie in Physics world. But since you said that it's always with other stuff, can't we just weight the whole bundle of'em (quark with other stuff), then if we know the weight of other stuff, do simple math?",0
+Twitter is a knowledge repository? Really?,0
+"Dijkstra's algorithm finds the shortest path. Negating the weights would cause it to find the longest path, but that won't work if the graph contains cycles, right?",1
+"Okay, so I did what it said and I sent a message to an admin. Now what do I do?",-1
+I find these methods quite unnecessary.  What's the advantage of using these over the very trivial comparisons?,-1
+I'm not sure what you mean by pointing out that votes were placed before the version you created. Could you elaborate?,-1
+"Hello, I've written a page about the <url>, shamelessly copying the style from your CCT/FoFC lists. In the process, have I missed anything out?",1
+"Slightly more seriously, there's a discussion over at <url> about the lack of non-European info regards torture.  Any chance that in your manifold research on all things psychohistorical you've found something that could be used to expand the section?",1
+"Since there's different tricks and none is the one right answer, shouldn't this be a community wiki?",-1
+"I suspect that `'apt-get install libpq-dev` didn't work properly, as the 9.04 distro is no longer supported (too old). Can you run the `pg_config` command?",-1
+"To clarify: you want to input the two paragraphs one after the other and you want the paragraphs themselves to sync, but not necessarily individual sentences.  Am I right?",0
+"Also, I undid the recent move to Eris, pending some discussion. Maybe you'd like to support/oppose the move?",0
+Hi RHM22. Would you or one of your coin-loving compatriots have access to <url>?,-1
+"agreed, but i am not seeing the checkbox. are you able to wiki-fy it? thx",1
+I don't have enough reputation. Can someone fix the spelling in the title?,0
+to the Citations missing template. What's the deal?,-1
+"The very easiest way to tag an image is to use the Alt Text in picture's properties, but I have a feeling this isn't what you want based on your example. Can you describe more about not only what you want but how you plan to achieve it?",1
+Is this the headset microphone or microphone-microphone? Or could you link to the product?,0
+"@Unreason, yes its not an natural thing to grasp, simply put: Possible Haiku combination = Infinite; Number of Monkeys OR Time required to produce said Infinite Hakim = NOT possible, as in order to generate those Infinite Haiku's you would need a greater than Infinite amount of time Or GREATER THAN infinite amount of monkeys. Now do you see the contradiction?",-1
+What? Please speak brighted.Ps.Do you know gag?,-1
+"On <url> about the Chinese sex imbalance, you accused either the OP or the first responder (me) of <url>. Could you explain why you thought either of us was advocating, opining, or recruiting, in a way that diminished the quality of the reference desk?",-1
+Maybe gae's setup works up on django's or parallel. But what is the final uri for an image which is located to http://localhost:8080/templates/images/background.jpg ?,0
+Not a trivial task for homework. Did you not get any advice from the teacher on how to proceed?,-1
+"Started, shall we post on the <url> page and ask for others to collaborate. Is that a good use of the WikiProject?",1
+"Is it timing out, or getting a 500 error? Have you enabled all error reporting in your php.ini as well?",0
+"In 1., is ""as id"" a valid grouping?  I.e. does the grouping have to preserve order?",0
+"Is it ok to use words like: here are some ""good"" or ""recommended"" reliable secondary sources?  Or does that have to be determined by consensus?",1
+I would have explained a problem which could have solved with the help of Versioning and then would have explained what versioning is all about. you did the same and yet they do not understand?,-1
+"I could not figure out how to make this view. Can you elaborate on this please, or refer me to a suitable link?",1
+"You're asking very different  questions here.  One is a repeat: http://physics.stackexchange.com/questions/1372/is-rotational-motion-relative-to-space  Could you simplify the question to ask just one thing, please?",0
+*@RealityCramp* - I have read your question several times and while I think I understand what you might be asking I'm at a loss regarding the details. Can you please rephrase your question?,-1
+This is mighty ambitious. Can you turn this into a question?,-1
+"Could you post some of the relevant code? It would make it easier to figure out what is going on... Also, what do you mean by ""the Map""?",1
+"But why is it the noscript element on the same level with 'head' and 'body' in the first place?
+What is the DOCTYPE of the html?",0
+Could you be more precise about what you mean by cross-tabulating the ORs? Your factors have more than two levels?,0
+"How are the printers connected? Via network, or via usb?",-1
+"Hi there. Regarding the comment you added <url>, how can this be verified?",0
+"Just to clarify, the circle comes in to the definition of what it means to be adjacent -- element n is adjacent to element 1 -- but you do not consider rotations of the same bit pattern to be the same.  Is that right?",1
+@Adam: Thanks! Any suggestions / comments for the site?,-1
+Where is the vandalism? Diffs?,-1
+"This sounds like a job for the listings package, really. Could you post an example of your code?",-1
+Is the function given the ready-made number (`1491625...`) or does it have to compute it itself? Extracting the nth digit should be easy (regardless of the base - but I assume you talk about base 10?).,0
+"Tomblin's official website says he's the 35th Governor. Also, why would Farnsworth be governor & Tomblin not?",0
+I don't think you can find the max weight cycle without enumerating all cycles. How would you decide which one to not enumerate?,0
+are the images stored in the same base folder that the jquery is in? or are they in a different folder?,1
+"Maybe I'm on crack, but in your edit summaries you're saying ""MT"" and ""Not MT"". What is MT an abbreviation for?",-1
+Can we assume contiguous IDs in [Employee Schedule] make a range? Or only [Day ID]?,0
+"You have a lot of cheek marking <url> with <person> without actually taking the trouble to say what needs fixing. If you're really someone who is able to contribute with a ""professional"" level of English, why not display this supposed proficiency rather than engaging in the illiterate practice of adding templates with tools?",-1
+Transmission monitoring already existed as an answer. Could you please describe more the iTunes watched folder function?,0
+Is it a difference between users? Have you configured iTextSharp correctly on the server?,0
+@ROM1 - Yes I can implement HTTTP. Is there any solution for HTTP?,0
+what is the & sign for? why do it?,-1
+"So why didn't you just look through the source, to see if there was a number there? Or why didn't you simply ask the editor on their talk page?",-1
+"Hello; I tried to visit the page for <url> today after learning of it elsewhere and being pointed here by google, and found it deleted.  I viewed the entry for deletion linked to from the page and you stated at the top that the result of the discussion was 'keep' -- how come, then, it is now deleted?",0
+Good advice from Garion96 there. Would you please come to the talk page of the template and voice your opinion?,1
+It seems <url> has tagged the following baiting articles <url> <url> <url> and <url> with a delete tag out of spite.  It there a  way to remedy this type of poor behaviour ?,0
+@Rippo: Tried it and it doesn't work. Isn't the `$form.find('.person')` supposed to find all elements that have the `person` class inside the form with `personas` id?,-1
+"Thank you for contacting me, the history has been restored given the link you provided.  Would you mind assisting with sourcing of the article so that it complies with <url> policy?",1
+"what have you tried? There are over 2000 questions here on SO about random numbers, have you had a look on some of them?",-1
+"@Ofeargall - Welcome to the community. Could you please elaborate on what you mean ""want to know"" vs ""need to know""?",-1
+"What is a ""pair"" - can you give an example?  I.e. is { 3, -3 } a pair, or is { 3, 3 } a pair?",0
+"Is the crack getting bigger?  After you fix it, what happens when you say it comes back?",1
+"This guy made a huge number of changes within minutes of creating <url>, including some annoying ones in the church categorization pages which I'm trying to clean up.  Can we deal appropriately?",0
+Can we pass a law that cars may not be operated within 100 yards of children under the age of 6? Which law would have a greater impact on public health?,1
+Can you create a short but complete program which demonstrates the problem? Are you sure you've got the right using directive *in the file which contains that line*?,0
+"I have no need to search the interwebs, all that matters is it offends people and is a violation of NPOV and MoS. ""All Wikipedia articles and other encyclopedic content must be written from a neutral point of view (NPOV), representing fairly and without bias all significant views (that have been published by reliable sources)"" - ess-eff is a bias term for a minority group of fans, put it this way: is there an SF-channel, or how often is the clichxe9 ess-eff used outside fan-groups?",-1
+"My only qualm, then, is that your question seems extremely specific, as I doubt anyone will be able to give you an answer without having experienced the exact same situation. Did you try to check what http://cyri.systemrequirementslab.com/CYRI/ think of your machine?",0
+"Yup, as Josh said. There may be too many entries to work with just get (limited to 256 characters?).",0
+"How sparse is the matrix?  Does the matrix have any special shape, or relationship between entries?",1
+But without the space it looks fine. Where is your blog that has such poor CSS that `<code>NULL</code>s` looks like it has an extra space?,0
+"Isn't this too time localized anyway? How long will ""at the moment"" last?",1
+"So, the canvas was causing the move to upper left, but removing the canvas still has one of the classes assuming it knows better where to place images, and it's letting me push them outside the bounds of the control.  Any suggestions?",1
+"Given what I see there, Finlay, I would argue that Marnanel's work is derivative, and that nohat's only request for derivative works is that they be released under the GFDL, which it's my understanding that Marnanel's work is.  Is there a section I'm misreading?",0
+"[MultiseatX](https://help.ubuntu.com/community/MultiseatX) gives you independent displays, but there's no easy way of switching input devices between them and I'm not sure if it's possible to mix X and console.  What if you just ran X normaly with a fullscreen terminal on one monitor?",0
+"I want to implement the whole online banking stack, from front-end, middleware, and back-end. So is there any opensource J2EE app for online banking?",1
+Wouldn't the time complexity depend on the type of tree? Could you elaborate on that point?,1
+"Setting aside the circumventing of company policies, this is still a question about installing software on a server. Surely that's a ServerFault question?",0
+"Are you running a dedicated server with your own VMs, or do you have one VM provided by a hosting company? Or are you talking about vhosts in regard of apache being multi-homed?",-1
+"You're absolutely right. I was just so pissed off that the previous move was undone, ya know?",0
+"Are you sure that the delimiter appears at most once per line? And if there are multiple delimiters, which one do you want to cut the line at?",1
+PS. Is <url> more relevant to explain the analogy?,0
+"We need some more details, what is the format? How are you parsing it?",0
+I am confused as to <url> where it claism you moved it from <url> and it is currently added to <url>.  The rfcn had been previously closed as allow?,0
+"Also, If we replace the maps with an image of a monument, then we could eliminate the architecture part. It would also make the article look colourful.Opinions?",0
+"You need to further explain the problem you are trying to solve, please. This sounds like a homework problem of some kind?",0
+For source control reasons? Can you please explain?,-1
+PS. You mentioned 'typical issues'. What problems do you have?,0
+"I might have just done a wrong revert on this art - what do you think?  Small cf Singapores  Changi maybe - but, ...?",0
+What is offensive in that question? And why is it downvoted?,-1
+"sounds strange, do you get any runtime error before the breakpoints ? what versions are you using ?",0
+"Huh?! You really want to use browser-side JS to create a cookie, receive it with server-side PHP, and store in a cookie.jar file for use with PHP's curl library?",-1
+"@Nate - Yeah, this is pretty close to that question. I'm not up on disc brakes; anyone know if these can be merged, or is there enough difference between the two models to maintain the two Q&A threads separately?",0
+This is a cool question!  Where did this come up?,1
+And why exactly am I looking at your monobook?  And why did you substitute your user links onto here?,-1
+I restored 3 non-piped blue links.  How does that look?,1
+"Spec isn't complete, what format is the percentage entered? What should happen if the user enters in decimal format (0.15) or includes the % symbol in the text, or worse yet both?",1
+Chli in the title should be Chili. (Does anyone have mod rights yet?),0
+Please tell us more about your prototype. Do you want to prototype a web-application or a desktop application?,0
+Are you asking for a tool that does this? Or an idea how to do this in python?,0
+"I wondered if you could recommend the best book on <url>. FOr Christmas, what would be the most detailed book (with lots of beautiful photographs) of Ladakh?",1
+Hi @OZ_ - can you educate me as to why? Is there a better way to store images?,1
+"Hi, would you have any objection to renaming the sub-categories of <url> to look more like the articles which describe them - i.e. <url> -> <url> and so on?",1
+You do realise that it's not likely to be much cheaper unless you rebuild the wheels yourself?,-1
+"Ok, I accept your claims, although I prefer the official names. Do you have MSN Messenger?",0
+"I didn't test it, but does it properly remove the following comment: `--[===[ text ]====] more text ]===]`? And does it _not_ remove parts of the following code: `a='--[[' ; b=']]'`?",0
+You want to move -4 (0xfc) to al? and move 0x01 to ah?,-1
+Don't worry I understand. Using igloo I assume?,1
+"Do you think the term standard means this is THE standard today ? Isn't it like asking why principal component are ""principal"" and not secondary ?",1
+At least there's nothing ungrammatical about them. Could you elaborate on why you have doubts about their correctness?,1
+Do you have a link for that?  I assume you mean you're out <url>?,0
+I am willing to try to discover the problem. What browser do you use?,1
+Google could just be going off of a cache. Do new posts appear?,0
+Still fuzzy. :) Could you please rephrase - what does `twenty ten shows` and `new one shows the html template` mean?,0
+How did you install mysql? How do you call the script?,0
+I noticed you deleted this while I was in the middle of creating it.  Does the listing of it on the <url> not make it notable?,-1
+Because I haven't seen it; I'm not even sure from the discussion whether it's on or off Wikipedia. Can you supply a link or a reference?,0
+"After finally reaching some agreement not to declare ""what Christians believe"" about a controversial point, why did you just revert the beginning of the article to make such a declaration?  Can we please drop the POV declaration?",0
+"Have you tried to run it without the `sys.stdout.flush()` under the loop? If so, what was the result?",0
+@Lord Torgamus: Yikes! Word your question imperfectly and expect it to be closed mercilessly?,0
+"@AviD: Cool, thanks! The original question asker gets to decide who answers the question, though, and can then just select his or her own answer, right?",1
+"Hi, I wsa just noticing that in <url>, players such as Tommy Walsh and Paul O'Connor have appeared under 'T' and 'P' respectively, rather than 'W' and 'O'.  How should that be fixed?",1
+"Did you notice his recommendation that you do the same?  Let's both take a break, ok?",0
+"Please, share more details, configured Application Pools, publishing configuration (realease, debug, ...). Is the IIS on the same machine?",0
+Cool. Is this something I can invoke with a template on the page or something?,0
+":I have blocked them for 24 hours, noting that continued soapboxing will attract further sanctions and a suggestion they take any complaint regarding my actions to ANI. Let us see what the future brings, then?",0
+What do you mean by protecting them? What are you trying to prevent/avoid?,-1
+Could you post a small example code showing exactly which space do you want to reduce? Also which environment are you trying to redefine?,-1
+What version? 6 or 7?,0
+"I'm confused by this sentence - ""I'm looking for an algorithm that will simplify and smooth the polygon, (reducing the number of vertices) with the constraint that the resulting polygon must contain all the vertices of the detailed polygon."".  How do you reduce the number of vertices, yet retain them all?",0
+"Just try the first instruction - `MOVE *R2, R1` - read the comment next to it - it pretty much tells you all you need to know. What do you think the result of this instruction will be ?",-1
+Well... actually it is <nowiki><!--commented--></nowiki>. Could it be visible?,0
+"that's all it said on the description of the object, I myself do not know as well what the museum means with ""old"". Maybe it came from the theater from a previous renovation?",0
+"yea, that code was crufty.. see the latest edit. it is still crashing when accessing the new array..perhaps the \0 characters are getting lost in the shuffle?",0
+What's wrong with the silly way? What problem does it create?,0
+"I see you've done a lot of work on hospital-related articles, especially in Oregon. Perhaps you'd like to join us in improving the articles for hospitals in Oregon?",1
+"OK, I give up?  What notability is asserted?",-1
+I've also started <url>. Now is this acceptable?,-1
+Do you have any experience in Visual Basic? Have you tried reading a tutorial or a book?,-1
+The question is how many ? or do you need to find them ?,0
+"<url> has copyedited the article on my request, cleaning up much of the complicated sentence structure; I'm not sure if it's sufficient, however.  Perhaps you might be able to take another look at it?",0
+Just in case you haven't seen it. I wondered if you might even respond to the comments there?,0
+Don't threaten me as that is not vandalism. What is wrong with a nude photo of Barack's mom?,-1
+"There was a CSD:A7 judgement (no assertion of notability) for <url>, http://www.google.com/search?q=%22Moderation+Management%22 , an alcohol management program that we talk a lot about over at the (highly chatty) talk pages for <url>. Any chance you could roll back the deletion, so I could add some text on why this is notable?",0
+"I just have the first (german) edition of the Sedgewick-there this assignment is not in. Is that the exact and complete wording, or is there additional like ""and in case it is not possible proof it""?",0
+"The Hitchin-related hoax claims by <url> seem to have led to a rather precipitate response, considering that he has only been an editor for a few days.  Is there something going on here that isn't obvious?",-1
+Is your problem that you don't know why the cost of the cycle 3 -> 1 -> 2 -> 4 -> 5 -> 3 is 37? Or is it that you don't know how to do the backtracking?,-1
+"OK, lets get a screenshot then. What is your keyboard layout, is it a qwerty keyboard?",0
+How do you pass the design into jasper? Is it doable to have two designs depending on the option selected?,1
+"Why are we reloading the page? Can't one manage all the data to be changed in a stream to the applet directly, or AJAX javascript?",-1
+Just saw your edit on <url>. Could you tell me how does Croatian Glagolitic differ from other Glagolitics?,0
+Is this for homework? What have you tried so far?,1
+How about just placing an `<img>` with width and height set to 100%? Do you really want to do it with CSS?,0
+"Hi, Michael David. Was there any consensus reached on this issue?",1
+Do other people see your ads? Have you tried using a proxy?,0
+Why would you build your own XML parser at all? Is this just to learn javaCC?,-1
+"I want to use an already existing encryption algorithm, so how am I designing this from scratch? I need to add somekind of code myself though to actually use this algorithm, right?",0
+"OK, fair enough. But it's still not a SO question?",-1
+"I don't know about Eclipse, but Visual Studio puts it on the right-button menu.  Perhaps Eclipse is the same?",1
+"I wish I could say, but I don't know what it is.  Could you tell me a little more?",1
+I knew what was going on with Note/Ref 17 at <url>: I spelled Constitution wrong. Is there anything else I can do to fix the article?,0
+"I have your CH2.js installed, but I forgot what it does.  What does it do?",0
+Are you using regular expressions?  How are you currently parsing the text?,0
+The content has recently been added to <url>. Would you consider changing your vote to delete?,0
+"Comply with what your talk page says, get off and study!!!! Have you willpower?",-1
+"Some otherwise useless kitchen gadgets might have other valid uses.  I never use a garlic press (just another thing to clean, when I can crush it with the side of my knife), but they can make play-doh hair (or really small noodles?)",1
+What is the (approximate) size of these two arrays? Is one much bigger than the other?,0
+I give that a huge second. Why haven't you signed onto the wikiproject yet?,0
+"I am starting this now. As Dexter is an official history, we should be beyond reproach in redrawing it would you say?",0
+"The topic is a good one I think, but the year of closure should be listed. What do you think about adding the year of closure & dropping the ""in the 1970s and 1980s"" in the title?",0
+"Don't worry about it. Take it easy, keep the ranting to a minimum and the productive editing to a maximum :) And you're still not convinced you should get an account?",1
+Binary shift? Divide?,-1
+"did you mean `{:a => [""val1"", ""val2"", ...],  :b => [""valb1"", ""valb2"", ...], ...}`?? so that the output will include, say, `:c => ""valc1""`, blah blah blah?",0
+"You won't even let the ink on your report dry and you're already at it again. Care to explain finally what about the DAB needs ""cleaning""?",-1
+"There already a bunch of free IDE out there, and you want to use Visual Studio ??? You have arguments to not use Eclipse or Netbeans ?",-1
+"No more saga! Help me by keeping this page the way it is right now, alright?",-1
+You deleted Ricardo Marinello. What was written in the article?,-1
+"So, you have duplicated records in the database, right? Also, why do you need `insertable=false, updatable=false` in join column?",0
+But ''you're'' the one branding his work as anti-Semitic! See what I mean about bad faith?,-1
+What about `coder`? What is difference between a programmer and coder?,0
+"So to clarify you want to paginate the ul's without loading a new page correct? In other words, if you grab 30 items you would want to show 3 at a time in a ul and have some sort of next/previous navigation that hides one ul and opens the next ul?",0
+"What exactly do you want to know? Equipment tips, location tips, landscape photography tips?",-1
+"""If you have played GTA 4, then you have probably been drunk at some stage."" Because you must have been drunk to play a GTA game, eh? ;)",0
+"Cool, so you understand what ""subst:"" does now? Btw, eh, where are the section edit links on this talk page?",0
+write and format work in Perl 5. Why do you want/need to change it?,0
+"Dear @sb1, it's all great but could you please answer the main question - in non-engineering terms that often already suppose an answer without asking why - whether the energy just disappears in the form of electromagnetic waves and how much? How much do we have to try to ""catch it"" by surrounding the circuit?",-1
+Thanks for the correction but I am still working on the table. Could you hold off for a bit so our edits don't cross?,1
+"@kraceKumar: i have another prob...the file writing here that is done row-wise skips a row as it writes into ""myfile.csv"". how can i make it not skip a line while writing?",1
+"@whuber Sorry, I can't see why that AmStat article is relevant. Where is the time-*dependent* exposure in the question?",0
+"Which water temperature? The tank, or the outlet water temperature?",0
+"I guess I sent you something about the <url> project and Welsh data. But you were also somehow silent on lists like gnome-i18n, weren't you?",-1
+Why did you delete the article on anal stretching????,-1
+Did you discuss it with the user? Did you ask him/her to redact or remove it?,0
+"Find the shortest path.  If there are other paths of the same distance, find those as well?",0
+Can you show us your code? How are you calling COlorbox?,0
+"I am using the 3.x Python version.  I figured that since I am new to the language, I should try to learn the newest version - is that faulty logic?",1
+But I did provide sources .. I just dont know where to find them online... a source doesnt have to be online does it?,0
+"@David: By the way, I hate to state the obvious, but just looking at the regions you selected in your graph, it looks like you chose the area in the lowest quartile.  Is that a sufficient criteria?",1
+"(ec)Yes, I just saw that in ""my"" contribs"". And apparently only arbcom members can close them... Best course of action?",0
+"+1 timely question, but you might clarify ""practical in the real world within the next two years"": it exists, can be used for many of the tasks that perl5 is useful for, has lots of nice improvements (rules being my favourite), and does look on track for release in tha time.  So what's your threshold?",1
+What kind of superblock do you mean? The ext3 superblock?,0
+"That looks OK to me (just learning Haskell myself, though).  Is there anything specifically wrong?",1
+"The funny thing is that you explained in the detail any part of the question (what you mean by integers, what comparison operators are), but what _short circuited_ mean. What is it?",0
+@blunders: However it still isn't clear to me what you really want to ask.  What is the problem you're experiencing?,1
+What operating system?  Are you writing a debugger or trying to use a debugger?,1
+"What type of application is this? WebApp, Console, WPF, etc?",0
+"""ConTeXt, an excursion"" *is* what I'd recommend to a beginner.  I had troubles with fonts, the internal state of the Context system, and trying to use not very well documented features early on, but not the command syntax or conflicts between commands: do you anything in particular in mind?",0
+When were closures for JDK 7 cancelled? You have a link confirm this?,-1
+"Soz about that then- on second thoughts it does look a little pinky, but then like you say it's probably the light. Can you tell I'm not used to that much sun?",0
+@Sriram : yup I will think of it on a small scale first ..then perhaps later will look into the bigger picture :-) ..thanks for ur suggestions !! :-)  so what do u feel hw should one get started with this ?,1
+"Please re-word the part ""How can I determine the point of view, using three angles and the radius"". What is the radius in this case?",0
+Please name one of those places.  This doesn't make much sense; how would friction destroy a chemical?,-1
+@Dennis attenDANCE? like in SquareDance? :D,0
+?????????????????,-1
+What problem are you having?  Is this page in a public place where we can see it?,0
+"George, would you mind if I 'borrowed' your stackoverflow icon? At least until there are ""official"" releases of icons/images?",0
+"If you need a command to do that, you better provide us at least with the language/package you use. Are we talking SAS, SPSS, Stata, SPlus, Minitab, R, ... ?",1
+"Please see my comments on <url> about a remark you added to <url> about the etymology of the term ""minim"" in music. Got any sources for your suggestion?",1
+I saw many missing names in the huge table of geonames. (Names of places which have articles in Wikipedia) Since no editions are permitted how will the missing names be completed ?,0
+Is there any point though? If the image is already the correct size?,-1
+What error? Why do you need `@` before `mysqli_query`?,-1
+Do you have POI's in your system ? or are you hoping to use maps to do that as well?,0
+I apologize if I have misunderstood.  Are you not an acknowledged devotee of Prem Rawat?,1
+"Hi, Wereon - I'm afraid I'm rather amateur at nominating articles for deletion. Where do I start?",1
+"Some links look notable, others do not, <url>. Thoughts?",0
+"oh, my, how did I get this here twice; trying to do too much at once (what else is new).  Can you copy instead a different color?",0
+"Compression is highly dependent on the source data. Since you say your matrices are ""small sizes"", why not post one?",-1
+"@kwak: I'm sorry to say I haven't a clue what this means. What do the symbols p, q, lambda, x, y, m and beta signify?",0
+"So, now that it's clear there's no moratorium, you now think it's controverial?  Can you explain why?",0
+"Please note the question, ""What are the remedies for when one bonks in the midst of a long ride? Essentially, what is the first aid so that one can continue?""",0
+"I have, see comment in original thread. Maybe there's a configuration option for it, or some way to set up a ""dummy target"" for nose?",0
+"What about B.C, B.D, and C.D?  Why does your goal not include these?",-1
+"Yes, sorry I didn't see the discussion.  How about moving it to a subpage of <url>, say <url>?",1
+"Thanks, I've PNG-ised these, and they look quite a lot better (to me, anyway!) &mdash; ""cbc decryption.png"" was missing; I don't suppose that's easily available, for completeness?",0
+"These are my numbers: 7 years in Wikipedia, 6 years as an admin, 570+ articles, 4 featured articles, 1 featured list, 21 Good articles, 60 DYK's - After six years as an admin. I recently made some mistakes and I can understand if I am placed in some type of probation were I am monitored and forbidden to use my tools maybe for a year, but do I really merit the removal of my adminship?",-1
+"I assume you are using NPI to refer to a problem in NP not known to be NPC ? Also, in the reference to Ladner, do you perhaps mean that L is NPC, and the removal S is NPI ?",1
+I obviously made a mistake too. Do you really think I'd purposefully misinterpret things like that?,-1
+Can you run it?  Do you have a MIPS board or an emulator or something?,0
+"""''Images with iconic status or historical importance: As subjects of commentary.''"". Listen, it's just trivial to look up, could you take the care of actually reading these policies before arguing over them?",-1
+"@Andrew Just out of curiosity, will it still work in LaTeX3?  Is that even a concern?",-1
+I'm being a bit thick but what exactly is the problem...Are you getting an exception? is so what?,-1
+Whose delegate? The view controller's?,0
+"I might be able to lend a hand, though it's not the most interesting article to me just as a matter of personal taste so I don't want to invest tons of time. What specifically do you want help with?",0
+for whatever reason adding a ~/.irbrc like most people are suggesting isn't working for me.  any other tips?,0
+"[Google Image Search](http://www.google.com/insidesearch/searchbyimage.html) does this to an extent. However, there seems to be no API for this (yet?).",0
+Could you please tell us what toppings are on them?,1
+Seems okay to me. What is it supposed to output?,1
+Is it possible to revert more than one revision at a time? Or must you be an administrator to do that?,0
+"How would you handle sarcasm, or other complicated figures of speech in such algorithms? Is it even possible?",0
+Why do you want to cook fish for someone who doesn't like it?  Why not just give her something else?,-1
+"<url> and I was wondering if you have worked on that project at all recently, or whether you know of any other open-source projects that implement your idea. Also, do you have any Wikibooks that you've written?",0
+"Eh, thanks, Sometimes impressing is too easy. Do you want to review the windmill article above?",0
+Why 5 things? Why not 3 or 7?,1
+"The C specification says tm_years is ""Years since 1900.""  Why not just stick to the standard and avoid this whole mess?",-1
+Noticed you've been holding the fort alone... again :) Thought I'd drop by and say hello. Surely your sanity has reached its limits by now?,1
+Why do you need to take factorials of such large numbers?  What will you do with the results?,-1
+"What is your opinion on just having that page deleted?  The spelling differences between that and <url> are more than minimal, as there are 4 differences between the two?",0
+"Ah, so next time I don't have to include ""Places"". Are there more specific categories I could use instead of ""Places""?",0
+"**Hey!** I just had the greatest idea - when a user clicks on a question in the widget, why not redirect them to the appropriate page on http://StackMobile.com ?",0
+I seconded wholeheartedly your proposal at <url>. Could you please add a link to the discussion?,1
+Who would be helped by this?  Is all that work really going to help someone?,-1
+"""If any database errors occur, they will be emailed to the address specified here."" Do u get any emails??",-1
+"Also, how can the answer be ""3""? Three banana's?",-1
+I'm not sure why you felt the need to make this question CW.  Do you see the question requiring collaborative effort from the community?,0
+"I remember seeing a table of bicycle laws in various states, but I forget where. A search isn't helping; does anyone remember seeing this?",0
+You told me to message you in here. Could you tell me how you do them?,0
+Can you post your .htaccess? And which directory is it in?,1
+"@ypercube hmm, never know it is there. **DATE** doesn't issue time, right?",0
+Sorry I should have asked it in more accurate words...yes I meant that it should be measured with respect to the aircraft's instantaneous position and not velocity... Would the cross-track wind measurement/direction change if it was measured with respect to the aircraft's 'airspeed' velocity than 'groundspeed' velocity? -- as the cross-track direction is effectively perpendicular to the instantanous velocity of the aircraft -- whether measured wrt to ground or air -- so its measurement/direction would not be infulenced by the aircraft's velocity... no?,-1
+"Also, you're not really asking a question by just posting some unfinished code - you need to be more specific. Is there something you don't understand about how the code works?",-1
+"@ʍǝɥʇɐɯ it seems ""this question will likely solicit opinion, debate, arguments, polling, or extended discussion"".  Is there a specific problem you're trying to solve that you can spell out better for us?",0
+"@Mr. C - taped-together printouts? You mean, no endless paper?",0
+That code works for me. Does it work for you if you just use that in an otherwise empty document?,1
+Hi again - it looks like the same user is editing out all the information about Destiny being self-centred again. Is there some way we can stop this user from making these edits?,1
+"actually, I found the requirement that ""your proof should work with any F, not just MST or MSF"" a little impossible because the weight could be any in the forest. any hint?",0
+another great example for how google makes you stupid. does nobody ever read the documentation anymore?,1
+"Also, you state that 2^|rules| is too many computational steps.  What about |options in group 1| * |options in group 2| ... *  |options in group k|?",0
+Google indicates that the ReadyNAS NV+ is a RAID controller.  Can you link to the product you're using?,0
+Would 'volatile' really have that effect in C? Don't you mean 'register'?,-1
+"If you want it CW, you have to flag it for moederator attention. Anyway, even as a CW question I don't really this is a real question... What's the point listing results in various fields of physics that one consider ""counter-intuitive"" ?",0
+"@bvr @chambwez I think my code is working fine now :) My last question would be, is session handling possible in XMLRPC? How do I maintain a stateful transmission between the client and the server?",1
+what's a binding? And in what way is it temporal?,0
+what do you mean by lock? you can't click on lock icon and enter your password to unlock it?,0
+What did you end up choosing? I'm looking at using custom layers or plug-in data source are there any more issues other than the ones you and Kirk mentioned?,-1
+"Fair enough, although the point that the Department serves a sizable population - since some cities may only have inhabitants in the hundreds - should be noted somewhere in the article. Perhaps when someone expands it, sometime in the future?",0
+"How about through basement/crawl space, attic, behind baseboards? Or are all of these out of the question?",0
+Do we have any Wikipedia regulars here who could perhaps advertise this thread at http://en.wikipedia.org/wiki/Talk:List_of_unsolved_problems_in_computer_science ? Or would it be a bad idea?,-1
+"In addition to xe1 xe2 xe3 xe0 xe7 xe9 xea xed xf3 xf4 xf5 xfa, I noticed that Portuguese uses - in the middle of words. When do you use -?",0
+"I've come to state that I find it mildly amusing that you don't consider a press release for a journalism award from Columbia University to be a ""substantial story from a citable source"".  Isn't Columbia among the world's most prestigious journalism schools?",-1
+"What are your OS and terminal program? Also, if using an unix OS do you have a `.inputrc` in your home dir?",0
+Holy cow! What happened?,0
+I find your decision to put the deepest level element as value and all parents as key somewhat weird. How are you going to know what to take from the array - key or value?,-1
+In .Net? C# or VB?,0
+"As to our last discussion, you said that <url> wasn't comprehensive enough and didn't show clearly its goal. Do you have any suggesting to improve this template?",0
+I styled the page to look like <url>. What are your thoughts?,0
+Any errors? what is in the debug console?,0
+Could you be more specific.  Are there specific points in the article that you believe are repetitive?,1
+"Just a question about the maintenance categories that FemtoBot automatically creates each month: I've noticed that the bot is frequently forced to recreate old, long-deleted monthly categories in the <person> queue, because an article got reverted to an old version for one reason or another and resulted in the old category being temporarily repopulated again. I'm just putting this forward as an idea for discussion, and am certainly not wedded to it u2014 but just to keep things simpler for everyone, I wonder what you would think about the feasibility and/or desirability of recoding the bot so that when it encounters a repopulated old maintenance category, it would retag the article to the ''current'' month instead of recreating the old one?",1
+"Hey,saw you had a page in the works in your sandbox. Are you planning to move it to mainspace soon?",0
+What is your take on <url>?  And is there a guideline or policy stated somewhere that covers this?,0
+"Sounds good then.  In this case, would it be wise to simply remove the ""influence"" field since it simply overlaps with ""subjects""?",1
+What is this code supposed to do? How are you approaching the data locality issues (this in my experience is the most important part of optimization)?,0
+"Sorry, no admin powers. If serious bring to the admin noticeboard?",0
+"Hi, I've reverted the edits you made to <url> as the flags by the clubs put's the box totally out of sync (on explorer anyway). Can I suggest that you don't add these flags?",0
+It's been 2 years since <url> was semi-protected. Worth opening it up to see if the vandals have gone away?,0
+"Also, it would be helpful if you told us more about what you're trying to do. What kind of manipulations are you hoping to accomplish?",1
+"So do I, because, inspite of my 100s of friends and supporters, I'm feeling a little beleaguered and lonely here. If I can hang on in here, can't you at least keep me company?",-1
+"As I've only ever tagged one page for speedy deletion before (and that was an obvious cut-and-paste copyvio), I just want to make sure I tagged it properly.  Was db-1 the right tag for <url>?",1
+Someone has moved this article to <url>. Can you please move it back?,1
+I'd suggest you get an iPod Touch to develop on then. Don't tell me you need something iPhone specific for your application like GPS? :),-1
+Is the graph that the MST is created from a unit graph (meanining all edges have a weight of 1)?  Is the graph directional?,0
+"I have no idea what you mean, please describe your question better. What exactly are you doing, what is returned *where* and what would you expect?",0
+Really? What is the evidence that leads you to conclude that `';'` is interpreted as a sentence terminator?,-1
+Do you mean multiple categories of blogs?  Or multiple discrete blogs like CNN's blog site?,-1
+"I'm sorry, but that does not respond to my question at all. Should I take it to indicate a no?",0
+someone? anyone?,-1
+Indeed. I trust you have already watchlisted this editor?,1
+It sounds (no pun intended) like you are looking for some sort of shock sensor (accelerometer) to detect the impact of the kick.  The problem that I see here is how do you limit the impact detection to just the kick event and not detect the impact of the foot/boot on the ground?,1
+"Hi Zaps, I've noticed that you edited the abovementioned article. Could you please provide your sources?",1
+This is certainly a tough assignment if you aren't good at programming. Do you have to code your own quadratic programming optimization as well?,1
+Replied there. Should we keep it in that one place for now?,0
+This is great so far! What do you feel you need help with?,1
+"I find it odd you have to define both the height and the width for an image, when your are displaying the image are you defining the width and height already? eg. `<img src="""" height=""y"" width=""x"">` and have you tried using `display: none` instead of the visibility property?",0
+OK then. You would support me if I removed '''ALL''' unreferenced material in Wikipedia?,0
+Not writing a full blown DNS so reading never ending RFC is a bit boring. Or is that absolutely essential?,-1
+"Am I missing something, or what specifically are you coding this in? JavaScript?",0
+Why did you remove my comment from your page? What was the reason for that?,-1
+"The question implies that free software is good for programmers. I would prefer the question ""Is free software good for programmers? Why?""",0
+"@sarnold It shows 
+Number of input = 22936722 49.Can anyone rationalise this strangeness?",1
+Specify what you mean by black-box. Does the adversary have access to the allocated addresses?,0
+Are these applications Swing based? What kind of communication is between them?,0
+Do you mind also explaining why bikes have this feature?,1
+Maybe one of your Processors died?  Was it a dual core or more?,0
+We prefer not to just do your homework for you. What answers have you considered?,-1
+"Yes, it is an option, but I have no experience using them. Can you direct me to the correct libraries so I can have a look at them ?",1
+"I found <url> while working <url> from <url>, my first impulse was to give it a prod, an long unreferenced orphan without a clear reason to exist.  I see you are still active on Wikipedia, is there chance you can do something for this article?",1
+"@Chubsdad - my point was that there is a very small amount of memory being allocated above.  Even if we were using a non-throwing version of `new`, what's the likelihood of `new` failing to allocate the insignificant amount of memory in that program?",-1
+"Variables should be extremely common, so why do you have to modify the most common with a $? Shouldn't something else get the $?",-1
+Only VideoCode returns undefined? Have you tried not using capital letters?,0
+"In your edit you specified inorder traversal, where in your original statement of the problem you specified preorder traversal.  Which is it?",0
+I can't remember if I asked/checked to see if it got to you? So... did it?,-1
+"What kind of routing logic would you provide at the host-level?  Are you talking about routing to various servers in a pool, or using something like IP source-routing?",0
+"Sorry for the delay in responding. The problems seems to have calmed down at this point, is that correct?",1
+"The reason for the malfunctioning redirects is that the character immediately after ""REDIRECT"" is not an ordinary space, but a ""non-breaking space"", hex code 0xA0.  Out of curiosity: how did you manage to create them?",1
+"At the top of the page it characterizes a guideline as ''a generally accepted standard that editors should follow'' along with a passing reference to <url>. So, I might ask, how would using 4 tildes prevent you from improving or maintaining Wikipedia?",-1
+What is an error? NotSuppeortedException in watch window or not sending request?,0
+somthing missing in your question! what forms you want to turn to?,-1
+"Great! Do you use IRC at all, or do you stay on-wiki?",1
+"Must the cycles $C_1, \dots, C_n$ be left intact? Are we allowed to break these cycles?",0
+"Sorry, what does ""set your exposure such that that is 'properly exposed'"" mean? Visually comparing the result of the camera with the colour of the card?",1
+Tcl nested hash? What version of Tcl is in that Cisco box?,0
+"Got that ''Spin'' article in the post today; should prove helpful. Also, I've added a Musical style section to the <url> article; any particular thoughts on what song would best exemplify the Dinosaur style?",0
+hmmm. off topic?,-1
+"Do you mean it literally says ""Unknown Sender?"" Or the number is just unfamiliar to you?",-1
+Are you sure the timers are responsible for the memory usage? Have you run your app using Instruments to see what objects are consuming the most memory?,0
+"@hop: i didn't know about the fallback, thanks for reference. I think you meant RFC 2821?",1
+Thank you for catching Known for Know.  How did you happen to look at the article?,1
+"This was virtually all copyvio. Carry out your earlier merge proposal and just add it to Cree language, turning the article into a redirect?",0
+"I created this for you. However as a registered user, do you know you can create categories by yourself?",0
+Done. Does Adam Hunter need your disambig-style touch?,-1
+I'm not sure I understand the problem. What's wrong with dropbox?,0
+"All I'm trying to say is that calling someone you're in a content dispute with a vandal isn't right. Let me ask you this, how do we stop the warring and conflict between users on Wikipedia that have real disputes outside Wikipedia?",0
+"In <url>, you removed a cartoon image of Wendy Thomas that had been used in the infobox on her article. I'm not very familiar with the NFCC policy you cite, so I was wondering if you thought that giving a rationale on the image for use in that particular article would bring it up to specs?",0
+"Some time ago you uploaded an image of the Knowledge Navigator, which was speedied some time later. Can you upload the file again?",1
+"Please clarify your question. What does ""This results in windows 7 with the following icons"" mean?",0
+What language are you looking for? C/C++?,-1
+"Good advice, @Spacedman. Care to write that down in a form of an answer so I can upvote you?",1
+What is a string pointer? Can you give some example about the input and the expected output?,1
+"As does ''<url>'', and ''<url>'', and even ''<url>''. Wanna be friends?",1
+"Did make me smile....a dreamtime legend of a tiger in WA of all places. Seems a long way to walk, even when there was a land bridge ?",0
+"Are you talking about downloads in the Market, or files downloaded from the internet (ie. in the browser)?",0
+I noticed that you created the Close AFD script. Is it possible to edit it so that it works on all xFDs?,0
+What's the purpose? Maybe http://stackoverflow.com/questions/491738/how-do-you-calculate-the-average-of-a-set-of-angles/491769 is relevant?,0
+"I have problems to understand your question. About which URL/file.php are you speaking when you say ""default ""post edit"" screen""?",0
+"What if there is no idle worker, how do you intend to deal with that? Just queue them up?",-1
+"Why not try it out and ask for specific answers if/when you encounter problems? I don't know if it's supported, but it's worth trying at least right?",0
+"This is a very broad topic. Akin to, ""How is cake made, and what are the ingredients?""",-1
+"So does jail breaking an iphone consist of changing file system and directory permissions or is it more complex?  If so, does anyone know the low level technical details?",0
+"I am doing stub cleaning and consolidation that is needed to reduce the incidence of tiny articles.  For instance, did you know that the Luis Rodriguez article was linked to by a music producer, two boxers and a singer?",0
+How are you performing the AJAX request? Could you show some code?,0
+I'm not really clear on what :foo_bar is. Is it just a join table or does it have other properties that aren't listed?,0
+"Granted, it wouldn't be terribly difficult for me to recreate what I did, but I don't like doing extra work when I don't have to. Could you at least userfy the last version edited by me?",-1
+i want to insert data whole data of array into vector of a map without using for loops. is it possible to push back data set into vector of map?,1
+Where did you find the `dequeue` method? [My API doesn't show it](http://download.oracle.com/javase/6/docs/api/java/util/PriorityQueue.html) ..?,0
+"Sorry, I understand, the bot has just moved the category of the sub-cat, not merged it. Is the bot going to proceed to the next layer - or does that have to be done manually?",1
+"what do you think was the purpose of this Fesselballon? if it wasn't military, what was the point in shooting it down?",0
+"Where is the object created? Is it created on the stack, on the heap, or is it a global variable?",1
+I think your question is a bit unclear. When you write add/attach do you mean you want to insert it into the post?,0
+/me scratches head. did you let VP access the internet through your firewall?,0
+"Sorrry,but i dont know where are these project properies. Could someone tell me?",-1
+Spam filter? Do you mean your post was reverted?,0
+`tex-guts` is a really ugly term to use. Can we use `tex-only` or `plain-tex` instead?,0
+I wasn't sure whether you were actually reading anything because facts seem to bounce off of you like bullets off of Superman. And you accuse ''me'' of fantasies?,-1
+Why bother with the `.php` in the rewritten URLs? Why not just `/course_view`?,-1
+"Hi, I've added a question to your RfA. Also, could you elaborate on how you will ''prevent'' vandalism?",1
+"Hi there, you entered info in the bio of <url>, saying he is related to <url>. Do you have any more info on the specific relationship, and also how they were related to <url> ?",1
+"If not here, then where? If not now, then when?",0
+Can you paste in your code? Or maybe try to find a small reproducible test case that you can paste here?,0
+"I know, I understood that. :)  I didn't scold you for it at all, did I make you feel that way?",1
+How long does your regression test take to complete?  Surely it should be based on this?,-1
+I agree that terms like Australian Formula 1 need an explanation but isn't that why we link the term to the Australian Formula 1 page? Do we need to disrupt the flow of the article to explain a term which is already explained on the linked page?,0
+How are you running the Django? mod_wsgi or mod_python?,0
+You mentioned an hour long video that included about 25 minutes of Will Wright just talking. Do you know where I could get a copy of this?,0
+"@Klark Why is the solution to the second example ""not possible""? How about `(2,9) (5,1)`?",0
+"Hi Editorofthewiki,  both images are just fine.  I don't see an open review for the article; is there somewhere in particular you'd like me to make this comment, if not just here?",1
+Have you tried running it from the command line? `softwareupdate --list` to see if it spits out any errors?,1
+"<person> I've moved contents of <url> to <url>, but keeping intial desciption of this specific disorder. It leaves though <url> looking very bare - can you word it up using teh eMedicine and DermNZ links already provided ?",0
+Post the exception that occured - preferably including stack trace. Is it perhaps `InvalidOperationException` and you have a library with it's own .config?,0
+<url> Is there any way I can convince you to change your mind?,0
+"There have been several frustum/aabb culling code questions recently; would some expert make a definitive how (not why) guide that shows the steps e.g. how/  *when* to make the frustum, what transform to use on the things to test etc?",0
+"i am not getting you,
+and where is the link?",-1
+"I dunno, that's what the vandals seem to think. And who are we to doub them, being the considerate, mature, thoughtful people they so often are?",0
+"Not sure what you mean by _""preserve""_ the sort parameter. Do you mean *""How do I parse a URL such that it generates a list of posts on a category page using the desired sort order?""*",0
+"Just to be sure, are you talking about ST as found in clinical trials, e.g. http://en.wikipedia.org/wiki/Sequential_analysis?",-1
+The sources are ref'd in the article. Can you be more specific?,-1
+"@Mac: I'd be interested in hearing more about that situation. Can you post it as a question, for us to solve the incompatibility?",1
+"I believe it was I who moved it, based on what appeared to be consensus to use the hyphen in that context.  Where is this guideline of which you speak that suggests otherwise?",0
+"@Gilles Sorry for touching such an old issue, but it looks very interesting! Do I understand it right, that something like `ionice` would do more good?",1
+"+1 Didn't know that about coated materials, do you know if the coating comes off in that situation or is it ruined and just stays on?",0
+"Thanks for the information (I'd guessed that it was Belgrade, but I didn't want to add that until I was sure).  About my second question: do you know if he campaigned to be elected mayor of Belgrade, or for someone else, or what?",0
+"It's not hard to, say, brute force this in Prolog, but the performance will be horrible.  Does anyone think this has a PTIME solution?",0
+I'm not quite sure why the size of your sample matters. Can you offer anymore specific reasoning as to why you think it is different for small n than it is for big n?,0
+Thanks for your assistance in the review of the Brian Keith review at the DYK! The user has cited the Internet Movie Database before?,1
+"Why was <url> deleted when it was simply a crop of <url> which is public domain? I'm pretty sure I wrote that on the description page, but if not, can it be restored?",-1
+Are you looking for absolutely all possible solutions or for all solutions of maximum length if multiple instances of such solution exist? in order words is solution of 2 sets of length 1 like {54}:{54}  an acceptable solution 1?,0
+"Today we mostly use petrol and diesel from crude oil, but this is running out in resources within 30 years. Do you know what we will be most likely to use as an alternative?",0
+"Hi Taivo, I'm beginning to have my suspicions that Fellowscientist might be you-know-who from past debates. Am I being paranoid?",0
+"What do you mean by bare-bones? Supporting nothing, but A lookups? :)",0
+Wait. Unless ''you'' need it repaired and updated quickly ?,-1
+"What do you mean by ""will take an arbitrary number""? Do you think about some input (from user or file) or some other way?",-1
+Have you tried connecting manually using telnet? If so what prompts do you get for username and password?,1
+hmmm....odd. can you give us the source you're searching?,0
+Is the question supposed to relate to programming (i.e. solve this using a program)?,0
+"@Cyber: What was that adequate solution?  Could you post it in detail, for people in the future who have this problem?",1
+@user1567: You add the function to the `wp_ajax_myaction` and `wp_ajax_admin_myaction` hooks. Should that not be `wp_ajax_myaction` (for logged in users) and `wp_ajax_nopriv_myaction` (for anonymous users)?,0
+probably is recessed lighting.  is this the style of lighting you are referring to http://www.google.com/images?q=recessed%20lighting&safe=on&um=1&ie=UTF-8&source=og&sa=N&hl=en&tab=wi&biw=1408&bih=800 ?,0
+"Who said the bunks are equidistant? Also, what is a ""bunk""?",-1
+Why are you holding this as a string? Can't you convert them to a dictionary?,-1
+"If this question isn't being moved to meta, can it be split?  Move the stuff specifically related to this site to meta, and leave the rest here for general web use?",1
+"Are your brakes not working, or just making noise?  The noise is fairly common for wet disk brakes.  But do they still stop you?",0
+"Hi, I understand that the WP:COI rules would still apply, regardless of username. Could you kindly approve the change in my user name from cecn to funshine?",1
+"You are being very insulting on <url>. Can't you just trust the strength of your arguments, instead of insulting people who are doing their best to help improve Wikipedia?",-1
+Why did you remove those German emigrant cases. Shouldn't we include those cases of people who was born in what was then Germany at the time?,-1
+@robin @peter: It isn't clear to me that it's an exact duplicate either.  Are you both referring to the one I linked above or another one?,-1
+"Avinash: Below, you rejected Levenshtein as ""slow"".  So your idea of ""best"" must include performance, too, no?",-1
+"By revert all user contributions, do you mean '''all''' contributions? or just all contributions to one article?",0
+"Does that mean we're not allowed to ask WordPress questions on SO, even if they're legitimate programming questions?  Why the fragmentation?",-1
+There's enough subtlety on some of the variants that I will need help from an expert. Might you?,0
+Can you phrase your question in the form of a question? Preferably a programming question?,0
+"Huh... I thought he was just overlooking the box, but you're right, @Tetrad, wiki is now mod-only. Seems strange, why wouldn't they allow users to apply it themselves?",0
+"Thanks for the explanation. Might not Aethelred have been following the example of his father, who also gave his sons the names of former kings?",0
+Good day. Can look at this report please <url> ?,1
+or anything else? So mutable linked list is allowed?,1
+"I've created another question to track the single-speed portion of the question. http://bicycles.stackexchange.com/questions/1983/ Here we can talk about ""why no freewheel?""",1
+I restored the lead picture series I like. What do you think?,1
+"That's what I thought. :) Well, what is solution for safe managing lua_State*?",1
+"In what way has it ""disappeared""? Do you mean it no longer appears as a shortcut icon on the home screen?",0
+Are you after an optimal solution or is a near optimal solution good enogh? And is hyphenation allowed?,0
+"I couldn't find your ""email user"" function. What's up?",-1
+Do you have problem with it? Does it work?,-1
+absolutely correct!!! UMM  what is in the blue J-box on back side of the wall???  possible junction location for an extension wire???,1
+"I see. What about ""Main Church""?",0
+"I often work out of Sweden and I have an excellent, free, built-in English or Swedish grammar ''and'' spelling program in ''Word'' on that computer using Firefox (as this user says she does) - red underlinings for spelling and green for grammar - which would preclude almost all of the huge amount of problems caused by this user regarding readability, or at least alert her to the very quanitity of the problems and inspire a constructive attitude as to her own capacity. Perhaps if one does not consider it a ""duty"" of sorts to contribute readable English here, that actually might be the problem?",-1
+@BioBuckyBall: Do you read what I wrote? Do you read every word?,-1
+"He's back <url>, <url> as <url>.  Also, in the future would you rather me just post these to <url>, or do you just want to continue handeling him?",0
+"Though your edit summaries say ""cat"" you seem to be on a mission against the word ""alumni"". Any reason for the purge?",0
+How are you launching the debugger? Via the respective properties of your project or via attaching the debugger to the w3p.exe process?,1
+Right. Any idea where I plug in the OAuth2 stuff?,1
+"ED, eh? Have they tried Viagra?",-1
+"Sure, only maybe ""legendary"" would be possibly better than ""magical"": the magic isn't so much explicitly stated, as hinted, possibly a residual of shamanic influences. What do you think?",0
+What are the numbers <url>? Are they population figures?,0
+"Since Maddieson has not himself done any work on Mazahua I would be interested in knowing which source he uses for his Mazahua data. could you put a reference to his references here at the talk page, just for  my curiosity?",0
+Would `ABABABAB` be `4(AB)` or `2(2(AB))`? or `2(ABAB)`?,0
+I get error messages with line numbers.  How are you loading your scripts?,0
+"Oh by the way I do drugs too, so we should get along together!  Friends?",0
+"Can you post a representative data set?  Are you okay with getting no matches back if there is a distance of more than 2 (or 5, or ..) between the closest pairs?",1
+Sounds a bit like homework? ... Can you define what you need to know in order to solve your problems?,0
+"Could you clarify what you think the problem with `Digest::MD5` might be? If you can't, why don't you just use it?",-1
+"You mention that it's fried at a high heat -- is it safe to assume that the tofu is coated in arrowroot, fried, then finished in the sauce?",0
+@ChrisW: I didn't edit because now it looks like we closed a legit question. Can it be unclosed?,0
+"that hotcat lockup, was like an edit conflict, so i tried a backup and re-enter.  thanks for the assistance, i'm using the old layout, so would the new view affect my hotcat category edits?",0
+"Could you please give a more detailed description of your problem. When did it start, etc?",0
+It's in the library I think. Need a specific reference?,0
+"Ok, so you have successfully logged in??",0
+"What kind of input are you looking for, give little more details. [CommonDialog](http://msdn.microsoft.com/en-us/library/system.windows.forms.commondialog.aspx) look at the classes inheriting it do any of them look right for you?",1
+"And after seeing this talk page, I'll also note that there is no difference between scalars in math, physics and computing, those articles should all be merged together. :-/ Maybe you'd be interested in doing such a merge?",1
+Interesting.  why the sugar?,0
+"Just curious, how are articles marked for your bot to update their statistics? Is there a tag, or is it any player in a certain category, or...?",0
+"This sounds like it belongs on another stack exchange, I'm just not sure which one.  Something to do with computer-architecture and hardware...maybe [Electrical Engineering](http://electronics.stackexchange.com/faq)?",0
+@DADU What changes do you want to make on that HTML string? Can you give some examples?,1
+what error do you receive? and when?,0
+I agree. How about using Mizbot?,0
+Do the titles of WP articles generally pass partisan judgment on the subject under discussion? Should they?,0
+Where is this dead zone? Can you please update your question with a screenshot?,1
+As I don't want t give default values because when ever I change its height and width I also have to change it in code - which one can change? the image view or the images stored?,0
+"The three readings given for that kanji are &#12395;&#12435; (nin), &#12375;&#12398;&#12406; (shinobu), and &#12375;&#12398;&#12403; (shinobi).  So what's the reading of this word &#19981;&#24525;?",0
+"Hey, I like your sharebox a lot.  What do you think about trying to make it a <url>?",1
+I see you are a libertarian SULS alumnus. Did you ever have Professor Rounds?,0
+"(according to my talk page) that we are going to loose the image of <url> that I just added over a copyright issue.  I have not had luck finding a free one, perhaps you can do better?",0
+"@Chzz, the coverage in the references provided are a dedicted chapeter and a reproduced artice??",-1
+Bumpity bump. Anyone else have any thoughts on this?,-1
+Your examples have nothing to do with GLn. Are the coefficients always integers ?,-1
+Does your log statement for the jobViewArray count in the notification show what you would expect? is jobViewArray a property?,0
+What do you think? And how does one go about establishing this project group?,0
+"do you know any good references for the special cases of nonexistence that you mentioned? Or perhaps, just a general reference/set of references for the order 12 case?",-1
+"I think if we did it that way, it would add a lot of possibilities to the page, enabling us to give breakdowns of other wars and major events in separate tables as well, in addition to alternative listings, which I think would be quite useful. Because there are a lot of events with different aspects to them that could be covered in more detail IMO, what do you think?",1
+"Suggestion to edit the title?  ""Free/Open-Source Theme Frameworks as an Alternate to Thesis?""",0
+"Define ""same"", i.e. do you mean = or == or something else?",0
+"Hi. I uploaded three very nice images in the <url>, can you please tell me what breed could that dog be?",1
+"*""Obviously""*. Why not?",-1
+"How much data are you backing up daily, weekly, monthly? How much data do you plan to retain, and for how long?",-1
+"Are you concerned with the fact that these are glass, or that they're shallow pans?",0
+What is the `ArrayIntStorage& AIS` parameter?  Is it relevant to your question?,0
+Could you please be more specific. What do you mean by your desktop vanishing?,-1
+What is in ExitListener.h? What happens if you insert the line `class ExitListener;` after the include statements?,0
+"isn't your regex working at line level, as e.g. in perl?",0
+I would like to move the section <url> from <url> to <url>. Comments?,0
+"Hi, Matt. Aren't you supposed to be banned?",-1
+"Again, why are you simply reverting wholesale and without any explanation? Would you rather the article be out of line with the policies and guidelines, among other problems?",-1
+"@cb Please note that some angles are not cyclic: the approach angle in the original question is a good example.  If you have a specific follow-up question, why not post it?",1
+What is the actual question? And have you considered using punctuation?,-1
+"Is this a exercise in ideology? Views is very well suited to this task, why not use it?",-1
+I always try to use correct grammar.  Why dumb down your correspondence?,0
+So your .click listener/handler is functioning correctly (you can do other things within it?) and it's only your $.get function that has an issue inside the handler?,1
+"Im assuming that you need an exact solution. Thats the case, right?",-1
+"Hi there, I've raised the possibility of unprotecting the tamazepam page <url>. What are your thoughts?",1
+Why the hell was this migrated from SO? What made them think it belonged here?,1
+Is this homework? Have you tried to work out how much storage each approach would require?,0
+I don't understand this answer.  What's the 2' piece for?  Are you assuming the beams are made from a single thickness of 2-by lumber?,-1
+What environment are you running the code on? Could you enclose the code as it would make it easier to help you for us SO'ers?,1
+It's a low-profile page in the sense of not getting much attention from editors. Why do you think addressing Luther's views on grace is necessary to understand contemporary philosophy?,-1
+Same thing happens to my with my Droid when checking my google voice messages.  I think that the proximity only works with the Phone Dialer maybe?,1
+"I pretty much agree with <url>, except I would like to know why you modified the see also section to be a hatnote. Doesn't <url> have specific requirements for this?",-1
+"But the main question was that would it be a bad idea to make more articles about characters, orginizations and etc. in a book?",0
+"I noticed your ""Original Research"" notation for the section on weights and measures in the article in Liberia. Could you explain in more detail your concern and how it might be remedied?",1
+"This question basically tells me nothing about what the actual problem is. Also, what's a ""pathway""?",-1
+"As for the Norwoods, both South Norwood and Upper Norwood are in Croydon, but West Norwood belongs to the LB of Lambeth. Does that help?",0
+DRM in eBooks is driving me mad.  Can we please please please hurry up the free market on this one?,0
+I understand the situation but not the question. What would you like to see different in the behavior?,0
+Aha! Can I also give you an answer which is not coded??? You and me need codes... Okay?,-1
+I'm afraid to step into the love jungle. Can you post a screenshot?,0
+Still highly POV. Shall we put pictures of human skeletons from Auschwitz on <url>?,0
+"It would help if you could create a scenario so I can see what you are talking about. I think this is an optimization problem, but what if you have a non-optimal solution that meets the requirements, would that be sufficient?",0
+Not that clear to me. What's wrong with this username?,-1
+Do you see any that are missing? Is this what you wanted?,0
+Your specs do not have span adjustment. Is there a typo?,0
+@Federico:This part defines a schema in the wsdl. Does it import one or defines it there?,0
+Maybe I'm confused... isn't POD (perlpod) extra formatting?  Or can it work without adding *anything* to the existing code?,0
+"Thanks. Can you leave a comment at <url>, saying you are the creator?",1
+These two factors make me think that Indian ice-cream is a better name for the article than sxusem.  What are your thoughts on this?,1
+"This is actually a question about recovering deleted files, it doesn't really make any differene that they are images. Perhaps would fit better on superuser?",0
+@Aaronut Hi.  Private message?,1
+"For a new project, I'd recommend either using Spring MVC, or using JSF2 and not having to deal with pure JSP.  JSP like that is heading towards legacyland...  Nothing *wrong* with using it, but why would you start a new project with it with better options available now?",0
+I am wondering about one thing. Is there a risk of flat tire on rough terrains or even breakage or tears on such tires?,0
+How can a permablocked user edit? And who would set up a sockpuppet months in advance?,-1
+For what country? Could the data from openstreetmap be complete enough for your locality?,1
+Thought of good idea: Wikipedia:Babies who will one day rule Wikipedia (WP:BABE) for Wikipedians in middle school or younger.  Whaddya think?,0
+is it accessory to call only delegate method on button click ? or some how to call it ?,-1
+Where did you get the tracklist for the album? Can you please drop me a messafe with the link?,1
+"is `""puzzle game using"",""group of words""` a legal solution? or does it have to be 1 or 2 words per partition?",0
+"Yes, it's a worry, particularly in light of the <url>. The end could be closer than we think .... or has someone else already said that?",0
+It looks like its not processing the imports in the WSDL. Have you confirmed suds works with external imports?,1
+do you want to send the 32bit number in binary form? or in ascii?,0
+"Hi, J.delanoy, I was just wondering why you did <url>. If in your opinion that text shouldn't be there, why not just delete it completely?",0
+"Also, by the way: there is no such operating system as ""window XP 2003"".  Do you mean *Microsoft Windows XP* (a desktop operating system released in 2002) or *Microsoft Windows 2003 Server* (a server operating system released in 2003)?",0
+@Milo: I'm confused about why you have a non-overrideable function call a virtual function rather than directly calling the virtual function. Is there a reason for this?,0
+"I don't know which of the answers I should select as the ""accepted answer"" as each one answers a part of my question. What is the normal procedure here?",1
+scheme is pretty easy to debug. What step does the stepper stop you at?,1
+Is this okay? Or OTT?,0
+I'm not clear on something.  Is this taking place _before_ or _after_ the hatches are open?,-1
+"Is a toaster oven apt for heating a pizza stone? (sorry, no experiences with t.o. here) How long does it take to get enough temp?",0
+What do you get instead of the sorted array? What is the output?,0
+What kind of data are you expecting? Another float or printed output?,0
+"@lasseespeholt: I see. If I may ask, what else do you need?",1
+"Very true. Out of interest, what do you make of the new kits(s)?",1
+"There seems to have been something wrong with the pages you made on the V8 Supercar Championship Series - a glitch with the ""align"" tags in the beginning infobox made the text grotesquely overflow the margins. I've trimmed these down; mind checking my work?",1
+"Since I have no purpose I don't need to use wikipedia, so can you change my username to <url> (<url>)???",0
+"You could have forgotten an include that defined a type, forgotten a smicolon, lots  of things. Can you paste the code 10 lines before and after the location that the error indicates?",1
+"I'm the uploader of the hubble pictures.  What do I put for the author, description, and stuff?",0
+"There is a recommendation on the talk page of the ""<url>"". What do you think of it?",0
+"There cant be a general solution. What do you do when the stack has 10 entries and you need to output a number, but the last number hasnt arrived yet?",-1
+"I think there is probably a very useful question underneath this, but as it stands this is quite subjective; some individuals may worry more about one or the other (or both) but that might not be useful for you at the end of the day. Can you reword the question more towards specifics?",0
+"Why can't we do like IMDB and have multiple ratings?  Is it that simple, or am I crazy?",-1
+"Thanks for the advice but that's why I remove the ""Thank you for your contributions"" on the welcoming template. Is that still okay to do?",1
+It's not that I don't like to use `memoir` commands -- it's that I don't know what they are in the first place. =) Could you please extend your answer to include the code which produces the same result but uses only `memoir` commands?,0
+What happens when you set a breakpoint in the code for the assembly?  Does it have a question mark in it?,0
+"What ""fact"" that was recently prooved is referred to?  And since when is pi the ratio of circumference to radius, rather than circumference to diameter?",-1
+"#I am still convinced the long page on ""prostatitis"" (a misnomer in the case of CPPS) is confusing, with too many sections and subsections, and would benefit from restructuring and the creation of separate pages for each area, or at the very least the removal of the CPPS section to its own, in depth page. You were the only editor to object to this going ahead, with this comment: ""So, suggest keep this on hold for now, but in principle one might similarly split off other classification categories with this then just umbrella simple introduction."" Do you still hold this view?",-1
+"Also, your question is a bit unclear to me. Can you provide an example of what `array` could be?",1
+"That seems to be right since it still debugs in IE, but I cleared everything (see above). What else can I clear?",0
+"I don't know, but that doesn't make any sense to me.  What do you think?",0
+All those people have said to news sources they aren't running/are/or something related? Or am I confused?,0
+"Are you able to access the file using the ""?"" instead of the escape code or the special char?",0
+You're welcome. What else is peer review for?,1
+What do you have so far? How are you storing what you get out of Nokogiri?,1
+I have now created <url> and <url>.  I wonder if a similar template may be warranted for listifying (CfL)?,0
+"Hi I saw you mentioned that DirecTV has plans to add MSNBC HD upon launch on <url> but the source you referenced has nothing about DirecTV in it, its just about the HD launch itself, so I removed it per <url>. Do you have a source that specifically says DirecTV WILL add it upon launch?",0
+"it **only** affects the object that has been created in the last loop-round? or, it **also** affects the object that has been created in the last loop-round?",-1
+Thanks for providing the IPA of <url>. can you help further in copyediting the text?,1
+I thought that it seemed a bit removed from Imlay's own time and there was no real explanation of the significance of Imlay to Twain (if any) or of Imlay's reputation between her death and the end of the nineteenth century or in America. What do you think?,1
+sounds like a permissioning issue on the linux box. have you tried chmod?,1
+"Although I've always used what I guess you could call an ""object based"" style of C programming, it is much, much easier to to this (and just about everything else) in C++.  I have to ask why you don't seem to want to use it?",0
+"By changing ''Category:New Zealand Mu0101ori people'' to ''Category:New Zealand Mu0101ori rugby union team players'' for many Kiwi rugby players -- such as <url>, <url> and <url> etc -- you have removed many Mu0101ori people from the only category that collates them together.  Do you want to fix?",0
+What do you mean by 'temperamental'? Exactly what is happening?,0
+"Alright, the NPOV template is even worse, since it specifically points people to a talk page discussion which does not exist. Why are you adding these templates?",-1
+"LordAmeth-- once again, many thanks for nominating me. I have a question, though-- I noticed that the process was ""scheduled to end"" at 16:52 today, and we're past that now...what happens next?",1
+"@Andrew Bolster: ""listofthings in the actual implementation is coming from the parent"".  Why can't you make this `thing` method a part of the parent and simplify this design?",-1
+I just have to ask.  Why is that outside?  And why don't you reroute it inside (the way it probably should be)?,-1
+"Well, why would you expect OSX programs to be runnable on Linux?  What about these two specific OS's makes you mention them in the question, but not any other OS that also can't run OSX programs?",0
+"I don't think it is too unreasonable to archive messages you have read by deleting them - they are still available in the page history. Is there a policy guideline that they should be archived, and not deleted?",0
+Thanks for the tip.  How come I sometimes come across pages where the trailing 's' is left off (or am I confusing that with the 's situation)?,1
+"@user3266: Sorry if this is obvious, but how do one permute the order of the interior vertices and construct another valid Hamiltonian path? Or, only if such property exists then you put it into the equivalence class?",0
+"As I wrote above, at first I thought lets keep it, but after I heard some arguments, and when I made analysis of my own, I got to my conclusion. What's yours?",1
+"I have just noticed that today a Wikipedia administrator added a POV tag in the u201cPsychohistoryu201d article, which you have contributed to edit. Perhaps someone should do a little work to balance the article and remove the tag?",-1
+"Ah, as I recall it was ''you'' who confused me on that one, by adding them to <url> during the GA review ;) What is the preferred display quote? Does one just use blockquote?",-1
+"Many people have mentioned this mythical facillity - I've never found it, and assumed it was only available to sysops, which I am not. Is this the case?",0
+"Yeah, tough crowd today.  Maybe it's right after a long weekend? :)",1
+"re: <url> edit. Then let me ask you, what exactly was offensive about them?",-1
+@ennuikiller - really? What mode is it opened in?,0
+"@dan and sri, Sorry if this is too far from the original question, but is there a manner of linking (ie. the type of URL I use in my post) I can use to attempt to maintain the header (I'm *imagining* some `rel=` attribute to the effect of the capturing it), or does HTTPS always strip it out?",-1
+"Hello -- I see you changed a couple of entries relating to ""PALATINE, the Subject Centre for Dance, Drama and Music of the UK Higher Education Academy"".  I don't know (or even care) why that organisation chooses to refer to itself by capitalising the word, but (and I ask for information here) is there a policy that precludes us from respecting that choice?",-1
+"Well, don't everyone talk all at once now. :) Any suggestions for the article ?",0
+are you looking for an algorithm that is optimized for a single query? Or an [indexing strategy](http://en.wikipedia.org/wiki/Index_(search_engine)) that will create the data structure given the 100MB source text so that all queries of similar nature will be optimized?,0
+"what do you mean by 'events'? string data like from calls to TRACE, software events (dll load/unload) or hardware events (device plug/unplug)?",0
+"Welcome, Hunter! Typically we want questions here to be specifically related to photography, not just image editing; if your question is photography-related, perhaps you could edit it a bit to clarify that relevance?",0
+Can you give an example of a recipe that didn't work out as you hoped?,0
+"Could you try to render a case-use of the jussive mood from another language into english? As in, how would you use the imperative to command he/she/it/them separately from the second person?",0
+I thought that was the style in all languages. Can you give an example of a language where the explicit numerals are not avoided?,0
+"As an additional data point, I'd recommend verifying the COM port is actually accessible by a simple terminal application like HyperTerminal. Is it?",0
+What City in Connecticut do you live in? And have you been to the north as your name suggests?,-1
+Have you set up venue and name as properties correctly? i.e. written KVC compliant accessors or used @property and @synthesize?,1
+"Probably not OOTB, but should be possible to write a plug-in to do that. Just curious, why in the world would you want to do that?",0
+"Herlihy & Shavit's book, The Art of Multiprocessor Programming, or [""Lock-free linked lists and skip lists""](http://www.cse.yorku.ca/~ruppert/Mikhail.pdf) or [java.util.concurrent](http://download.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentSkipListMap.html) or [Practical lock-freedom](http://www.cl.cam.ac.uk/research/srg/netos/lock-free/). Have you considered using a concurrent hash table like a [hopscotch hash table](https://sites.google.com/site/cconcurrencypackage/hopscotch-hashing)?",-1
+They are completely different. Have you even glanced at the documentation?,-1
+"I've made some changes to the <url>, and started a discussion on the template talk page. I'm a bit stuck on some bits of table formatting and linking, so I wondered if you'd be able to help?",1
+Any idea what happened here <url>? Buffer overflow because my comment was too long?,-1
+I get confused about scope with this horde of niche sites.  Please explain:  A question about apple filesystems belongs on superuser?,0
+"More a bot to flag articles where persondata and defaultsort disagree, so that humans can check which is correct. I presume your bot already detects cases where DEFAULTSORT and listas disagree?",0
+"I also found your audio uploads at <url>. If it's not a burden, would you mind recording more Hungarian town names for WP?",1
+"Do you mean, when you break into the debugger and step through the code the image disappears?  Or when running the form in DEBUG mode?",0
+"<url> <url> version, but mighty all the same. Am I wrong?",0
+"Do you mind telling me why you haven't reverted my rewriting of the first sentence, and changes to the introduction? Perhaps you would prefer to delete the two new biographies that I have just started to cover the red links?",0
+"But someone actually remade the article here, http://en.wikipedia.org/wiki/User:DOSGuy/Joe_Siegler it's a subset of someone's user profile, but they are essentially circumventing a deleted article. Is this against wikipedia policy?",0
+You need to show the declaration of Patient. Are you sure you're not writing pointers instead of complete strings into the file?,0
+Can you define butter spread for us? Do you mean margarine or other non-butter spreads? Or is there some spread that uses butter as a component that you're referring to?,1
+"I was going to create the list of tallest buildings in Hartford, when I saw that it had been deleted three years ago by you. I don't understand the reason for deletion; can you clarify why?",1
+Did you start the JLink remote server that talks to GDB? Did you tell GDB to connect to a remote target?,0
+But how many of them have Wikipedia articles and pass <url> and <url>? How many of them are located ''in the boundaries of the CDP'' or ''are associated with the CDP''?,0
+"I have seen 'webform-revisions' module, but it solves nothing to me. Have you got that functionality working?",1
+"I fail to see how you call copyleft ""selfish"", but are fine with the idea of totally proprietary licenses. Wouldn't those be even more selfish, then?",-1
+The same way anyone with a desk job stays healthy! This isn't really programmer-related?,1
+"Squeegy, I didn't set any breakpoints, so I guess TouchXML had breakpoints included? How do I get rid of them?",0
+Do you mean article edits with sock puppets? Could you give me more precise examples?,1
+Your code isn't going to work anyway. How can `tags` contain a new instance of the tag object?,-1
+"I've never even questioned this before, but now you mention it why is it OK for boards but not for knives?",0
+"To clarify, are you trying to find the lowest distance, or the fewest number of edges?  Do the edges have differing lengths?",0
+"So, your app creates a new html for each login? Or for each user?",1
+"@Matt Sorry about the edit, maaan. Out of curiosity, why don't you want the spoiler block?",0
+Interesting! What is the cider vinegar supposed to do?,0
+"Ultimately, **every** file is represented using `0` and `1` only. What makes a ""bitmap index"" different?",-1
+Visual Studio 2080? Are you from the future? O_O,-1
+Why not share your library over Bonjour so she can access your music? Or is there something else you want her to do?,-1
+how much current is your power supply rated for? what are you using?,1
+It appears that that article was deleted because not enough info was found on the person. Doesn't the new article have enough info?,0
+"While the Curriculum and Campus sections could use some references, i think this is ready to go live. Do you know how to move this to the main article space?",0
+"Do you think your question has not been answered adequately yet? If so, how can the answers be improved upon?",1
+"Why did you revert my edits on that page? You say it was unsourced but it was sourced, I put two references to two fair sources (not blogs nor politicaly bound), so why did you remove them?",-1
+Would you please make the question more clear? Do you want `\BRallowhypbch` activated when you set `\emergencystretch`?,0
+How did you fix this. It doesn't seem that simply moving your views into separate modules would work?,1
+What do you mean by run?  Instantiate a servlet or actually hit one of the doX methods?,0
+"@cantrem: Yes, that's what I meant, just a direct rebuild after it fails. What happens if you change any other line and try to recompile?",0

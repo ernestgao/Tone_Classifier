@@ -1,0 +1,30 @@
+{
+  "source_row_counts_before_merge": {
+    "politepeer_csv": 1442
+  },
+  "human_rows_after_dedup": 1442,
+  "synthetic_rows_after_cap": 0,
+  "total_rows_final": 1442,
+  "label_counts_final": {
+    "-1": 208,
+    "0": 1132,
+    "1": 102
+  },
+  "output_files": {
+    "train": "data_politepeer_extreme\\train.csv",
+    "valid": "data_politepeer_extreme\\valid.csv",
+    "test": "data_politepeer_extreme\\test.csv"
+  },
+  "config": {
+    "seed": 42,
+    "valid_size": 0.1,
+    "test_size": 0.1,
+    "max_synth_fraction": 0.3,
+    "somewhat_to": "neutral",
+    "use_wiki": false,
+    "use_stackexchange": false,
+    "politepeer_csv": "data_sources/politepeer.csv",
+    "politepeer_mode": "extreme_only_three",
+    "polite_guard_dataset": null
+  }
+}

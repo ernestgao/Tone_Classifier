@@ -223,6 +223,40 @@ def load_examples(path: Path, text_column: str, label_column: str) -> List[Dict[
     raise ValueError(f"Unsupported input format: {suffix}")
 
 
+def resolve_model_path_for_modal(model_path: str) -> str:
+    """
+    Resolve model identifier for Modal runtime.
+
+    This script runs attribution remotely on Modal. A local filesystem path
+    (e.g., .\\artifacts\\... on Windows) is not visible inside Modal containers.
+    Users should pass either:
+    - a Hugging Face model id, or
+    - a Modal-accessible path, e.g. /root/tone_classifier_outputs/<subdir>/hf_model
+    """
+    local_path = Path(model_path)
+    if local_path.exists():
+        raise ValueError(
+            "Detected local model path, but this script runs on Modal remote workers.\n"
+            f"Local path: {local_path}\n"
+            "Use a Modal path like '/root/tone_classifier_outputs/<subdir>/hf_model' "
+            "(from run_train_modal.py output 'Modal hf_model_dir'), "
+            "or use a Hugging Face model id."
+        )
+
+    # Normalize Windows-style separators for remote use.
+    normalized = model_path.replace("\\", "/")
+
+    # Common accidental local pattern that would be misread as HF repo id.
+    if normalized.startswith("./") or normalized.startswith(".\\"):
+        raise ValueError(
+            "Relative local path provided for --model_path, which Modal cannot access.\n"
+            f"Provided: {model_path}\n"
+            "Use '/root/tone_classifier_outputs/<subdir>/hf_model' or a Hugging Face model id."
+        )
+
+    return normalized
+
+
 def chunk_list(items: List[Dict[str, Any]], chunk_size: int) -> List[List[Dict[str, Any]]]:
     if chunk_size <= 0:
         raise ValueError("chunk_size must be > 0")
@@ -340,6 +374,7 @@ def main() -> None:
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
+    resolved_model_path = resolve_model_path_for_modal(args.model_path)
 
     examples = load_examples(input_path, args.text_column, args.label_column)
     if args.max_samples is not None:
@@ -367,7 +402,7 @@ def main() -> None:
 
             if args.use_large_model:
                 remote_output = run_large_model_batch_attribution.remote(
-                    model_name=args.model_path,
+                    model_name=resolved_model_path,
                     texts=chunk_texts,
                     num_ablations=args.num_ablations,
                     max_length=args.max_length,
@@ -378,7 +413,7 @@ def main() -> None:
                 )
             else:
                 remote_output = run_batch_attribution_analysis.remote(
-                    model_path=args.model_path,
+                    model_path=resolved_model_path,
                     texts=chunk_texts,
                     num_ablations=args.num_ablations,
                     max_length=args.max_length,
@@ -410,7 +445,7 @@ def main() -> None:
     summary.update(
         {
             "input_file": str(input_path),
-            "model_path": args.model_path,
+            "model_path": resolved_model_path,
             "use_large_model": args.use_large_model,
             "use_quantization": args.use_quantization,
             "num_ablations": args.num_ablations,

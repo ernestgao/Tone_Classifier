@@ -1,0 +1,30 @@
+{
+  "source_row_counts_before_merge": {
+    "wiki": 4338,
+    "stackexchange": 6594
+  },
+  "human_rows_after_dedup": 10932,
+  "synthetic_rows_after_cap": 0,
+  "total_rows_final": 10932,
+  "label_counts_final": {
+    "-1": 2732,
+    "0": 5466,
+    "1": 2734
+  },
+  "output_files": {
+    "train": "data_multisource_wiki_se\\train.csv",
+    "valid": "data_multisource_wiki_se\\valid.csv",
+    "test": "data_multisource_wiki_se\\test.csv"
+  },
+  "config": {
+    "seed": 42,
+    "valid_size": 0.1,
+    "test_size": 0.1,
+    "max_synth_fraction": 0.3,
+    "somewhat_to": "neutral",
+    "use_wiki": true,
+    "use_stackexchange": true,
+    "politepeer_csv": null,
+    "polite_guard_dataset": null
+  }
+}
