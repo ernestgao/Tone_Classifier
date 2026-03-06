@@ -174,6 +174,65 @@ python -m tone_classifier.predict \
   --attribution_iter_mask_token ""
 ```
 
+### Top-k masking on original prompt + MLM neutral substitutions
+
+Mask the top-k attributed words (or phrases) directly on the original prompt:
+
+```bash
+python -m tone_classifier.predict \
+  --hf_model_dir artifacts/tuning/<best_exp_dir>/hf_model \
+  --text "Why are you stupid? You are the most retarded agent I have ever seen. I hate you" \
+  --show_attribution \
+  --attribution_top_k 10 \
+  --attribution_max_phrase_tokens 1 \
+  --attribution_content_words_only \
+  --attribution_mask_top_k 5
+```
+
+If you have a fine-tuned BERT-style MLM, fill those masks and rerank candidates by neutral-label probability:
+
+```bash
+python -m tone_classifier.predict \
+  --hf_model_dir artifacts/tuning/<best_exp_dir>/hf_model \
+  --text "Why are you stupid? You are the most retarded agent I have ever seen. I hate you" \
+  --show_attribution \
+  --attribution_top_k 10 \
+  --attribution_max_phrase_tokens 1 \
+  --attribution_content_words_only \
+  --attribution_mask_top_k 5 \
+  --fill_masks_with_mlm \
+  --mlm_model_dir artifacts/neutral_mlm/hf_model \
+  --mlm_target_label neutral
+```
+
+The script prints:
+- selected top-k spans from attribution
+- `masked_text` with `[MASK]` tokens
+- per-mask fill steps and candidate list
+- final filled text + classifier probabilities
+
+### Train a neutral-domain MLM (BERT-style)
+
+Fine-tune MLM on your neutral text so mask filling prefers neutral substitutions:
+
+```bash
+python -m tone_classifier.train_mlm \
+  --train_file data/train.csv \
+  --validation_file data/valid.csv \
+  --text_column text \
+  --label_column label \
+  --filter_to_neutral \
+  --neutral_label_values neutral 0 \
+  --model_name bert-base-uncased \
+  --max_length 128 \
+  --mlm_probability 0.15 \
+  --num_train_epochs 4 \
+  --per_device_train_batch_size 32 \
+  --per_device_eval_batch_size 32 \
+  --learning_rate 5e-5 \
+  --output_dir artifacts/neutral_mlm
+```
+
 ## 7) Download model from Google Drive to local machine
 
 If your artifacts are on Drive and you want them on your laptop/desktop, zip first in Colab:

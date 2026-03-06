@@ -1,12 +1,17 @@
 from __future__ import annotations
 
 import argparse
+import re
 from typing import Any
 
 import torch
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from transformers import AutoModelForMaskedLM, AutoModelForSequenceClassification, AutoTokenizer
 
-from tone_classifier.attribution import extract_cls_attention_attribution
+from tone_classifier.attribution_ranking import (
+    extract_cls_attention_attribution,
+    mask_text_by_character_spans,
+    select_top_spans_for_masking,
+)
 
 
 ID_TO_LABEL = {
@@ -14,6 +19,7 @@ ID_TO_LABEL = {
     1: "neutral",
     2: "polite",
 }
+LABEL_TO_ID = {v: k for k, v in ID_TO_LABEL.items()}
 
 
 def parse_args() -> argparse.Namespace:
@@ -41,6 +47,53 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--attribution_iter_remove_top_n", type=int, default=1)
     p.add_argument("--attribution_iter_min_prob_drop", type=float, default=0.0)
     p.add_argument("--attribution_iter_mask_token", type=str, default=None)
+    p.add_argument(
+        "--attribution_mask_top_k",
+        type=int,
+        default=0,
+        help="Mask top-k attributed spans in the original prompt.",
+    )
+    p.add_argument(
+        "--attribution_mask_use_phrases",
+        action="store_true",
+        help="Mask phrase spans instead of single-token spans.",
+    )
+    p.add_argument(
+        "--attribution_mask_token",
+        type=str,
+        default=None,
+        help="Mask token for top-k masking. Defaults to tokenizer mask token or [MASK].",
+    )
+    p.add_argument(
+        "--fill_masks_with_mlm",
+        action="store_true",
+        help="Fill generated mask tokens using a (fine-tuned) masked language model.",
+    )
+    p.add_argument(
+        "--mlm_model_dir",
+        type=str,
+        default=None,
+        help="Path/name of fine-tuned masked language model for mask filling.",
+    )
+    p.add_argument(
+        "--mlm_candidate_top_k",
+        type=int,
+        default=30,
+        help="Candidate pool per mask position before reranking.",
+    )
+    p.add_argument(
+        "--mlm_rerank_top_k",
+        type=int,
+        default=6,
+        help="How many MLM candidates to rerank with classifier probability.",
+    )
+    p.add_argument(
+        "--mlm_target_label",
+        type=str,
+        choices=["impolite", "neutral", "polite"],
+        default="neutral",
+        help="Target label for optional classifier-based candidate reranking.",
+    )
     return p.parse_args()
 
 
@@ -182,22 +235,134 @@ def _select_outstanding_tokens(
     return [c for c in candidates if float(c["score"]) >= min_token_score]
 
 
-def _mask_text_by_spans(text: str, spans: list[tuple[int, int]], mask_token: str) -> str:
-    if not spans:
-        return text
-    merged: list[list[int]] = []
-    for start, end in sorted(spans):
-        if end <= start:
-            continue
-        if not merged or start > merged[-1][1]:
-            merged.append([start, end])
-            continue
-        merged[-1][1] = max(merged[-1][1], end)
+def _normalize_mlm_token(token: str) -> str:
+    t = token.strip()
+    if t.startswith("##"):
+        return ""
+    if t.startswith("Ġ") or t.startswith("▁"):
+        t = t[1:]
+    t = t.strip()
+    if not t:
+        return ""
+    if not re.match(r"^[A-Za-z][A-Za-z'\-]*$", t):
+        return ""
+    return t
 
-    masked = text
-    for start, end in reversed([(s, e) for s, e in merged]):
-        masked = masked[:start] + f" {mask_token} " + masked[end:]
-    return " ".join(masked.split())
+
+def _replace_first_mask(text: str, mask_token: str, replacement: str) -> str:
+    pattern = re.escape(mask_token)
+    return re.sub(pattern, replacement, text, count=1)
+
+
+def _build_topk_masked_prompt(
+    *,
+    text: str,
+    attributions: list[dict[str, Any]] | None,
+    top_k: int,
+    use_phrase_spans: bool,
+    mask_token: str,
+    overlap_ratio: float,
+) -> tuple[str, list[dict[str, Any]]]:
+    if not attributions or top_k <= 0:
+        return text, []
+    selected = select_top_spans_for_masking(
+        attributions=attributions,
+        top_k=top_k,
+        use_phrase_spans=use_phrase_spans,
+        max_overlap_ratio=overlap_ratio,
+    )
+    spans = [(int(x["start"]), int(x["end"])) for x in selected]
+    masked_text = mask_text_by_character_spans(text, spans, mask_token=mask_token)
+    return masked_text, selected
+
+
+def _fill_masks_with_mlm(
+    *,
+    args: argparse.Namespace,
+    masked_text: str,
+    mask_token: str,
+    mlm_tokenizer: Any,
+    mlm_model: Any,
+    classifier_tokenizer: Any,
+    classifier_model: Any,
+    classifier_device: str,
+) -> tuple[str, list[dict[str, Any]]]:
+    mask_token_id = mlm_tokenizer.mask_token_id
+    if mask_token_id is None:
+        raise ValueError("MLM tokenizer has no mask token id.")
+
+    if mask_token not in masked_text:
+        return masked_text, []
+
+    mlm_device = next(mlm_model.parameters()).device
+    target_label_id = LABEL_TO_ID[args.mlm_target_label]
+    current_text = masked_text
+    fill_steps: list[dict[str, Any]] = []
+    max_loops = current_text.count(mask_token)
+
+    for step_idx in range(max_loops):
+        inputs = mlm_tokenizer(
+            current_text,
+            truncation=True,
+            max_length=args.max_length,
+            return_tensors="pt",
+        )
+        inputs = {k: v.to(mlm_device) for k, v in inputs.items()}
+        mask_positions = torch.nonzero(
+            inputs["input_ids"][0] == mask_token_id,
+            as_tuple=False,
+        ).squeeze(-1)
+        if mask_positions.numel() == 0:
+            break
+
+        pos = int(mask_positions[0].item())
+        with torch.no_grad():
+            logits = mlm_model(**inputs).logits[0, pos]
+
+        candidate_pool = max(args.mlm_candidate_top_k, args.mlm_rerank_top_k, 1)
+        top_ids = torch.topk(logits, k=candidate_pool).indices.tolist()
+        candidates: list[str] = []
+        for token_id in top_ids:
+            raw_token = mlm_tokenizer.convert_ids_to_tokens(int(token_id))
+            cand = _normalize_mlm_token(str(raw_token))
+            if not cand:
+                continue
+            if cand.lower() not in {x.lower() for x in candidates}:
+                candidates.append(cand)
+            if len(candidates) >= candidate_pool:
+                break
+        if not candidates:
+            break
+
+        rerank_pool = candidates[: max(args.mlm_rerank_top_k, 1)]
+        best = rerank_pool[0]
+        best_score = float("-inf")
+        for cand in rerank_pool:
+            trial_text = _replace_first_mask(current_text, mask_token, cand)
+            trial_result = _run_single_prediction(
+                args=args,
+                text=trial_text,
+                tokenizer=classifier_tokenizer,
+                model=classifier_model,
+                device=classifier_device,
+                with_attribution=False,
+            )
+            score = float(trial_result["probs"][target_label_id].item())
+            if score > best_score:
+                best_score = score
+                best = cand
+
+        current_text = _replace_first_mask(current_text, mask_token, best)
+        fill_steps.append(
+            {
+                "step": step_idx + 1,
+                "chosen": best,
+                "target_label_prob": best_score,
+                "candidates": rerank_pool,
+            }
+        )
+
+    return current_text, fill_steps
 
 
 def _rank_tokens_by_prob_drop(
@@ -217,7 +382,7 @@ def _rank_tokens_by_prob_drop(
 
     scored: list[dict[str, Any]] = []
     for item in eval_candidates:
-        masked_text = _mask_text_by_spans(
+        masked_text = mask_text_by_character_spans(
             current_text,
             [(int(item["start"]), int(item["end"]))],
             mask_token=mask_token,
@@ -252,6 +417,16 @@ def main() -> None:
     model.to(device)
     model.eval()
 
+    mlm_tokenizer = None
+    mlm_model = None
+    if args.fill_masks_with_mlm:
+        if not args.mlm_model_dir:
+            raise ValueError("--fill_masks_with_mlm requires --mlm_model_dir")
+        mlm_tokenizer = AutoTokenizer.from_pretrained(args.mlm_model_dir)
+        mlm_model = AutoModelForMaskedLM.from_pretrained(args.mlm_model_dir)
+        mlm_model.to(device)
+        mlm_model.eval()
+
     result = _run_single_prediction(
         args=args,
         text=args.text,
@@ -262,8 +437,80 @@ def main() -> None:
 
     print("label:", ID_TO_LABEL[int(result["pred"])])
     _print_probabilities(result["probs"])
+
     if args.show_attribution:
         _print_attributions(result["attributions"])
+
+    if args.attribution_mask_top_k > 0:
+        if not args.show_attribution:
+            print("\nmask_top_k: requires --show_attribution")
+        elif result["attributions"] is None:
+            print("\nmask_top_k: unavailable (model did not return attentions)")
+        else:
+            mask_token = args.attribution_mask_token
+            if mask_token is None:
+                mask_token = tokenizer.mask_token or "[MASK]"
+            if mlm_tokenizer is not None and mlm_tokenizer.mask_token:
+                mask_token = mlm_tokenizer.mask_token
+
+            masked_text, selected_spans = _build_topk_masked_prompt(
+                text=args.text,
+                attributions=result["attributions"],
+                top_k=args.attribution_mask_top_k,
+                use_phrase_spans=args.attribution_mask_use_phrases,
+                mask_token=mask_token,
+                overlap_ratio=args.attribution_max_overlap_ratio,
+            )
+            print("\nmasked_prompt_from_top_k:")
+            print(f"  mask_token: {mask_token}")
+            if not selected_spans:
+                print("  selected_spans: none")
+            else:
+                print("  selected_spans:")
+                for i, span in enumerate(selected_spans, start=1):
+                    print(
+                        "    "
+                        f"{i}. text='{span['text']}' "
+                        f"char_span=({int(span['start'])},{int(span['end'])}) "
+                        f"score={float(span['score']):.4f}"
+                    )
+            print(f"  masked_text: {masked_text}")
+
+            if args.fill_masks_with_mlm:
+                filled_text, fill_steps = _fill_masks_with_mlm(
+                    args=args,
+                    masked_text=masked_text,
+                    mask_token=mask_token,
+                    mlm_tokenizer=mlm_tokenizer,
+                    mlm_model=mlm_model,
+                    classifier_tokenizer=tokenizer,
+                    classifier_model=model,
+                    classifier_device=device,
+                )
+                print("\nmlm_fill_steps:")
+                if not fill_steps:
+                    print("  none (no mask tokens filled)")
+                else:
+                    for step in fill_steps:
+                        print(
+                            "  "
+                            f"step={int(step['step'])} chosen='{step['chosen']}' "
+                            f"target_prob={float(step['target_label_prob']):.4f} "
+                            f"candidates={step['candidates']}"
+                        )
+                print(f"  filled_text: {filled_text}")
+                filled_result = _run_single_prediction(
+                    args=args,
+                    text=filled_text,
+                    tokenizer=tokenizer,
+                    model=model,
+                    device=device,
+                    with_attribution=False,
+                )
+                print("  filled_text_label:", ID_TO_LABEL[int(filled_result["pred"])])
+                print("  filled_text_probabilities:")
+                for i, prob in enumerate(filled_result["probs"].tolist()):
+                    print(f"    {ID_TO_LABEL[i]}: {prob:.4f}")
 
     if not args.attribution_iterative_erasure:
         return
@@ -322,7 +569,7 @@ def main() -> None:
             )
             for item in chosen
         ]
-        next_text = _mask_text_by_spans(current_text, spans, mask_token=mask_token)
+        next_text = mask_text_by_character_spans(current_text, spans, mask_token=mask_token)
         if next_text == current_text:
             print(f"\niterative_erasure: stop at round {round_idx - 1} (no text change)")
             return

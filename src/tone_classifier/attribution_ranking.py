@@ -365,3 +365,109 @@ def extract_cls_attention_attribution(
             break
 
     return selected
+
+
+def select_top_spans_for_masking(
+    *,
+    attributions: list[dict[str, Any]],
+    top_k: int,
+    use_phrase_spans: bool = False,
+    max_overlap_ratio: float = 0.8,
+) -> list[dict[str, Any]]:
+    """
+    Select top-k character spans from attribution outputs for masking.
+
+    Returns items with: start, end, text, score.
+    """
+    if top_k <= 0 or not attributions:
+        return []
+
+    start_key = "phrase_char_start" if use_phrase_spans else "token_char_start"
+    end_key = "phrase_char_end" if use_phrase_spans else "token_char_end"
+    text_key = "phrase" if use_phrase_spans else "token"
+    score_key = "phrase_score" if use_phrase_spans else "token_score"
+
+    best_by_span: dict[tuple[int, int], dict[str, Any]] = {}
+    for item in attributions:
+        if start_key not in item or end_key not in item:
+            continue
+        start = int(item[start_key])
+        end = int(item[end_key])
+        if end <= start:
+            continue
+        span_key = (start, end)
+        score = float(item.get(score_key, 0.0))
+        prev = best_by_span.get(span_key)
+        if prev is None or score > float(prev["score"]):
+            best_by_span[span_key] = {
+                "start": start,
+                "end": end,
+                "text": str(item.get(text_key, "")).strip(),
+                "score": score,
+            }
+
+    ranked = sorted(best_by_span.values(), key=lambda x: float(x["score"]), reverse=True)
+    if max_overlap_ratio <= 0:
+        return ranked[:top_k]
+
+    selected: list[dict[str, Any]] = []
+    for item in ranked:
+        start_a = int(item["start"])
+        end_a = int(item["end"])
+        len_a = end_a - start_a
+        if len_a <= 0:
+            continue
+
+        too_similar = False
+        for chosen in selected:
+            start_b = int(chosen["start"])
+            end_b = int(chosen["end"])
+            len_b = end_b - start_b
+            if len_b <= 0:
+                continue
+
+            inter = max(0, min(end_a, end_b) - max(start_a, start_b))
+            if inter == 0:
+                continue
+            overlap_ratio = inter / float(max(len_a, len_b))
+            if overlap_ratio >= max_overlap_ratio:
+                too_similar = True
+                break
+        if too_similar:
+            continue
+
+        selected.append(item)
+        if len(selected) >= top_k:
+            break
+    return selected
+
+
+def merge_character_spans(spans: list[tuple[int, int]]) -> list[tuple[int, int]]:
+    if not spans:
+        return []
+    merged: list[list[int]] = []
+    for start, end in sorted(spans):
+        if end <= start:
+            continue
+        if not merged or start > merged[-1][1]:
+            merged.append([start, end])
+        else:
+            merged[-1][1] = max(merged[-1][1], end)
+    return [(s, e) for s, e in merged]
+
+
+def mask_text_by_character_spans(
+    text: str,
+    spans: list[tuple[int, int]],
+    mask_token: str,
+) -> str:
+    if not spans:
+        return text
+    merged = merge_character_spans(spans)
+    if not merged:
+        return text
+
+    masked = text
+    for start, end in reversed(merged):
+        masked = masked[:start] + f" {mask_token} " + masked[end:]
+    return " ".join(masked.split())
