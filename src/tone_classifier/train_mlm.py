@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import inspect
 import json
 import math
 from pathlib import Path
@@ -171,14 +172,22 @@ def main() -> None:
         remove_unused_columns=True,
     )
 
-    trainer = Trainer(
-        model=model,
-        args=train_args,
-        train_dataset=tokenized["train"],
-        eval_dataset=tokenized["validation"] if has_validation else None,
-        tokenizer=tokenizer,
-        data_collator=data_collator,
-    )
+    trainer_kwargs: dict[str, Any] = {
+        "model": model,
+        "args": train_args,
+        "train_dataset": tokenized["train"],
+        "eval_dataset": tokenized["validation"] if has_validation else None,
+        "data_collator": data_collator,
+    }
+
+    # transformers v5 removed `tokenizer=` and uses `processing_class=`.
+    trainer_init_params = inspect.signature(Trainer.__init__).parameters
+    if "processing_class" in trainer_init_params:
+        trainer_kwargs["processing_class"] = tokenizer
+    elif "tokenizer" in trainer_init_params:
+        trainer_kwargs["tokenizer"] = tokenizer
+
+    trainer = Trainer(**trainer_kwargs)
 
     train_result = trainer.train()
     trainer.save_model(str(output_dir / "hf_model"))
