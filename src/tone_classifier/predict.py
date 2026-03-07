@@ -5,11 +5,13 @@ import re
 from typing import Any
 
 import torch
+import torch.nn.functional as F
 from transformers import AutoModelForMaskedLM, AutoModelForSequenceClassification, AutoTokenizer
 
 from tone_classifier.attribution_ranking import (
     extract_cls_attention_attribution,
     mask_text_by_character_spans,
+    merge_character_spans,
     select_top_spans_for_masking,
 )
 
@@ -93,6 +95,30 @@ def parse_args() -> argparse.Namespace:
         choices=["impolite", "neutral", "polite"],
         default="neutral",
         help="Target label for optional classifier-based candidate reranking.",
+    )
+    p.add_argument(
+        "--mlm_neutral_weight",
+        type=float,
+        default=1.0,
+        help="Weight for neutral-target probability in constrained reranking.",
+    )
+    p.add_argument(
+        "--mlm_token_similarity_weight",
+        type=float,
+        default=0.45,
+        help="Weight for candidate-vs-original token embedding cosine similarity.",
+    )
+    p.add_argument(
+        "--mlm_sentence_similarity_weight",
+        type=float,
+        default=0.35,
+        help="Weight for sentence-level semantic cosine similarity to original text.",
+    )
+    p.add_argument(
+        "--mlm_min_token_cosine",
+        type=float,
+        default=0.35,
+        help="Minimum token embedding cosine similarity to keep a replacement candidate.",
     )
     return p.parse_args()
 
@@ -254,6 +280,54 @@ def _replace_first_mask(text: str, mask_token: str, replacement: str) -> str:
     return re.sub(pattern, replacement, text, count=1)
 
 
+def _cosine_similarity(vec_a: torch.Tensor | None, vec_b: torch.Tensor | None) -> float:
+    if vec_a is None or vec_b is None:
+        return 0.0
+    if vec_a.numel() == 0 or vec_b.numel() == 0:
+        return 0.0
+    return float(F.cosine_similarity(vec_a.unsqueeze(0), vec_b.unsqueeze(0)).item())
+
+
+def _sentence_embedding(
+    *,
+    text: str,
+    tokenizer: Any,
+    model: Any,
+    device: str,
+    max_length: int,
+) -> torch.Tensor | None:
+    with torch.no_grad():
+        inputs = tokenizer(
+            text,
+            truncation=True,
+            max_length=max_length,
+            return_tensors="pt",
+        )
+        inputs = {k: v.to(device) for k, v in inputs.items()}
+        outputs = model(**inputs, output_hidden_states=True, return_dict=True)
+        hidden_states = outputs.hidden_states
+        if hidden_states is None:
+            return None
+        last_hidden = hidden_states[-1][0]
+        attn = inputs["attention_mask"][0].unsqueeze(-1).to(last_hidden.dtype)
+        pooled = (last_hidden * attn).sum(dim=0) / attn.sum(dim=0).clamp(min=1.0)
+        return pooled.detach()
+
+
+def _phrase_embedding_from_mlm_vocab(
+    *,
+    phrase_text: str,
+    tokenizer: Any,
+    embedding_matrix: torch.Tensor,
+    device: str,
+) -> torch.Tensor | None:
+    ids = tokenizer(phrase_text, add_special_tokens=False)["input_ids"]
+    if not ids:
+        return None
+    token_ids = torch.tensor(ids, dtype=torch.long, device=device)
+    return embedding_matrix[token_ids].mean(dim=0).detach()
+
+
 def _build_topk_masked_prompt(
     *,
     text: str,
@@ -262,9 +336,9 @@ def _build_topk_masked_prompt(
     use_phrase_spans: bool,
     mask_token: str,
     overlap_ratio: float,
-) -> tuple[str, list[dict[str, Any]]]:
+) -> tuple[str, list[dict[str, Any]], list[str]]:
     if not attributions or top_k <= 0:
-        return text, []
+        return text, [], []
     selected = select_top_spans_for_masking(
         attributions=attributions,
         top_k=top_k,
@@ -272,13 +346,17 @@ def _build_topk_masked_prompt(
         max_overlap_ratio=overlap_ratio,
     )
     spans = [(int(x["start"]), int(x["end"])) for x in selected]
-    masked_text = mask_text_by_character_spans(text, spans, mask_token=mask_token)
-    return masked_text, selected
+    merged_spans = merge_character_spans(spans)
+    masked_text = mask_text_by_character_spans(text, merged_spans, mask_token=mask_token)
+    mask_targets = [text[start:end].strip() for start, end in merged_spans]
+    return masked_text, selected, mask_targets
 
 
 def _fill_masks_with_mlm(
     *,
     args: argparse.Namespace,
+    original_text: str,
+    original_mask_targets: list[str],
     masked_text: str,
     mask_token: str,
     mlm_tokenizer: Any,
@@ -299,8 +377,30 @@ def _fill_masks_with_mlm(
     current_text = masked_text
     fill_steps: list[dict[str, Any]] = []
     max_loops = current_text.count(mask_token)
+    vocab_embeddings = mlm_model.get_input_embeddings().weight
+    original_sentence_emb = None
+    if args.mlm_sentence_similarity_weight > 0:
+        original_sentence_emb = _sentence_embedding(
+            text=original_text,
+            tokenizer=classifier_tokenizer,
+            model=classifier_model,
+            device=classifier_device,
+            max_length=args.max_length,
+        )
 
     for step_idx in range(max_loops):
+        original_target = (
+            original_mask_targets[step_idx]
+            if step_idx < len(original_mask_targets)
+            else ""
+        )
+        original_target_emb = _phrase_embedding_from_mlm_vocab(
+            phrase_text=original_target,
+            tokenizer=mlm_tokenizer,
+            embedding_matrix=vocab_embeddings,
+            device=mlm_device,
+        )
+
         inputs = mlm_tokenizer(
             current_text,
             truncation=True,
@@ -321,24 +421,29 @@ def _fill_masks_with_mlm(
 
         candidate_pool = max(args.mlm_candidate_top_k, args.mlm_rerank_top_k, 1)
         top_ids = torch.topk(logits, k=candidate_pool).indices.tolist()
-        candidates: list[str] = []
+        candidates: list[dict[str, Any]] = []
+        seen_candidates: set[str] = set()
         for token_id in top_ids:
             raw_token = mlm_tokenizer.convert_ids_to_tokens(int(token_id))
             cand = _normalize_mlm_token(str(raw_token))
             if not cand:
                 continue
-            if cand.lower() not in {x.lower() for x in candidates}:
-                candidates.append(cand)
+            cand_key = cand.lower()
+            if cand_key in seen_candidates:
+                continue
+            seen_candidates.add(cand_key)
+            candidates.append({"text": cand, "token_id": int(token_id)})
             if len(candidates) >= candidate_pool:
                 break
         if not candidates:
             break
 
         rerank_pool = candidates[: max(args.mlm_rerank_top_k, 1)]
-        best = rerank_pool[0]
-        best_score = float("-inf")
+        best_item = None
+        fallback_item = None
         for cand in rerank_pool:
-            trial_text = _replace_first_mask(current_text, mask_token, cand)
+            cand_text = str(cand["text"])
+            trial_text = _replace_first_mask(current_text, mask_token, cand_text)
             trial_result = _run_single_prediction(
                 args=args,
                 text=trial_text,
@@ -347,18 +452,60 @@ def _fill_masks_with_mlm(
                 device=classifier_device,
                 with_attribution=False,
             )
-            score = float(trial_result["probs"][target_label_id].item())
-            if score > best_score:
-                best_score = score
-                best = cand
+            neutral_prob = float(trial_result["probs"][target_label_id].item())
 
-        current_text = _replace_first_mask(current_text, mask_token, best)
+            token_cos = _cosine_similarity(
+                vocab_embeddings[int(cand["token_id"])].detach(),
+                original_target_emb,
+            )
+            sentence_cos = 0.0
+            if args.mlm_sentence_similarity_weight > 0 and original_sentence_emb is not None:
+                trial_sent_emb = _sentence_embedding(
+                    text=trial_text,
+                    tokenizer=classifier_tokenizer,
+                    model=classifier_model,
+                    device=classifier_device,
+                    max_length=args.max_length,
+                )
+                sentence_cos = _cosine_similarity(trial_sent_emb, original_sentence_emb)
+
+            combined = (
+                float(args.mlm_neutral_weight) * neutral_prob
+                + float(args.mlm_token_similarity_weight) * token_cos
+                + float(args.mlm_sentence_similarity_weight) * sentence_cos
+            )
+
+            candidate_info = {
+                "token": cand_text,
+                "target_label_prob": neutral_prob,
+                "token_cosine": token_cos,
+                "sentence_cosine": sentence_cos,
+                "combined_score": combined,
+            }
+            if fallback_item is None or neutral_prob > float(fallback_item["target_label_prob"]):
+                fallback_item = candidate_info
+
+            if original_target_emb is not None and token_cos < float(args.mlm_min_token_cosine):
+                continue
+            if best_item is None or combined > float(best_item["combined_score"]):
+                best_item = candidate_info
+
+        if best_item is None:
+            if fallback_item is None:
+                break
+            best_item = fallback_item
+
+        current_text = _replace_first_mask(current_text, mask_token, str(best_item["token"]))
         fill_steps.append(
             {
                 "step": step_idx + 1,
-                "chosen": best,
-                "target_label_prob": best_score,
-                "candidates": rerank_pool,
+                "original_mask_target": original_target,
+                "chosen": str(best_item["token"]),
+                "target_label_prob": float(best_item["target_label_prob"]),
+                "token_cosine": float(best_item["token_cosine"]),
+                "sentence_cosine": float(best_item["sentence_cosine"]),
+                "combined_score": float(best_item["combined_score"]),
+                "candidates": [str(x["text"]) for x in rerank_pool],
             }
         )
 
@@ -453,7 +600,7 @@ def main() -> None:
             if mlm_tokenizer is not None and mlm_tokenizer.mask_token:
                 mask_token = mlm_tokenizer.mask_token
 
-            masked_text, selected_spans = _build_topk_masked_prompt(
+            masked_text, selected_spans, mask_targets = _build_topk_masked_prompt(
                 text=args.text,
                 attributions=result["attributions"],
                 top_k=args.attribution_mask_top_k,
@@ -474,11 +621,15 @@ def main() -> None:
                         f"char_span=({int(span['start'])},{int(span['end'])}) "
                         f"score={float(span['score']):.4f}"
                     )
+            if mask_targets:
+                print(f"  mask_targets_in_order: {mask_targets}")
             print(f"  masked_text: {masked_text}")
 
             if args.fill_masks_with_mlm:
                 filled_text, fill_steps = _fill_masks_with_mlm(
                     args=args,
+                    original_text=args.text,
+                    original_mask_targets=mask_targets,
                     masked_text=masked_text,
                     mask_token=mask_token,
                     mlm_tokenizer=mlm_tokenizer,
@@ -496,6 +647,9 @@ def main() -> None:
                             "  "
                             f"step={int(step['step'])} chosen='{step['chosen']}' "
                             f"target_prob={float(step['target_label_prob']):.4f} "
+                            f"token_cos={float(step.get('token_cosine', 0.0)):.4f} "
+                            f"sent_cos={float(step.get('sentence_cosine', 0.0)):.4f} "
+                            f"combined={float(step.get('combined_score', 0.0)):.4f} "
                             f"candidates={step['candidates']}"
                         )
                 print(f"  filled_text: {filled_text}")

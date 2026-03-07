@@ -189,7 +189,8 @@ python -m tone_classifier.predict \
   --attribution_mask_top_k 5
 ```
 
-If you have a fine-tuned BERT-style MLM, fill those masks and rerank candidates by neutral-label probability:
+If you have a fine-tuned BERT-style MLM, fill those masks with constrained reranking
+(neutral probability + token similarity + sentence similarity):
 
 ```bash
 python -m tone_classifier.predict \
@@ -199,17 +200,28 @@ python -m tone_classifier.predict \
   --attribution_top_k 10 \
   --attribution_max_phrase_tokens 1 \
   --attribution_content_words_only \
-  --attribution_mask_top_k 5 \
+  --attribution_mask_top_k 3 \
   --fill_masks_with_mlm \
-  --mlm_model_dir artifacts/neutral_mlm/hf_model \
-  --mlm_target_label neutral
+  --mlm_model_dir artifacts/neutral_mlm_paradetox/hf_model \
+  --mlm_target_label neutral \
+  --mlm_rerank_top_k 20 \
+  --mlm_neutral_weight 1.0 \
+  --mlm_token_similarity_weight 0.9 \
+  --mlm_sentence_similarity_weight 0.6 \
+  --mlm_min_token_cosine 0.55
 ```
 
 The script prints:
 - selected top-k spans from attribution
+- `mask_targets_in_order` (original words/phrases being replaced)
 - `masked_text` with `[MASK]` tokens
-- per-mask fill steps and candidate list
+- per-mask fill steps including `target_prob`, `token_cos`, `sent_cos`, `combined`
 - final filled text + classifier probabilities
+
+Tuning tips:
+- Increase `--mlm_min_token_cosine` (e.g. `0.6`) for stronger meaning preservation.
+- Increase `--mlm_neutral_weight` if outputs are still too toxic.
+- Lower `--attribution_mask_top_k` if rewriting becomes too aggressive.
 
 ### Train a neutral-domain MLM (BERT-style)
 
