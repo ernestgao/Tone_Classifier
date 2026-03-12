@@ -456,6 +456,17 @@ def merge_character_spans(spans: list[tuple[int, int]]) -> list[tuple[int, int]]
     return [(s, e) for s, e in merged]
 
 
+def split_span_text_for_mask_targets(span_text: str) -> list[str]:
+    """
+    Split a masked span into surface tokens so each token maps to one mask slot.
+    """
+    tokens = [tok for tok in span_text.strip().split() if tok]
+    if tokens:
+        return tokens
+    stripped = span_text.strip()
+    return [stripped] if stripped else []
+
+
 def mask_text_by_character_spans(
     text: str,
     spans: list[tuple[int, int]],
@@ -469,5 +480,8 @@ def mask_text_by_character_spans(
 
     masked = text
     for start, end in reversed(merged):
-        masked = masked[:start] + f" {mask_token} " + masked[end:]
+        span_text = masked[start:end]
+        token_count = len(split_span_text_for_mask_targets(span_text))
+        repeated_mask = " ".join([mask_token] * max(token_count, 1))
+        masked = masked[:start] + f" {repeated_mask} " + masked[end:]
     return " ".join(masked.split())

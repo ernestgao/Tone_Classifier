@@ -13,6 +13,7 @@ from tone_classifier.attribution_ranking import (
     mask_text_by_character_spans,
     merge_character_spans,
     select_top_spans_for_masking,
+    split_span_text_for_mask_targets,
 )
 
 
@@ -348,7 +349,14 @@ def _build_topk_masked_prompt(
     spans = [(int(x["start"]), int(x["end"])) for x in selected]
     merged_spans = merge_character_spans(spans)
     masked_text = mask_text_by_character_spans(text, merged_spans, mask_token=mask_token)
-    mask_targets = [text[start:end].strip() for start, end in merged_spans]
+    mask_targets: list[str] = []
+    for start, end in merged_spans:
+        span_text = text[start:end]
+        span_targets = split_span_text_for_mask_targets(span_text)
+        if span_targets:
+            mask_targets.extend(span_targets)
+        else:
+            mask_targets.append(span_text.strip())
     return masked_text, selected, mask_targets
 
 
@@ -582,11 +590,18 @@ def main() -> None:
         device=device,
     )
 
-    print("label:", ID_TO_LABEL[int(result["pred"])])
+    baseline_label = ID_TO_LABEL[int(result["pred"])]
+    print("label:", baseline_label)
     _print_probabilities(result["probs"])
 
     if args.show_attribution:
         _print_attributions(result["attributions"])
+
+    if baseline_label == "neutral" and (
+        args.attribution_mask_top_k > 0 or args.attribution_iterative_erasure
+    ):
+        print("\nrewrite_skipped: baseline label is neutral")
+        return
 
     if args.attribution_mask_top_k > 0:
         if not args.show_attribution:
